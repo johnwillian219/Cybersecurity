@@ -3,6 +3,9 @@
 ## Visão Geral
 Este projeto é um roadmap interativo para guiar entusiastas e profissionais em cibersegurança desde o início até um nível avançado de expertise. Através do site, os usuários podem navegar por tópicos fundamentais e avançados, explorando conteúdos e ferramentas necessárias para se tornarem especialistas em segurança cibernética.
 
+![Cybersecurity Roadmap](https://github.com/johnwillian219/Cybersecurity/blob/main/imagens/roadmap.svg)
+
+
 ## 🚀 Funcionalidades
 - Navegação interativa onde cada tópico ao ser clicado redireciona para uma página detalhada.
 - Conteúdos que cobrem desde Fundamentos de TI até Ferramentas Avançadas de Hacking.

@@ -27,7 +27,7 @@ Capacitar estudantes, aspirantes e profissionais da área de segurança ciberné
 ## 🚧 Tecnologias Utilizadas
 - **HTML5 e CSS3**: Estrutura e estilo da página.
 - **JavaScript**: Funcionalidade interativa dos tópicos e navegação.
-- **[draw.io](https://www.draw.io)**: Website onde foram feitos os desenhos para o website.
+- **[draw.io](https://www.draw.io)**: Website onde foram feitos os desenhos para o nosso website.
 
 ## 🌐 Acesse o Site
 - O website está hospedado em (Será disponibilizado em breve).

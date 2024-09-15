@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const WebButton = document.getElementById('web-btn');
     const WebMenu = document.getElementById('web-menu');
 
+    const OthersButton = document.getElementById('others-btn');
+    const OthersMenu = document.getElementById('others-menu');
+
 
     let menuFixo = false; // Indica se algum menu está fixo após o clique duplo
 
@@ -80,6 +83,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     WebButton.addEventListener('click', function () {
         if (!menuFixo) toggleMenu(WebMenu);
+    });
+
+    OthersButton.addEventListener('click', function () {
+        if (!menuFixo) toggleMenu(OthersMenu);
     });
 
 

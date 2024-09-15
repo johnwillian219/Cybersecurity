@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const DistrosToolsButton = document.getElementById('distros-tools-btn');
     const DistrosToolsMenu = document.getElementById('distros-tools-menu');
 
+    const WebButton = document.getElementById('web-btn');
+    const WebMenu = document.getElementById('web-menu');
+
 
     let menuFixo = false; // Indica se algum menu está fixo após o clique duplo
 
@@ -74,6 +77,11 @@ document.addEventListener('DOMContentLoaded', function () {
     DistrosToolsButton.addEventListener('click', function () {
         if (!menuFixo) toggleMenu(DistrosToolsMenu);
     });
+
+    WebButton.addEventListener('click', function () {
+        if (!menuFixo) toggleMenu(WebMenu);
+    });
+
 
 
     // Eventos globais para esconder menus ao clicar fora deles

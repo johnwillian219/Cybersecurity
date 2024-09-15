@@ -41,9 +41,18 @@ Capacitar estudantes, aspirantes e profissionais da área de segurança ciberné
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 **1**. Faça um fork do projeto.  
-**2**. Crie uma nova branch para sua feature (git checkout -b feature/nome-da-feature).  
-**3**. Commit suas mudanças (git commit -m 'Adiciona nova feature').  
-**4**. Faça o push da sua branch (git push origin feature/nome-da-feature).  
+**2**. Crie uma nova branch para sua feature 
+```bash
+git checkout -b feature/nome-da-feature
+```
+**3**. Commit suas mudanças 
+```bash
+git commit -m 'Adiciona nova feature'  
+```
+**4**. Faça o push da sua branch 
+```bash
+git push origin feature/nome-da-feature.  
+```
 **5**. Abra um pull request.
 
 ## ✉️ Contato

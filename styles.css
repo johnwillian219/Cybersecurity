@@ -1,0 +1,124 @@
+/* Estilos gerais do corpo */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+/* Contêiner principal */
+.main-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Contêiner da imagem do roadmap */
+.roadmap-container {
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+/* Estilo da imagem do roadmap */
+.roadmap-image {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+/* Contêiner para botões de tópicos */
+.button-container {
+    position: absolute;
+}
+
+/* Estilo padrão dos botões de tópicos */
+.topic-button {
+    width: 224px;
+    height: 41px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(7, 7, 7);
+    background-color: #00FF00;
+    border: 1px solid #FFFFFF;
+    border-radius: 7px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    text-align: center;
+    z-index: 5;
+}
+
+/* Efeito hover para botões de tópicos */
+.topic-button:hover {
+    background-color: #666;
+    color: #FFFFFF;
+}
+
+/* Estilo para o menu SVG */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 230px;
+    background-color: #4a4d4a;
+    border: 1px solid #000000;
+    border-radius: 14px;
+    padding: 10px;
+    display: none;
+    z-index: 100;
+}
+
+/* Remover qualquer regra de tamanho para a imagem dentro do menu */
+.menu img {
+    display: block;
+    max-width: none;
+    max-height: none;
+    position: relative;
+}
+
+/* Classe para mostrar o menu */
+.menu.visible {
+    display: block;
+}
+
+/* Contêiner para botões sobre a imagem */
+.menu-button-container {
+    position: absolute;
+}
+
+/* Estilo para os botões do menu */
+.menu-button {
+    width: 504px;
+    height: 71.5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(7, 7, 7);
+    background-color: #00FF00;
+    border: 1px solid #000000;
+    border-radius: 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Efeito hover para botões do menu */
+.menu-button:hover {
+    background-color: #666;
+    color: #FFFFFF;
+}
+
+/* Mudança de cor do texto ao clicar */
+.menu-button:active {
+    color: #FFFFFF;
+}

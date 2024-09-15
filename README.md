@@ -14,18 +14,6 @@ Este projeto é um roadmap interativo para guiar entusiastas e profissionais em 
   <img src="https://github.com/johnwillian219/Cybersecurity/blob/main/imagens/roadmap.svg" alt="## 🔧 Tópicos Abordados"/>
 </p>
 
-
-- **Fundamental IT Skills**: Conhecimentos essenciais de TI.
-- **Operating Systems**: Sistemas operacionais e sua administração.
-- **Computer Networks**: Redes de computadores e protocolos.
-- **Basics of Virtualization**: Conceitos e implementação de virtualização.
-- **Security Knowledge**: Práticas e fundamentos de segurança da informação.
-- **Cloud Skills**: Habilidades em computação em nuvem.
-- **Programming Skills**: Linguagens e habilidades de programação.
-- **Cyber Tools**: Ferramentas de hacking e pentest.
-- **Web: Server Essentials**: Administração de servidores, CMS, e hospedagem.
-- **Outros**: Amplia o seu conhecimento em Cibersegurança.
-
 ## 🎯 Objetivo
 Capacitar estudantes, aspirantes e profissionais da área de segurança cibernética com uma plataforma clara e interativa para guiar o desenvolvimento de suas habilidades de forma progressiva e prática.
 

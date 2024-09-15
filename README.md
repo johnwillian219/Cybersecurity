@@ -1,4 +1,4 @@
-# 🛡️ Cybersecurity Roadmap
+# 🛡️ Cybersecurity 
 
 ## Visão Geral
 Este projeto é um roadmap interativo para guiar entusiastas e profissionais em cibersegurança desde o início até um nível avançado de expertise. Através do site, os usuários podem navegar por tópicos fundamentais e avançados, explorando conteúdos e ferramentas necessárias para se tornarem especialistas em segurança cibernética.
@@ -40,14 +40,14 @@ Capacitar estudantes, aspirantes e profissionais da área de segurança ciberné
 ## 🤝 Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-**1**. Faça um fork do projeto.
-**2**. Crie uma nova branch para sua feature (git checkout -b feature/nome-da-feature).
-**3**. Commit suas mudanças (git commit -m 'Adiciona nova feature').
-**4**. Faça o push da sua branch (git push origin feature/nome-da-feature).
+**1**. Faça um fork do projeto.  
+**2**. Crie uma nova branch para sua feature (git checkout -b feature/nome-da-feature).  
+**3**. Commit suas mudanças (git commit -m 'Adiciona nova feature').  
+**4**. Faça o push da sua branch (git push origin feature/nome-da-feature).  
 **5**. Abra um pull request.
 
 ## ✉️ Contato
 Para dúvidas ou sugestões, entre em contato:
 
-Email: johnwillian254@gmail.com
+Email: johnwillian254@gmail.com  
 LinkedIn: [John William Cabral Gomes](https://www.linkedin.com/in/john-william-cabral-gomes-031389234/)

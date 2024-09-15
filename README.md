@@ -18,6 +18,7 @@ Este projeto é um roadmap interativo para guiar entusiastas e profissionais em 
 - **Programming Skills**: Linguagens e habilidades de programação.
 - **Cyber Tools**: Ferramentas de hacking e pentest.
 - **Web: Server Essentials**: Administração de servidores, CMS, e hospedagem.
+- **Outros**: Amplia o seu conhecimento em Cibersegurança
 
 ## 🎯 Objetivo
 Capacitar estudantes, aspirantes e profissionais da área de segurança cibernética com uma plataforma clara e interativa para guiar o desenvolvimento de suas habilidades de forma progressiva e prática.

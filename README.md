@@ -27,12 +27,12 @@ Capacitar estudantes, aspirantes e profissionais da área de segurança ciberné
    ```bash
    git clone https://github.com/seu-usuario/nome-do-repositorio.git
 
-2. Abra o arquivo index.html em seu navegador para ver o website.
+2. Abra o arquivo ```index.html``` em seu navegador para ver o website.
 
 ## 🚧 Tecnologias Utilizadas
 - **HTML5 e CSS3**: Estrutura e estilo da página.
 - **JavaScript**: Funcionalidade interativa dos tópicos e navegação.
-- **draw.io**: Website onde foram feitos os desenhos
+- **[draw.io](https://www.draw.io)**: Website onde foram feitos os desenhos para o website
 
 ## 🌐 Acesse o Site
 - O website está hospedado em (Será disponibilizado em breve)

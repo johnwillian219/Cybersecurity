@@ -25,7 +25,7 @@ Capacitar estudantes, aspirantes e profissionais da área de segurança ciberné
 ## 📋 Instalação
 1. Clone o repositório para o seu ambiente local:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/johnwillian219/Cybercecurity.git
 
 2. Abra o arquivo ```index.html``` em seu navegador para ver o website.
 

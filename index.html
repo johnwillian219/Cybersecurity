@@ -1,336 +1,445 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Roadmap</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="main-container">
-        <!-- Contêiner da Imagem à Esquerda -->
-        <div class="roadmap-container">
-            <img src="imagens/roadmap.svg" alt="Cybersecurity Roadmap" class="roadmap-image">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Cybersecurity Roadmap</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
 
-            <!-- Botão Fundamental IT Skills com evento hover -->
-            <div class="button-container" style="top: 2.4%; left: 14.4%;">
-                <button class="topic-button" id="fundamental-it-skills-btn">Fundamental IT Skills</button>
+            <!-----------------------Inicio do Cabeçalho --------------------------------------------------------------------------------------------------------------------------------->
+            <header>
+                <div class="logo">Cybersecurity</div>
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="showSection('home')">Início</a></li>
+                        <li><a href="#" onclick="showSection('about')">Sobre</a></li>
+                        <li><a href="#" onclick="showSection('progress')">Progresso</a></li>
+                        <li><a href="#" onclick="showSection('contact')">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button>Pesquisar</button>
+                </div>
+            </header>
+            <!--------------------------Fim do cabeçalho---------------------------------------------------------------------------------------------------------------------------------->
+
+
+        <!-----------------------------Inicio das Seções de conteúdo --------------------------------------------------------------------------------------------------------------------->
+        <div class="content-container">
+
+            <!-- Seção Início ------------------------------------------------------------------------------------------------------------------------------------------------------------>
+            <section id="home" class="content-section">
+                <h1>Bem-vindo ao Cybersecurity Roadmap</h1>
+                <p>Esta é a seção de início. Aqui você pode encontrar uma visão geral do que o roadmap cobre.</p>
+
                 
-                <!-- Menu SVG oculto inicialmente -->
-                <div id="fundamental-it-skills-menu" class="menu hidden">
-                    <img src="imagens/fundamental_IT_skills.svg" alt="Fundamental IT Skills Menu">
-                    <!-- Botões dentro do menu -->
-                    <div class="menu-button-container" style="top: 2.95%; left: 17.5%;"> 
-                        <button class="menu-button" onclick="window.location.href='Fundamental/Suites/index.html'">Popular Suites</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 26.3%; left: 17.5%;"> 
-                        <button class="menu-button" onclick="window.location.href='Fundamental/Software&Hardware/index.html'">Software & Hardware</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 49.8%; left: 17.5%;"> 
-                        <button class="menu-button" onclick="window.location.href='Fundamental/Connection/index.html'">Tipos de Conexão</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 73.2%; left: 17.5%;"> 
-                        <button class="menu-button" onclick="window.location.href='Fundamental/Configuração&Manutenção/index.html'">Kit de Configuração e Manutenção do Sistema</button>
-                    </div>
-                </div>
-            </div>
+            <div class="main-container">
+                <!-- Contêiner da Imagem à Esquerda -------------------------------------------------------------------------------->
+                <div class="roadmap-container">
+                    <img src="imagens/roadmap.svg" alt="Cybersecurity Roadmap" class="roadmap-image">
 
-            <!-- Botão Operating Systems -->
-            <div class="button-container" style="top: 10.33%; left: 51.7%;">
-                <button class="topic-button" id="operating-systems-btn">Operating Systems</button>
-                <!-- Menu SVG oculto inicialmente para Operating Systems -->
-                <div id="operating-systems-menu" class="menu hidden">
-                    <img src="imagens/Operating_systems.svg" alt="Operating Systems Menu">
-                    <!-- Botões dentro do menu para Operating Systems -->
-                    <div class="menu-button-container" style="top: 1.6%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='SO/Tipos/index.html'">Tipos de Sistemas Operacionais</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 15.4%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='SO/Arquitetura/index.html'">Componentes e Arquitetura do Sistema Operacional</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 29.2%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='SO/Instalação/index.html'">Instalação e Configuração de Sistemas Operacionais</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 43%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='SO/Administração/index.html'">Gestão e Administração do Sistema</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 56.8%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='SO/Segurança/index.html'">Segurança em Sistemas Operacionais</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 70.6%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='SO/Comandos/index.html'">Comandos e Ferramentas Essenciais</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 84.2%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='SO/Interoperabilidade/index.html'">Interoperabilidade entre Sistemas Operacionais</button>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Botão Computer Networks -->
-            <div class="button-container" style="top: 19.5%; left: 14.4%;">
-                <button class="topic-button" id="computer-networks-btn">Computer Networks</button>
 
-                <!-- Menu SVG para Computer Networks -->
-                <div id="computer-networks-menu" class="menu hidden">
-                    <img src="imagens/computer_network.svg" alt="Computer Networks Menu">
-                    <!-- Botões dentro do menu para Computer Networks -->
-                    <div class="menu-button-container" style="top: 1.2%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='ComputerNetwork/Internet/index.html'">Internet</button>
+                    <!-- Botão Fundamental IT Skills com evento hover -------------------------------------------------------------->
+                    <div class="button-container" style="top: 2.4%; left: 14.4%;">
+                        <button class="topic-button" id="fundamental-it-skills-btn">Fundamental IT Skills</button>
+                        
+                        <!-- Menu SVG oculto inicialmente -------------------------------------------------------------------------->
+                        <div id="fundamental-it-skills-menu" class="menu hidden">
+                            <img src="imagens/fundamental_IT_skills.svg" alt="Fundamental IT Skills Menu">
+                            <!-- Botões dentro do menu ----------------------------------------------------------------------------->
+                            <div class="menu-button-container" style="top: 2.95%; left: 17.5%;"> 
+                                <button class="menu-button" onclick="window.location.href='Fundamental/Suites/index.html'">Popular Suites</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 26.3%; left: 17.5%;"> 
+                                <button class="menu-button" onclick="window.location.href='Fundamental/Software&Hardware/index.html'">Software & Hardware</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 49.8%; left: 17.5%;"> 
+                                <button class="menu-button" onclick="window.location.href='Fundamental/Connection/index.html'">Tipos de Conexão</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 73.2%; left: 17.5%;"> 
+                                <button class="menu-button" onclick="window.location.href='Fundamental/Configuração&Manutenção/index.html'">Kit de Configuração e Manutenção do Sistema</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-button-container" style="top: 10.9%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='ComputerNetwork/Endereçamentos/index.html'">Registros de Endereçamento</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 20.6%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='ComputerNetwork/Comunicação/index.html'">Redes de Comunicação</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 30.4%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='ComputerNetwork/Arquitetura&Dispositivos/index.html'">Arquitetura de Redes e Disposítivos Físicos</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 40.2%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='ComputerNetwork/Conectividade/index.html'">Tecnologias de Conectividade</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 49.9%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='ComputerNetwork/Classificação/index.html'">Classificação de Redes</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 59.6%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='ComputerNetwork/Segurança/index.html'">Segurança de Redes</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 69.45%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='ComputerNetwork/Comandos/index.html'">Comando de Configuração de Redes em Máquinas</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 79.1%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='ComputerNetwork/Softwares/index.html'">Softwares Usados para Gerir e Analisar Redes</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 88.9%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='ComputerNetwork/Configurações/index.html'">Configuração de Redes entre Máquinas</button>
-                    </div>
-                </div>
-            </div>
 
-            <!--Botão Basics of Virtualization-->
-            <div class="button-container" style="top: 27.42%; left: 51.7%;">
-                <button class="topic-button" id="Virtualização-btn">Basics of Virtualization</button>
+                    <!-- Botão Operating Systems ----------------------------------------------------------------------------------->
+                    <div class="button-container" style="top: 10.33%; left: 51.7%;">
+                        <button class="topic-button" id="operating-systems-btn">Operating Systems</button>
+                        <!-- Menu SVG oculto inicialmente para Operating Systems --------------------------------------------------->
+                        <div id="operating-systems-menu" class="menu hidden">
+                            <img src="imagens/Operating_systems.svg" alt="Operating Systems Menu">
+                            <!-- Botões dentro do menu para Operating Systems ------------------------------------------------------>
+                            <div class="menu-button-container" style="top: 1.6%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='SO/Tipos/index.html'">Tipos de Sistemas Operacionais</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 15.4%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='SO/Arquitetura/index.html'">Componentes e Arquitetura do Sistema Operacional</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 29.2%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='SO/Instalação/index.html'">Instalação e Configuração de Sistemas Operacionais</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 43%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='SO/Administração/index.html'">Gestão e Administração do Sistema</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 56.8%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='SO/Segurança/index.html'">Segurança em Sistemas Operacionais</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 70.6%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='SO/Comandos/index.html'">Comandos e Ferramentas Essenciais</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 84.2%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='SO/Interoperabilidade/index.html'">Interoperabilidade entre Sistemas Operacionais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botão Computer Networks ------------------------------------------------------------------------------------->
+                    <div class="button-container" style="top: 19.5%; left: 14.4%;">
+                        <button class="topic-button" id="computer-networks-btn">Computer Networks</button>
+
+                        <!-- Menu SVG para Computer Networks ------------------------------------------------------------------------->
+                        <div id="computer-networks-menu" class="menu hidden">
+                            <img src="imagens/computer_network.svg" alt="Computer Networks Menu">
+                            <!-- Botões dentro do menu para Computer Networks -------------------------------------------------------->
+                            <div class="menu-button-container" style="top: 1.2%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='ComputerNetwork/Internet/index.html'">Internet</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 10.9%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='ComputerNetwork/Endereçamentos/index.html'">Registros de Endereçamento</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 20.6%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='ComputerNetwork/Comunicação/index.html'">Redes de Comunicação</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 30.4%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='ComputerNetwork/Arquitetura&Dispositivos/index.html'">Arquitetura de Redes e Disposítivos Físicos</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 40.2%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='ComputerNetwork/Conectividade/index.html'">Tecnologias de Conectividade</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 49.9%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='ComputerNetwork/Classificação/index.html'">Classificação de Redes</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 59.6%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='ComputerNetwork/Segurança/index.html'">Segurança de Redes</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 69.45%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='ComputerNetwork/Comandos/index.html'">Comando de Configuração de Redes em Máquinas</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 79.1%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='ComputerNetwork/Softwares/index.html'">Softwares Usados para Gerir e Analisar Redes</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 88.9%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='ComputerNetwork/Configurações/index.html'">Configuração de Redes entre Máquinas</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Botão Basics of Virtualization-------------------------------------------------------------------------------------->
+                    <div class="button-container" style="top: 27.42%; left: 51.7%;">
+                        <button class="topic-button" id="Virtualização-btn">Basics of Virtualization</button>
+                    
+                        <!-- Menu SVG para Basics of virtualization ------------------------------------------------------------------------>
+                        <div id="Virtualization-menu" class="menu hidden">
+                        <img src="imagens/Virtualização.svg" alt="Virtualização Menu">
+                            
+                            <!-- bOTOES DO MENU VIRTUALIZATION------------------------------------------------------------------------------>
+                            <div class="menu-button-container" style="top: 2.9%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Virtualização/Tipos/index.html'">Tecnologias e Tipos de Virtualização</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 26.4%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Virtualização/Máquinas/index.html'">Instalação e Configuração de Máquinas Virtuais</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 49.8%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Virtualização/ISO/index.html'">ISO</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 73.2%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Virtualização/Segurança/index.html'">Segurança em Ambientes Virtualizados</button>
+                            </div>
+                        </div>
+                    </div>
+                            
+
+                    <!--Botão Security Knowledge--------------------------------------------------------------------------------------------->
+                    <div class="button-container" style="top: 36.55%; left: 14.4%;">
+                        <button class="topic-button" id="security-knowledge-btn">Security Knowledge</button>
+
+                        <!-- Menu para Security Knowledge------------------------------------------------------------------------------------>
+                        <div id="Security_knowledge-menu" class="menu hidden">
+                            <img src="imagens/Security_knowledge.svg" alt="Security Knowledge Menu">
+
+                            <!-- bOTOES DO MENU SECURITY KNOWLEDGE--------------------------------------------------------------------------->
+                            <div class="menu-button-container" style="top: 1.5%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Security/Fundamentos/index.html'">Fundamentos de Segurança da Informação</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 13.6%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Security/Políticas de Segurança/index.html'">Políticas e Padrões de Segurança da Informação</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 25.7%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Security/Ataques e Ameaças/index.html'">Tipos de Ataques e ameaças</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 37.8%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Security/Divisões em Cibersegurança/index.html'">Divisões e Áreas em Cibersegurança</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 49.9%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Security/Vulnerabilidades/index.html'">Vulnerabilidades</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 62%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Security/Criptografia/index.html'">Criptografia e Proteção de Dados</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 74.1%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Security/Acesso e Autenticação/index.html'">Controlo de Acesso e Autenticação</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 86.2%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Security/Defesa Cibernética/index.html'">Defesa Cibernética</button>
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                    
+                    <!--Botão do Cloud Skills------------------------------------------------------------------------------------------------>
+                    <div class="button-container" style="top: 44.5%; left: 51.7%;">
+                        <button class="topic-button" id="cloud-skills-btn">Cloud Skills</button>
+
+                        <!-- Menu para Cloud Skills------------------------------------------------------------------------------------------>
+                        <div id="cloud-skills-menu" class="menu hidden">
+                            <img src="imagens/cloud_skills.svg" alt="Cloud Skills Menu">
+                        
+                            <!--Botões do menu Cloud Skills---------------------------------------------------------------------------------->
+                            <div class="menu-button-container" style="top: 2.3%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Clouds/Knowledge/index.html'">Clouds Knowledge</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 21.4%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Clouds/Modelos/index.html'">Modelos de Serviços</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 40.4%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Clouds/Tipos/index.html'">Tipos de Nuvens</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 59.4%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Clouds/Provedores/index.html'">Provedores de Cloud</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 78.4%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Clouds/Storage/index.html'">Cloud Storage</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--Botão de Progamming Skills-------------------------------------------------------------------------------------------->
+                    <div class="button-container" style="top: 53.65%; left: 14.4%;">
+                        <button class="topic-button" id="programming-skills-btn">Programming Skills</button>
+
+                        <!-- Menu para Programming Skills------------------------------------------------------------------------------------->
+                        <div id="programming-skills-menu" class="menu hidden">
+                            <img src="imagens/Programming_skills.svg" alt="Progamming Skills Menu">
+
+                            <!--Botões do menu Programming Skills----------------------------------------------------------------------------->
+                            <div class="menu-button-container" style="top: 1.7%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Programação/Essênciais/index.html'">Linguagens de Programação Essências </button>
+                            </div>
+                            <div class="menu-button-container" style="top: 15.5%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Programação/scripts/index.html'">Linguagens de Script</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 29.2%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Programação/web/index.html'">Programação para Web</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 43%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Programação/segurança/index.html'">Práticas de Codificação Segura</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 56.8%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Programação/Automação/index.html'">APIs e Automação</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 70.5%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Programação/versões/index.html'">Controle de Versão</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 84.3%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Programação/Ferramentas/index.html'">Programação para Ferramentas de Segurança</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Botão do Cyber Distros & Tools---------------------------------------------------------------------------------------->
+                    <div class="button-container" style="top: 62.2%; left: 51.7%;">
+                        <button class="topic-button" id="distros-tools-btn">Cyber Distros & Tools</button>
+
+                        <!-- Menu para Cyber Distros & Tools----------------------------------------------------------------------------------->
+                        <div id="distros-tools-menu" class="menu hidden">
+                            <img src="imagens/Distros_tools.svg" alt="Cyber Distros & Tools Menu">
+
+                            <!--Botões para o menu Cyber Distros & Tools----------------------------------------------------------------------->
+                            
+                            <div class="menu-button-container" style="top: 1.2%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Distros/Kali/index.html'">Kali Linux</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 10.9%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Distros/Parrot/index.html'">Parrot Security OS</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 20.7%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Distros/BlackArch/index.html'">BlackArch Linux</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 30.37%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Distros/BackBox/index.html'">BackBox Linux</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 40.18%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Distros/DEFT/index.html'">DEFT</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 49.87%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Distros/CAINE/index.html'">CAINE</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 59.6%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Distros/Pentoo/index.html'">Pentoo</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 69.4%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Distros/Fedora/index.html'">Fedora Security Lab</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 79.15%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Distros/SamuraiWTF/index.html'">Samurai Web Testing Framework</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 88.85%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Distros/ArchStrike/index.html'">ArchStrike</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--Botão para Web : Server Essentials------------------------------------------------------------------------------------------->
+                    <div class="button-container" style="top: 70.75%; left: 14.4%;">
+                        <button class="topic-button" id="web-btn">Web: Server Essentials</button>
+
+                        <!-- Menu para Web: Server Essential----------------------------------------------------------------------------------------->
+                        <div id="web-menu" class="menu hidden">
+                            <img src="imagens/web.svg" alt="Web: Server Essentials Menu">
             
-                <!-- Menu SVG para Basics of virtualization -->
-                <div id="Virtualization-menu" class="menu hidden">
-                <img src="imagens/Virtualização.svg" alt="Virtualização Menu">
-                    
-                    <!-- bOTOES DO MENU VIRTUALIZATION-->
-                    <div class="menu-button-container" style="top: 2.9%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Virtualização/Tipos/index.html'">Tecnologias e Tipos de Virtualização</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 26.4%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Virtualização/Máquinas/index.html'">Instalação e Configuração de Máquinas Virtuais</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 49.8%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Virtualização/ISO/index.html'">ISO</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 73.2%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Virtualização/Segurança/index.html'">Segurança em Ambientes Virtualizados</button>
-                    </div>
-                </div>
-            </div>
-                    
+                            <!--Botões do menu Server Essentials------------------------------------------------------------------------------------->
+                            <div class="menu-button-container" style="top: 1.75%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Web/Servidores/index.html'">Servidores Web</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 15.45%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Web/E-mail Server/index.html'">Servidores de E-mail</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 29.2%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Web/Banco de Dados/index.html'">Servidores de Banco de Dados</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 42.95%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Web/Administração/index.html'">Administração de Sistemas</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 56.75%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Web/CMS/index.html'">Content Management Systems (CMS)</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 70.55%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Web/Security/index.html'">Segurança em Servidores Web </button>
+                            </div>
+                            <div class="menu-button-container" style="top: 84.26%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Web/Hospedagem/index.html'">Hospedagem Web</button>
+                            </div>
 
-            <!--Botão Security Knowledge-->
-            <div class="button-container" style="top: 36.55%; left: 14.4%;">
-                <button class="topic-button" id="security-knowledge-btn">Security Knowledge</button>
 
-                <!-- Menu para Security Knowledge-->
-                <div id="Security_knowledge-menu" class="menu hidden">
-                    <img src="imagens/Security_knowledge.svg" alt="Security Knowledge Menu">
+                        </div>
+                    </div>
 
-                    <!-- bOTOES DO MENU SECURITY KNOWLEDGE-->
-                    <div class="menu-button-container" style="top: 1.5%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Security/Fundamentos/index.html'">Fundamentos de Segurança da Informação</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 13.6%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Security/Políticas de Segurança/index.html'">Políticas e Padrões de Segurança da Informação</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 25.7%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Security/Ataques e Ameaças/index.html'">Tipos de Ataques e ameaças</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 37.8%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Security/Divisões em Cibersegurança/index.html'">Divisões e Áreas em Cibersegurança</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 49.9%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Security/Vulnerabilidades/index.html'">Vulnerabilidades</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 62%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Security/Criptografia/index.html'">Criptografia e Proteção de Dados</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 74.1%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Security/Acesso e Autenticação/index.html'">Controlo de Acesso e Autenticação</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 86.2%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Security/Defesa Cibernética/index.html'">Defesa Cibernética</button>
-                    </div>
-                
-                </div>
-            </div>
+                    <!--Botão Others----------------------------------------------------------------------------------------------------------------->
+                    <div class="button-container" style="top: 79.85%; left: 51.7%;">
+                        <button class="topic-button" id="others-btn">Others</button>
 
+                        <!--Menu para Others--------------------------------------------------------------------------------------------------------->
+                        <div id="others-menu" class="menu hidden">
+                            <img src="imagens/others.svg" alt="Others Menu">
             
-            <!--Botão do Cloud Skills-->
-            <div class="button-container" style="top: 44.5%; left: 51.7%;">
-                <button class="topic-button" id="cloud-skills-btn">Cloud Skills</button>
-
-                <!-- Menu para Cloud Skills-->
-                <div id="cloud-skills-menu" class="menu hidden">
-                    <img src="imagens/cloud_skills.svg" alt="Cloud Skills Menu">
-                
-                    <!--Botões do menu Cloud Skills-->
-                    <div class="menu-button-container" style="top: 2.3%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Clouds/Knowledge/index.html'">Clouds Knowledge</button>
+                            <!--Botões do menu Others------------------------------------------------------------------------------------------------>
+                            <div class="menu-button-container" style="top: 5.2%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Others/Pentest/index.html'">Hacking & Pentest</button>
+                            </div>
+                            <div class="menu-button-container" style="top: 49.6%; left: 17.6%;">
+                                <button class="menu-button" onclick="window.location.href='Others/Recursos/index.html'">Documentação e Recursos</button>
+                            </div>
+                        </div>          
                     </div>
-                    <div class="menu-button-container" style="top: 21.4%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Clouds/Modelos/index.html'">Modelos de Serviços</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 40.4%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Clouds/Tipos/index.html'">Tipos de Nuvens</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 59.4%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Clouds/Provedores/index.html'">Provedores de Cloud</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 78.4%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Clouds/Storage/index.html'">Cloud Storage</button>
-                    </div>
-
                 </div>
             </div>
 
-            <!--Botão de Progamming Skills-->
-            <div class="button-container" style="top: 53.65%; left: 14.4%;">
-                <button class="topic-button" id="programming-skills-btn">Programming Skills</button>
-
-                <!-- Menu para Programming Skills-->
-                <div id="programming-skills-menu" class="menu hidden">
-                    <img src="imagens/Programming_skills.svg" alt="Progamming Skills Menu">
-
-                     <!--Botões do menu Programming Skills-->
-                     <div class="menu-button-container" style="top: 1.7%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Programação/Essênciais/index.html'">Linguagens de Programação Essências </button>
-                    </div>
-                    <div class="menu-button-container" style="top: 15.5%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Programação/scripts/index.html'">Linguagens de Script</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 29.2%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Programação/web/index.html'">Programação para Web</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 43%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Programação/segurança/index.html'">Práticas de Codificação Segura</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 56.8%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Programação/Automação/index.html'">APIs e Automação</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 70.5%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Programação/versões/index.html'">Controle de Versão</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 84.3%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Programação/Ferramentas/index.html'">Programação para Ferramentas de Segurança</button>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Botão do Cyber Distros & Tools-->
-            <div class="button-container" style="top: 62.2%; left: 51.7%;">
-                <button class="topic-button" id="distros-tools-btn">Cyber Distros & Tools</button>
-
-                 <!-- Menu para Cyber Distros & Tools-->
-                 <div id="distros-tools-menu" class="menu hidden">
-                    <img src="imagens/Distros_tools.svg" alt="Cyber Distros & Tools Menu">
-
-                    <!--Botões para o menu Cyber Distros & Tools-->
-                    
-                    <div class="menu-button-container" style="top: 1.2%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Distros/Kali/index.html'">Kali Linux</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 10.9%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Distros/Parrot/index.html'">Parrot Security OS</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 20.7%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Distros/BlackArch/index.html'">BlackArch Linux</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 30.37%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Distros/BackBox/index.html'">BackBox Linux</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 40.18%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Distros/DEFT/index.html'">DEFT</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 49.87%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Distros/CAINE/index.html'">CAINE</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 59.6%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Distros/Pentoo/index.html'">Pentoo</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 69.4%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Distros/Fedora/index.html'">Fedora Security Lab</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 79.15%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Distros/SamuraiWTF/index.html'">Samurai Web Testing Framework</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 88.85%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Distros/ArchStrike/index.html'">ArchStrike</button>
-                    </div>
-
-                 </div>
-            </div>
-
-            <!--Botão para Web : Server Essentials-->
-            <div class="button-container" style="top: 70.75%; left: 14.4%;">
-                <button class="topic-button" id="web-btn">Web: Server Essentials</button>
-
-                <!-- Menu para Web: Server Essential-->
-                <div id="web-menu" class="menu hidden">
-                    <img src="imagens/web.svg" alt="Web: Server Essentials Menu">
-    
-                    <!--Botões do menu Server Essentials-->
-                    <div class="menu-button-container" style="top: 1.75%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Web/Servidores/index.html'">Servidores Web</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 15.45%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Web/E-mail Server/index.html'">Servidores de E-mail</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 29.2%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Web/Banco de Dados/index.html'">Servidores de Banco de Dados</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 42.95%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Web/Administração/index.html'">Administração de Sistemas</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 56.75%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Web/CMS/index.html'">Content Management Systems (CMS)</button>
-                    </div>
-                    <div class="menu-button-container" style="top: 70.55%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Web/Security/index.html'">Segurança em Servidores Web </button>
-                    </div>
-                    <div class="menu-button-container" style="top: 84.26%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Web/Hospedagem/index.html'">Hospedagem Web</button>
-                    </div>
+            </section>
+            <!------------------------------Fim da Seção Inicio------------------------------------------------------------------------------------------------------------------->
 
 
-                </div>
-            </div>
 
-            <!--Botão Others-->
-            <div class="button-container" style="top: 79.85%; left: 51.7%;">
-                <button class="topic-button" id="others-btn">Others</button>
+            <!------------------------------Inicio da Seção Sobre ---------------------------------------------------------------------------------------------------------------->
+            <section id="about" class="content-section" style="display: none;">
+                <h1>Sobre o Cybersecurity Roadmap</h1>
+                <p>O roadmap de cibersegurança foi criado para ajudar iniciantes e profissionais a navegarem pelos diferentes aspectos da segurança digital.</p>
+            </section>
+            <!------------------------------Fim da seção Sobre-------------------------------------------------------------------------------------------------------------------->
 
-                  <!-- Menu para Others-->
-                  <div id="others-menu" class="menu hidden">
-                     <img src="imagens/others.svg" alt="Others Menu">
-    
-                     <!--Botões do menu Others-->
-                     <div class="menu-button-container" style="top: 5.2%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Others/Pentest/index.html'">Hacking & Pentest</button>
-                     </div>
-                     <div class="menu-button-container" style="top: 49.6%; left: 17.6%;">
-                        <button class="menu-button" onclick="window.location.href='Others/Recursos/index.html'">Documentação e Recursos</button>
-                     </div>
-                </div>          
-            </div>
+            <!------------------------------Inicio da Seção Progresso ------------------------------------------------------------------------------------------------------------>
+            <section id="progress" class="content-section" style="display: none;">
+                <h1>Veja o seu Progresso</h1>
+                <p>Pode consular o seu progresso de cada tópico.</p>
+            </section>
+            <!------------------------------Fim da Seção de Progresso------------------------------------------------------------------------------------------------------------->
+
+
+            <!-------------------------------Inicio da Seção Contato ------------------------------------------------------------------------------------------------------------->
+            <section id="contact" class="content-section" style="display: none;">
+                <h1>Contato</h1>
+                <p>Entre em contato conosco para mais informações sobre cibersegurança e treinamentos.</p>
+            </section>
+            <!-------------------------------Fim da seção de contato-------------------------------------------------------------------------------------------------------------->
+
         </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+        <!------------------------------------Fim das seções de conteudos--------------------------------------------------------------------------------------------------------->
+
+            <script src="script.js"></script>
+
+        
+        <!-----------------------------------Inicio do Rodapé--------------------------------------------------------------------------------------------------------------------->    
+        <footer class="footer">
+            <div class="footer-content">
+        
+                <!-- Primeira Seção: Cybersecurity centralizado e com letra grande -->
+                <div class="footer-section footer-title">
+                    <h1>Cybersecurity</h1>
+                </div>
+        
+                <!-- Segunda Seção: Sobre e Direitos Reservados --------------------->
+                <div class="footer-section">
+                    <h2>Sobre</h2>
+                    <p>Aprenda sobre Cybersecurity. Proteja seus dados e mantenha-se atualizado com as melhores práticas de segurança cibernética.</p>            
+                    <p>&copy; 2024 Cybersecurity. Todos os direitos reservados.</p>
+                </div>
+        
+                <!-- Terceira Seção: Links Úteis ------------------------------------>
+                <div class="footer-section">
+                    <h2>Links Úteis</h2>
+                    <p>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Serviços</a></li>
+                    </ul>
+                    </p>
+        
+                </div>
+        
+                <!-- Última Seção: Botão para Voltar ao Topo ------------------------>
+                <div class="footer-section footer-back-to-top">
+                    <!-- Imagem de fundo do botão -->
+                    <div class="back-to-top-container">
+                        <h2>Voltar ao Topo</h2>
+                        <a href="#top" class="back-to-top" aria-label="Voltar ao topo">
+                            <img src="imagens/botao_rodapé.svg" alt="Voltar ao Topo" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>        
+        <!-----------------------------------Fim do rodapé------------------------------------------------------------------------------------------------------------------------>
+
+        </body>
+        </html>

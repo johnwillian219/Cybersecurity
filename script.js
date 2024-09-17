@@ -102,3 +102,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+ // Função para mostrar a seção selecionada e ocultar as outras
+ function showSection(sectionId) {
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+        section.style.display = 'none'; // Esconde todas as seções
+    });
+    document.getElementById(sectionId).style.display = 'block'; // Mostra a seção selecionada
+}
+
+// Mostra a seção Início por padrão
+showSection('home');

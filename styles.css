@@ -1,14 +1,16 @@
-/* Estilos gerais do corpo */
+/* Estilos gerais do corpo --------------------------------------------------------------------------*/
 body {
     margin: 0;
     padding: 0;
-    background-color: #111;
+    background-color: #111; /* Fundo preto */
+    color: #fff; /* Texto em branco por padrão */
+    font-family: Arial, sans-serif;
     overflow-y: scroll;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: column;
     height: 100vh;
 }
+
 
 /* Contêiner principal */
 .main-container {
@@ -20,8 +22,8 @@ body {
 .roadmap-container {
     position: relative;
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: flex;
+    justify-content: flex-start;
 }
 
 /* Estilo da imagem do roadmap */
@@ -122,3 +124,280 @@ body {
 .menu-button:active {
     color: #FFFFFF;
 }
+
+/* Cabeçalho -----------------------------------------------------------------------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    background-color: #222; /* Cor de fundo do cabeçalho */
+    border-bottom: 1px solid #333;
+}
+
+/* Estilo da logo */
+header .logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilo da navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff; /* Texto em branco */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00FF00; /* Cor do texto ao passar o mouse (verde) */
+}
+
+/* Barra de busca */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff; /* Texto da barra de busca em branco */
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #00FF00;
+    border: none;
+    color: #000; /* Texto do botão de busca */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-bar button:hover {
+    background-color: #666; /* Cor do botão ao passar o mouse */
+}
+
+/* Contêiner do conteúdo */
+.content-container {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: flex-start;
+}
+
+/* Seções de conteúdo */
+.content-section {
+    display: none;
+}
+
+.content-section h1 {
+    color: #fff; /* Cor do título em branco */
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    color: #ccc; /* Cor do texto do parágrafo em cinza claro */
+}
+
+/* Exibir seção ativa */
+.content-section.active {
+    display: block;
+}
+
+
+/* Estilo do rodapé -------------------------------------------------------------------------------------*/
+.footer {
+    background-color: #222; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px; /* Tamanho da fonte */
+    position: relative; /* Permite que o botão "Voltar ao Topo" fique posicionado corretamente */
+}
+
+/* Estilo do conteúdo do rodapé */
+.footer-content {
+    display: flex; /* Flexbox para layout em linha */
+    justify-content: space-around; /* Distribui o espaço igualmente */
+    flex-wrap: wrap; /* Permite a quebra de linha */
+    margin-bottom: 20px; /* Espaçamento inferior antes do rodapé inferior */
+}
+
+.footer-section {
+    flex: 1; /* Cada seção ocupa o mesmo espaço */
+    min-width: 200px; /* Largura mínima para seções */
+    padding: 10px; /* Espaçamento interno das seções */
+}
+
+.footer-section h2 {
+    font-size: 18px; /* Tamanho do título das seções */
+    margin-top: 0; /* Remove a margem superior */
+    margin-bottom: 10px; /* Margem inferior para separar o título do conteúdo */
+}
+
+.footer-section ul {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+
+.footer-section a {
+    color: #00FF00; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+/* Estilo do conteúdo do rodapé */
+.footer-content {
+    display: flex; /* Flexbox para layout em linha */
+    justify-content: space-between; /* Distribui o espaço entre as seções */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    flex-wrap: nowrap; /* Impede que os itens quebrem para a próxima linha */
+    gap: 1px; /* Espaçamento geral entre as seções */
+    margin-bottom: 0px; /* Espaçamento inferior */
+}
+
+/* Primeira seção (Cybersecurity) centralizada horizontalmente */
+.footer-title {
+    flex: 1 1 25%; /* Ocupa 25% da largura */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 0;
+}
+
+.footer-title h1 {
+    font-size: 36px; /* Aumenta o tamanho do título */
+    margin: 0; /* Remove as margens padrão */
+    color: #00FF00; /* Cor verde (igual ao cabeçalho) */
+}
+
+/* Segunda seção (Sobre e Direitos Reservados) ocupa um pouco mais de espaço */
+.footer-section {
+    flex: 1 1 100%; /* Aumenta para 40% da largura */
+    padding: 0px;
+    text-align: center;
+}
+
+/* Terceira seção (Links Úteis) */
+.footer-section:last-of-type {
+    flex: 1 1 1%; /* Ocupa 20% da largura */
+    padding: 0px;
+    text-align: center;
+}
+
+/* Última seção (botão Voltar ao Topo) ocupa menos espaço */
+.footer-back-to-top {
+    flex: 0 0 1%; /* Ocupa 10% da largura */
+    text-align: right; /* Alinha o botão à direita */
+    padding: 0px;
+}
+
+/* Estilo do botão Voltar ao Topo */
+.back-to-top-container {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão ao final (direita) */
+}
+
+.back-to-top img {
+    width: 50px; /* Define o tamanho da imagem SVG */
+    height: 50px;
+    cursor: pointer;
+}
+
+.back-to-top {
+    display: block;
+    width: 50px; /* Define o tamanho do botão */
+    height: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Efeito hover sobre a imagem do botão */
+.back-to-top img:hover {
+    opacity: 0.8; /* Pequena alteração na opacidade ao passar o mouse */
+}
+
+/* Mudar a cor ao clicar (estado ativo) */
+.back-to-top:active img {
+    filter: brightness(50%); /* Torna o botão mais escuro (cinza) ao clicar */
+    transition: filter 0.2s; /* Adiciona uma transição suave */
+}
+
+/* Mudar a cor ao passar o mouse */
+.back-to-top img:hover {
+    filter: brightness(80%); /* Torna o botão mais escuro ao passar o mouse */
+    transition: filter 0.2s; /* Suaviza a mudança */
+}
+
+
+/* Seções do rodapé (Sobre, Links Úteis) */
+.footer-section h2 {
+    font-size: 18px; /* Tamanho do título das seções */
+    margin-top: 0; /* Remove a margem superior */
+    margin-bottom: 0px; /* Espaçamento inferior */
+}
+
+.footer-section ul {
+    list-style: none; /* Remove marcadores */
+    padding: 0; /* Remove preenchimento */
+    margin: 0; /* Remove margem */
+}
+
+.footer-section ul li {
+    margin-bottom: 7px; /* Espaçamento entre itens */
+}
+
+.footer-section ul li a {
+    color: #00FF00; /* Cor dos links */
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline; /* Sublinha os links ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-wrap: wrap; /* Permite quebra em linha para telas menores */
+        gap: 10px; /* Reduz o espaçamento entre as seções em telas pequenas */
+    }
+
+    .footer-section, .footer-title, .footer-back-to-top {
+        flex: 1 1 100%; /* Cada seção ocupa 100% da largura em telas pequenas */
+        text-align: center; /* Alinha todos os elementos ao centro */
+        margin-bottom: 20px;
+    }
+
+    .footer-back-to-top {
+        text-align: center; /* Alinha o botão ao centro em telas pequenas */
+    }
+}
+

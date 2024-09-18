@@ -9,34 +9,56 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
 }
 
 
-/* Contêiner principal */
+
+/* Estilos da seção home */
+#home {
+    padding: 20px;
+}
+
+/* Contêiner principal da home (para posicionar as subseções lado a lado) */
 .main-container {
     display: flex;
+    justify-content: space-between; /* Distribui as subseções com espaço entre elas */
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 20px; /* Espaço entre o roadmap e o computador */
     width: 100%;
+    box-sizing: border-box;
 }
 
-/* Contêiner da imagem do roadmap */
-.roadmap-container {
-    position: relative;
+/* Sub-seção (tanto a do computador quanto a do roadmap) */
+.subsection {
+    flex: 1; /* Faz com que ambas as subseções ocupem o mesmo espaço */
     display: flex;
-    align-items: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contêiner da imagem do roadmap (alinhado à direita) */
+.roadmap-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end; /* Empurra a imagem para o lado direito */
 }
 
 /* Estilo da imagem do roadmap */
 .roadmap-image {
-    width: auto;
+    width: 100%;
     height: auto;
     display: block;
+    max-width: 500px; /* Limita a largura da imagem */
 }
+
 
 /* Contêiner para botões de tópicos */
 .button-container {
     position: absolute;
 }
+
+
 
 /* Estilo padrão dos botões de tópicos */
 .topic-button {
@@ -133,6 +155,7 @@ header {
     padding: 18px 20px;
     background-color: #222; /* Cor de fundo do cabeçalho */
     border-bottom: 1px solid #333;
+    box-sizing: border-box;
 }
 
 /* Estilo da logo */
@@ -233,6 +256,8 @@ nav ul li a:hover {
     text-align: center; /* Centraliza o texto */
     font-size: 14px; /* Tamanho da fonte */
     position: relative; /* Permite que o botão "Voltar ao Topo" fique posicionado corretamente */
+    box-sizing: border-box;
+
 }
 
 /* Estilo do conteúdo do rodapé */
@@ -401,3 +426,137 @@ nav ul li a:hover {
     }
 }
 
+
+/* --------------Animação-------------------------------------------------------------------------------------------------------------*/
+
+/* Estilo do contêiner do computador (alinhado à esquerda) */
+.computer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin-left: 0; /* Garante que o contêiner do computador fique à esquerda */
+}
+
+/* Monitor do computador */
+.monitor {
+    width: 300px;
+    height: 200px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgb(255, 254, 254);
+    position: relative;
+    border: 2px solid #ffffff; /* Adiciona a borda branca */
+
+}
+
+/* Tela do monitor */
+.screen {
+    width: 90%;
+    height: 85%;
+    background-color: #444141;
+    margin: 10px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #00ff00; /* Adiciona a borda verde */
+    border-radius: 5px; /* Para um efeito arredondado nas bordas */
+}
+
+
+/* Cadeado (aparece na tela do monitor) */
+.lock-icon {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    background-color: #00FF00;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: appear 2s forwards 1s; /* Animação de aparecer */
+}
+
+/* Arco do cadeado (corrigido) */
+.lock-icon::before {
+    content: "";
+    position: absolute;
+    top: -35px; /* Levanta o arco para ficar mais visível */
+    left: 10px; /* Ajuste horizontal para centralizar */
+    width: 30px; /* Largura do arco */
+    height: 40px; /* Altura do arco */
+    border: 5px solid #00FF00; /* Cor e espessura do arco */
+    border-radius: 20px 20px 0 0; /* Bordas arredondadas apenas na parte superior */
+    background-color: transparent;
+}
+
+/* Parte de baixo do computador */
+.base {
+    width: 180px;
+    height: 20px;
+    background-color: #444;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffffff; /* Adiciona a borda branca */
+}
+
+/* Animação de aparecer e desaparecer o cadeado */
+@keyframes appear-disappear {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    25% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    75% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Aplica a animação ao cadeado */
+.lock-icon {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    background-color: #00FF00;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: appear-disappear 10s infinite; /* Aparece e desaparece a cada 5 segundos */
+}
+
+
+/*-----------------Animação de Texto---------------------------*/
+.animation_text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.animated-text {
+    color: #00FF00;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInOut 10s infinite; /* Atualiza a duração da animação para 10 segundos */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

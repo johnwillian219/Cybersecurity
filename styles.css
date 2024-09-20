@@ -52,6 +52,34 @@ section {
     box-sizing: border-box;
     /* Garante que largura e altura incluam o padding e borda */
 }
+
+/* Prevenir que elementos escapem do container */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Garante que largura e altura incluam padding e borda */
+
+}
+/* Media query para telas pequenas */
+@media (max-width: 768px) {
+    .site-container {
+        padding: 10px;
+        /* Reduz o padding em telas pequenas */
+        min-height: 100vh;
+        /* Garante que o container ocupe toda a tela */
+    }
+
+    .full-height {
+        margin-bottom: 10px;
+        /* Reduz o espaço entre seções em telas pequenas */
+    }
+
+    section {
+        padding: 10px;
+        /* Reduz o padding dentro das seções */
+    }
+}
 /********************************************************************** Cabeçalho *****************************************************************/
 
 header {

@@ -115,57 +115,38 @@ window.addEventListener('click', function(event) {
 
 
 //seção 1-------------------------------
-// script.js
+function updateProgress() {
+    const totalCheckboxes = 255; // Total de checkboxes em todos os módulos
+    let checkedCount = 0;
 
-function updateCheckbox(checkbox) {
-    const progressValue = parseFloat(checkbox.dataset.progress);
-    const currentKey = window.location.pathname; // Usa o caminho da URL para identificar a página
-    const storageKey = `${currentKey}_${checkbox.parentElement.textContent.trim()}`; // Cria uma chave única para o checkbox
+    for (let i = 0; i < totalCheckboxes; i++) {
+        const isChecked = localStorage.getItem(`checkbox_${i}`) === 'true';
+        if (isChecked) {
+            checkedCount++;
+        }
+    }
 
-    // Armazena o estado do checkbox no localStorage
-    localStorage.setItem(storageKey, checkbox.checked);
-    calculateProgress();
+    const progressPercentage = (checkedCount / totalCheckboxes) * 100;
+    document.querySelector('.progress-text').innerText = `${progressPercentage.toFixed(2)}%`;
+
+    // Atualiza o título com base no progresso
+    const sectionTitle = document.querySelector('.section-title');
+    if (progressPercentage === 0) {
+        sectionTitle.innerText = "Let's Start";
+    } else if (progressPercentage > 0 && progressPercentage < 100) {
+        sectionTitle.innerText = "Keep Going";
+    } else if (progressPercentage === 100) {
+        sectionTitle.innerText = "Congratulations!";
+    }
 }
 
-function calculateProgress() {
-    const currentKey = window.location.pathname; // Usa o caminho da URL para identificar a página
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    let totalProgress = 0;
-    let totalCheckboxes = 0;
-
-    checkboxes.forEach(checkbox => {
-        const progressValue = parseFloat(checkbox.dataset.progress);
-        const storageKey = `${currentKey}_${checkbox.parentElement.textContent.trim()}`; // A mesma chave usada ao armazenar
-
-        // Verifica se o checkbox está marcado e soma o progresso
-        if (localStorage.getItem(storageKey) === 'true') {
-            totalProgress += progressValue;
-        }
-        totalCheckboxes += progressValue; // Contabiliza todos os checkboxes
-    });
-
-    // Calcula a porcentagem
-    const percentage = totalCheckboxes > 0 ? (totalProgress / totalCheckboxes) * 100 : 0;
-    document.querySelector('.progress-text').textContent = percentage.toFixed(2) + '%';
-}
-
-// Quando a página carrega, verifica os checkboxes e atualiza o progresso
-window.onload = function() {
-    const currentKey = window.location.pathname;
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-    checkboxes.forEach(checkbox => {
-        const storageKey = `${currentKey}_${checkbox.parentElement.textContent.trim()}`;
-        if (localStorage.getItem(storageKey) === 'true') {
-            checkbox.checked = true; // Marca o checkbox se estiver armazenado como verdadeiro
-        }
-    });
-
-    calculateProgress(); // Calcula o progresso ao carregar
-};
+// Atualiza o progresso ao carregar a página principal
+document.addEventListener('DOMContentLoaded', () => {
+    updateProgress();
+});
 
 
-// seção 2 Seleciona todos os itens de notícias
+// seção 2 Seleciona todos os itens de notícias-----------------------------------//
 const newsItems = document.querySelectorAll('.news-item');
 let currentIndex = 0;
 const totalNewsItems = newsItems.length;

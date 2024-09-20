@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popular Suites</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Configuração e Manutenção</title>
+    <link rel="stylesheet" href="../../styles.css">
 </head>
+
 <body>
     <div class="content-container">
         <h1>Kit de Configuração e Manutenção do Sistema</h1>
-        <p>Bem-vindo à página de Kit de Manutenção e Configuração do Sistema!</p>
-        
-
-        <a href="index.html">Voltar ao Roadmap</a> <!-- Link de volta à página principal -->
+    <label class="checkpoint">
+        <input type="checkbox" data-progress="25" onchange="updateCheckbox(this)"> Tarefa 1
+    </label>
+    <label class="checkpoint">
+        <input type="checkbox" data-progress="25" onchange="updateCheckbox(this)"> Tarefa 2
+    </label>
+    <label class="checkpoint">
+        <input type="checkbox" data-progress="25" onchange="updateCheckbox(this)"> Tarefa 3
+    </label>
+    <label class="checkpoint">
+        <input type="checkbox" data-progress="25" onchange="updateCheckbox(this)"> Tarefa 4
+    </label>
+        <a href="../../index.html">Voltar ao Roadmap</a>
     </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

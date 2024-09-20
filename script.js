@@ -1,108 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Referências para botões e menus
-    const fundamentalItSkillsButton = document.getElementById('fundamental-it-skills-btn');
-    const fundamentalItSkillsMenu = document.getElementById('fundamental-it-skills-menu');
-
-    const computerNetworksButton = document.getElementById('computer-networks-btn');
-    const computerNetworksMenu = document.getElementById('computer-networks-menu');
-
-    const operatingSystemsButton = document.getElementById('operating-systems-btn');
-    const operatingSystemsMenu = document.getElementById('operating-systems-menu');
-
-    const VirtualizationButton = document.getElementById('Virtualização-btn');
-    const VirtualizationMenu = document.getElementById('Virtualization-menu');
-
-    const SecurityKnowledgeButton = document.getElementById('security-knowledge-btn');
-    const SecurityKnowledgeMenu = document.getElementById('Security_knowledge-menu');
-
-    const CloudSkillsButton = document.getElementById('cloud-skills-btn');
-    const CloudSkillsMenu = document.getElementById('cloud-skills-menu');
-
-    const ProgrammingSkillsButton = document.getElementById('programming-skills-btn');
-    const ProgrammingSkillsMenu = document.getElementById('programming-skills-menu');
-
-    const DistrosToolsButton = document.getElementById('distros-tools-btn');
-    const DistrosToolsMenu = document.getElementById('distros-tools-menu');
-
-    const WebButton = document.getElementById('web-btn');
-    const WebMenu = document.getElementById('web-menu');
-
-    const OthersButton = document.getElementById('others-btn');
-    const OthersMenu = document.getElementById('others-menu');
-
-
-    let menuFixo = false; // Indica se algum menu está fixo após o clique duplo
-
-    // Função para mostrar/ocultar menu
-    function toggleMenu(menu) {
-        // Esconde todos os menus antes de exibir o novo
-        document.querySelectorAll('.menu').forEach(m => m.classList.remove('visible'));
-
-        // Exibe o menu clicado
-        menu.classList.toggle('visible');
-    }
-
-    // Função para fixar menu ao clicar duas vezes
-    function fixarMenu(menu) {
-        menu.classList.add('visible');
-        menuFixo = true; // Define o menu como fixo
-    }
-
-    // Eventos para os botões de tópicos - mostrar/ocultar menu ao clicar
-    fundamentalItSkillsButton.addEventListener('click', function () {
-        if (!menuFixo) toggleMenu(fundamentalItSkillsMenu);
-    });
-
-    computerNetworksButton.addEventListener('click', function () {
-        if (!menuFixo) toggleMenu(computerNetworksMenu);
-    });
-
-    operatingSystemsButton.addEventListener('click', function () {
-        if (!menuFixo) toggleMenu(operatingSystemsMenu);
-    });
-
-    VirtualizationButton.addEventListener('click', function () {
-        if (!menuFixo) toggleMenu(VirtualizationMenu);
-    });
-
-    SecurityKnowledgeButton.addEventListener('click', function () {
-        if (!menuFixo) toggleMenu(SecurityKnowledgeMenu);
-    });
-
-    CloudSkillsButton.addEventListener('click', function () {
-        if (!menuFixo) toggleMenu(CloudSkillsMenu);
-    });
-
-    ProgrammingSkillsButton.addEventListener('click', function () {
-        if (!menuFixo) toggleMenu(ProgrammingSkillsMenu);
-    });
-
-    DistrosToolsButton.addEventListener('click', function () {
-        if (!menuFixo) toggleMenu(DistrosToolsMenu);
-    });
-
-    WebButton.addEventListener('click', function () {
-        if (!menuFixo) toggleMenu(WebMenu);
-    });
-
-    OthersButton.addEventListener('click', function () {
-        if (!menuFixo) toggleMenu(OthersMenu);
-    });
-
-
-
-    // Eventos globais para esconder menus ao clicar fora deles
-    document.addEventListener('click', function (event) {
-        const isMenu = event.target.closest('.menu') !== null;
-        const isButton = event.target.classList.contains('topic-button');
-
-        // Se não for um clique em menu ou botão e nenhum menu estiver fixo, esconder menus
-        if (!isMenu && !isButton && !menuFixo) {
-            document.querySelectorAll('.menu').forEach(menu => menu.classList.remove('visible'));
-        }
-    });
-});
-
  // Função para mostrar a seção selecionada e ocultar as outras
  function showSection(sectionId) {
     const sections = document.querySelectorAll('.content-section');
@@ -114,3 +9,193 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Mostra a seção Início por padrão
 showSection('home');
+
+// Seleciona o botão e o menu
+const fundamentalSkillsBtn = document.getElementById('fundamental-it-skills-btn');
+const fundamentalSkillsMenu = document.getElementById('fundamental-it-skills-menu');
+
+const OperatingSystemsBtn = document.getElementById('operating-systems-btn');
+const OperatingSystemsMenu = document.getElementById('operating-systems-menu');
+
+const computerNetworksBtn = document.getElementById('computer-networks-btn');
+const computerNetworksMenu = document.getElementById('computer-networks-menu');
+
+const VirtualizationBtn = document.getElementById('Virtualização-btn');
+const VirtualizationMenu = document.getElementById('Virtualization-menu');
+
+const SecurityKnowledgeBtn = document.getElementById('security-knowledge-btn');
+const SecurityKnowledgeMenu = document.getElementById('security-knowledge-menu');
+
+const CloudSkillsBtn = document.getElementById('cloud-skills-btn');
+const CloudSkillsMenu = document.getElementById('cloud-skills-menu');
+
+
+const ProgrammingSkillsBtn = document.getElementById('programming-skills-btn');
+const ProgrammingSkillsMenu = document.getElementById('programming-skills-menu');
+
+const DistrosToolsBtn = document.getElementById('distros-tools-btn');
+const DistrosToolsMenu = document.getElementById('distros-tools-menu');
+
+const WebBtn = document.getElementById('web-btn');
+const WebMenu = document.getElementById('web-menu');
+
+const OthersBtn = document.getElementById('others-btn');
+const OthersMenu = document.getElementById('others-menu');
+
+
+// Adiciona um evento de clique ao botão
+fundamentalSkillsBtn.addEventListener('click', function() {
+    // Alterna a classe 'show' para mostrar ou esconder o menu
+    fundamentalSkillsMenu.classList.toggle('show');
+});
+
+OperatingSystemsBtn.addEventListener('click', function() {
+    // Alterna a classe 'show' para mostrar ou esconder o menu
+    OperatingSystemsMenu.classList.toggle('show');
+});
+
+computerNetworksBtn.addEventListener('click', function() {computerNetworksMenu.classList.toggle('show');});
+VirtualizationBtn.addEventListener('click', function() {VirtualizationMenu.classList.toggle('show');});
+SecurityKnowledgeBtn.addEventListener('click', function() {SecurityKnowledgeMenu.classList.toggle('show');});
+CloudSkillsBtn.addEventListener('click', function() {CloudSkillsMenu.classList.toggle('show');});
+ProgrammingSkillsBtn.addEventListener('click', function() {ProgrammingSkillsMenu.classList.toggle('show');});
+DistrosToolsBtn.addEventListener('click', function() {DistrosToolsMenu.classList.toggle('show');});
+WebBtn.addEventListener('click', function() {WebMenu.classList.toggle('show');});
+OthersBtn.addEventListener('click', function() {OthersMenu.classList.toggle('show');});
+
+
+// Fechar o menu se clicar fora dele
+window.addEventListener('click', function(event) {
+    if (!fundamentalSkillsBtn.contains(event.target) && !fundamentalSkillsMenu.contains(event.target)) {
+        fundamentalSkillsMenu.classList.remove('show');
+    }
+
+    if (!OperatingSystemsBtn.contains(event.target) && !OperatingSystemsMenu.contains(event.target)) {
+        OperatingSystemsMenu.classList.remove('show');
+    }
+
+     if (!computerNetworksBtn.contains(event.target) && !computerNetworksMenu.contains(event.target)) {
+        computerNetworksMenu.classList.remove('show');
+    }
+     if (!VirtualizationBtn.contains(event.target) && !VirtualizationMenu.contains(event.target)) {
+        VirtualizationMenu.classList.remove('show');
+    }
+
+    if (!SecurityKnowledgeBtn.contains(event.target) && !SecurityKnowledgeMenu.contains(event.target)) {
+        SecurityKnowledgeMenu.classList.remove('show');
+    }
+
+     if (!CloudSkillsBtn.contains(event.target) && !CloudSkillsMenu.contains(event.target)) {
+        CloudSkillsMenu.classList.remove('show');
+    }
+
+      if (!ProgrammingSkillsBtn.contains(event.target) && !ProgrammingSkillsMenu.contains(event.target)) {
+        ProgrammingSkillsMenu.classList.remove('show');
+    }
+
+    
+      if (!DistrosToolsBtn.contains(event.target) && !DistrosToolsMenu.contains(event.target)) {
+        DistrosToolsMenu.classList.remove('show');
+    }
+
+    if (!WebBtn.contains(event.target) && !WebMenu.contains(event.target)) {
+        WebMenu.classList.remove('show');
+    }
+
+    if (!OthersBtn.contains(event.target) && !OthersMenu.contains(event.target)) {
+        OthersMenu.classList.remove('show');
+    }
+
+
+
+
+
+
+});
+
+
+//seção 1-------------------------------
+// script.js
+
+function updateCheckbox(checkbox) {
+    const progressValue = parseFloat(checkbox.dataset.progress);
+    const currentKey = window.location.pathname; // Usa o caminho da URL para identificar a página
+    const storageKey = `${currentKey}_${checkbox.parentElement.textContent.trim()}`; // Cria uma chave única para o checkbox
+
+    // Armazena o estado do checkbox no localStorage
+    localStorage.setItem(storageKey, checkbox.checked);
+    calculateProgress();
+}
+
+function calculateProgress() {
+    const currentKey = window.location.pathname; // Usa o caminho da URL para identificar a página
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let totalProgress = 0;
+    let totalCheckboxes = 0;
+
+    checkboxes.forEach(checkbox => {
+        const progressValue = parseFloat(checkbox.dataset.progress);
+        const storageKey = `${currentKey}_${checkbox.parentElement.textContent.trim()}`; // A mesma chave usada ao armazenar
+
+        // Verifica se o checkbox está marcado e soma o progresso
+        if (localStorage.getItem(storageKey) === 'true') {
+            totalProgress += progressValue;
+        }
+        totalCheckboxes += progressValue; // Contabiliza todos os checkboxes
+    });
+
+    // Calcula a porcentagem
+    const percentage = totalCheckboxes > 0 ? (totalProgress / totalCheckboxes) * 100 : 0;
+    document.querySelector('.progress-text').textContent = percentage.toFixed(2) + '%';
+}
+
+// Quando a página carrega, verifica os checkboxes e atualiza o progresso
+window.onload = function() {
+    const currentKey = window.location.pathname;
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach(checkbox => {
+        const storageKey = `${currentKey}_${checkbox.parentElement.textContent.trim()}`;
+        if (localStorage.getItem(storageKey) === 'true') {
+            checkbox.checked = true; // Marca o checkbox se estiver armazenado como verdadeiro
+        }
+    });
+
+    calculateProgress(); // Calcula o progresso ao carregar
+};
+
+
+// seção 2 Seleciona todos os itens de notícias
+const newsItems = document.querySelectorAll('.news-item');
+let currentIndex = 0;
+const totalNewsItems = newsItems.length;
+let newsInterval;
+
+// Função para exibir a notícia atual
+function showNewsItem(index) {
+    newsItems.forEach((item, i) => {
+        item.classList.remove('active');
+        if (i === index) {
+            item.classList.add('active');
+        }
+    });
+}
+
+// Função para mostrar a próxima notícia
+function showNextNews() {
+    currentIndex = (currentIndex + 1) % totalNewsItems;
+    showNewsItem(currentIndex);
+}
+
+// Função para iniciar a rotação automática
+function startNewsRotation() {
+    newsInterval = setInterval(showNextNews, 10000); // Muda a cada 20 segundos
+}
+
+// Função para parar a rotação automática
+function stopNewsRotation() {
+    clearInterval(newsInterval);
+}
+
+// Inicia a rotação automática assim que a página carrega
+startNewsRotation();

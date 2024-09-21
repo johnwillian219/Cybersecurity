@@ -517,7 +517,22 @@ body {
     }
 }
 
+/* Ajustes para telas pequenas (telemóveis) */
+@media screen and (max-width: 768px) {
+    .roadmap-container {
+        height: auto;
+        /* Ajusta a altura conforme o conteúdo */
+    }
 
+    .roadmap-image {
+        width: 100%;
+        /* A imagem ocupa 100% da largura */
+        height: auto;
+        /* Mantém a proporção correta */
+        object-fit: contain;
+        /* Ajusta a imagem no contêiner sem cortes */
+    }
+}
 
 /*----------------------------------------------Lado direito-seção3-----------------------------------------*/
 .section-1,

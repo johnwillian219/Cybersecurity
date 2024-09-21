@@ -180,3 +180,5 @@ function stopNewsRotation() {
 
 // Inicia a rotação automática assim que a página carrega
 startNewsRotation();
+
+

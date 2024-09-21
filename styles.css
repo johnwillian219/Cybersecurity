@@ -1,5 +1,6 @@
 /* Container para todo o site */
 .site-container {
+    flex: auto;
     border: 4px solid #00FF00;
     /* Borda verde */
     padding: 0px;
@@ -16,8 +17,15 @@
     /* Fundo escuro */
     justify-content: space-between;
     /* Empurra o conteúdo para ocupar o espaço vertical */
+    transition: width 0.3s ease;
+            /* Transição suave para mudanças de largura */
 }
 
+/* Quando o menu é aberto, aumente a largura do container */
+.site-container.expanded {
+    width: 150%;
+    transition: width 0.3s ease;
+}
 /* Estilo para as seções fora da página Home */
 .full-height {
     min-height: 52vh;
@@ -53,33 +61,6 @@ section {
     /* Garante que largura e altura incluam o padding e borda */
 }
 
-/* Prevenir que elementos escapem do container */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* Garante que largura e altura incluam padding e borda */
-
-}
-/* Media query para telas pequenas */
-@media (max-width: 768px) {
-    .site-container {
-        padding: 10px;
-        /* Reduz o padding em telas pequenas */
-        min-height: 100vh;
-        /* Garante que o container ocupe toda a tela */
-    }
-
-    .full-height {
-        margin-bottom: 10px;
-        /* Reduz o espaço entre seções em telas pequenas */
-    }
-
-    section {
-        padding: 10px;
-        /* Reduz o padding dentro das seções */
-    }
-}
 /********************************************************************** Cabeçalho *****************************************************************/
 
 header {
@@ -206,17 +187,9 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    
 }
 
-/* Contêiner do conteúdo */
-.content-container {
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: flex-start;
-}
 
 /*------------------------Seções de conteúdo---------------------------------------------------- */
 .content-section {
@@ -244,16 +217,20 @@ body {
     width: 100%;
 }
 
-/* Contêiner do conteúdo */
+/* Container principal para o conteúdo */
 .content-container {
+    width: 100%;
+    max-width: 1200px;
+    /* Define um limite máximo para a largura do conteúdo */
+    margin: 0 auto;
+    /* Centraliza o conteúdo na página */
     padding: 20px;
-    flex-grow: 1;
+    /*background-color: #222;*/
+    color: #fff;
+    box-sizing: border-box;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: center;
+    flex-direction: column;
 }
-
 /* Seções de conteúdo */
 .content-section {
     display: none;
@@ -274,34 +251,57 @@ body {
 }
 
 /*-------------------- Divisão da Seção Home em duas partes (esquerda e direita)---------------- */
+/* Contêiner principal para o layout */
 .home-container {
     display: flex;
+    justify-content: space-between;
+    align-items: stretch;
     width: 100%;
-    height: 100%;
+        text-align: center;
+            /* Garante que o texto também fique centralizado */
 }
-
-.home-left, .home-right {
-    padding: 20px;
-}
-
-.home-left {
-    flex: 1; /* Ocupa a metade esquerda */
-    background-color: #222; /* Cor de fundo para a parte esquerda */
-        border-radius: 10px;
-}
-
+/* Alinhamento das seções */
+.home-left,
 .home-right {
-    flex: 1; /* Ocupa a metade direita */
     display: flex;
-    flex-direction: column; /* Divisão em colunas para as seções internas */
-    background-color: #333; /* Cor de fundo para a parte direita */
+    flex-direction: column;
+    justify-content: flex-start;
 }
+/* Parte esquerda e direita do layout */
+.home-left {
+    flex: 1 1 60%;
+    /* Ocupa 40% do espaço */
+    padding: 20px;
+    box-sizing: border-box;
+        background-color: #222;
+            /* Cor de fundo para a parte esquerda */
+            border-radius: 10px;
+                justify-content: flex-start;
+        
+}
+/* Parte esquerda e direita do layout */
+.home-right {
+    flex: 1 1 40%;
+    /* Ocupa 40% do espaço */
+    padding: 20px;
+    box-sizing: border-box;
+  /*  background-color: #222;
+    /* Cor de fundo para a parte esquerda */
+    border-radius: 10px;
+        margin-left: 20px;
+            /* Espaçamento entre o contêiner esquerdo e direito */ 
+                justify-content: flex-start;
+                    /* Alinha o conteúdo ao topo */
+                      /*  height: 150vh;
+                            /* Define a altura total da tela */
+                                background-color: #111;
+                                    border-radius: 13px;
 
+}
 /* Divisão da Parte Direita em 3 partes horizontais */
 .home-right > div {
     flex: 1; /* Cada seção ocupa o mesmo espaço vertical */
     padding: 10px;
-    border-bottom: 1px solid #444; /* Linha divisória entre as seções */
 }
 
 .home-right > div:last-child {
@@ -317,27 +317,49 @@ body {
     color: #ccc; /* Texto em cinza claro */
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+    }
+
+    .home-left,
+    .home-right {
+        flex: 1 1 100%;
+        /* Ocupa 100% da largura em telas pequenas */
+        padding: 0;
+            margin: 0;
+    }
+}
+
 /*-------------------------------------Lado esquerdo-------------------------------------------------------------*/
 
 /* Contêiner principal */
 .main-container {
     display: flex;
     width: 100%;
+    justify-content: space-between;
+    /* Espaça os itens entre si */
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente */
+    gap: 20px;
+    /* Espaço entre o texto e a imagem */
 }
-
 /* Contêiner da imagem do roadmap */
 .roadmap-container {
     position: relative;
     display: flex;
-    align-items: flex;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    /* O contêiner da imagem ocupa espaço proporcional ao conteúdo */
+    
 }
-
-/* Estilo da imagem do roadmap */
 .roadmap-image {
-    width: auto;
+    width: 110%;
+    /* Aumenta o tamanho da imagem para ocupar 100% do contêiner */
     height: auto;
-    display: block;
+    object-fit: contain;
 }
 
 /* Contêiner para botões de tópicos */
@@ -465,7 +487,12 @@ body {
 
 
 /*----------------------------------------------Lado direito-seção3-----------------------------------------*/
-
+.section-1,
+.section-2,
+.section-3 {
+    margin-bottom: 40px;
+    /* Ajuste este valor conforme necessário espaçamento entre seções */
+}
 /*----------------------------------------------Seção 1---------------------------------------*/
 /* Seção 1 */
 .section-1 {
@@ -473,9 +500,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    /* Ocupa toda a altura da tela */
-    background-color: #333;
+    background-color: #222;
+    border-radius: 12px;
     /* Fundo escuro */
     color: white;
     /* Cor do texto padrão */
@@ -486,7 +512,7 @@ body {
     font-size: 40px;
     color: #00ff00;
     /* Cor verde */
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     /* Espaçamento entre o título e o círculo */
 }
 
@@ -495,8 +521,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    margin-bottom: 20px;
+    height: 220px;
+    margin-bottom: 14px;
     /* Espaçamento entre o disco e as caixas de seleção */
 }
 
@@ -591,7 +617,8 @@ body {
 .section-2 {
     position: relative;
     padding: 5px;
-    background-color: #333;
+    background-color: #222;
+        border-radius: 12px;
     min-height: 300px; /* Ajuste conforme necessário */
     overflow: hidden; /* Garante que nada ultrapasse os limites da seção */
 }
@@ -653,8 +680,9 @@ body {
 
 /* Estilos da Seção 3 */
 .section-3 {
-    padding: 20px;
-    background-color: #333; /* Mantém o fundo consistente */
+   /* padding: 20px;*/
+    background-color: #222;
+        border-radius: 12px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -674,6 +702,8 @@ body {
     max-width: 100%; /* Garante que não ultrapasse os limites */
     margin: 0 auto; /* Centraliza o contêiner */
     height: auto; /* Ajusta a altura automaticamente conforme o conteúdo */
+    margin-top: 50px;
+
 }
 
 /* Monitor do computador */
@@ -779,6 +809,7 @@ body {
     align-items: center;
     width: 100%; /* Ocupa toda a largura do contêiner */
     margin-top: 20px; /* Espaçamento entre o computador e o texto */
+    margin-bottom: 50px;
 }
 
 .animated-text {
@@ -814,6 +845,8 @@ body {
     text-align: center; /* Centraliza o texto */
     font-size: 14px; /* Tamanho da fonte */
     position: relative; /* Permite que o botão "Voltar ao Topo" fique posicionado corretamente */
+        border-top: 0.5px solid #413f3f;
+            /* Linha branca de 2px */
 }
 
 /* Estilo do conteúdo do rodapé */

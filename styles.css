@@ -501,9 +501,10 @@ body {
 
     /* Reduzir tamanho dos botões de tópicos */
     .topic-button {
-        width: 100px;
+        width: 120px;
         height: 20px;
         font-size: 10px;
+        border-radius: 3px;
     }
 
     /* Reduzir tamanho dos botões de menu */

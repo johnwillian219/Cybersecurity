@@ -277,6 +277,7 @@ body {
             /* Cor de fundo para a parte esquerda */
             border-radius: 10px;
                 justify-content: flex-start;
+                
         
 }
 /* Parte esquerda e direita do layout */
@@ -330,6 +331,12 @@ body {
         padding: 0;
             margin: 0;
     }
+
+        /* Adiciona uma margem de 40px entre o lado esquerdo e o direito quando o layout é em coluna */
+        .home-right {
+            margin-top: 40px;
+        }
+    
 }
 
 /*-------------------------------------Lado esquerdo-------------------------------------------------------------*/
@@ -494,9 +501,9 @@ body {
 
     /* Reduzir tamanho dos botões de tópicos */
     .topic-button {
-        width: 180px;
-        height: 35px;
-        font-size: 14px;
+        width: 125px;
+        height: 25px;
+        font-size: 13px;
     }
 
     /* Reduzir tamanho dos botões de menu */

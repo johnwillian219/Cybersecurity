@@ -355,8 +355,13 @@ body {
     /* O contêiner da imagem ocupa espaço proporcional ao conteúdo */
     
 }
+/* Botões fixos na imagem */
+.button-container {
+    position: absolute;
+    /* Os botões serão posicionados em relação ao roadmap-container */
+}
 .roadmap-image {
-    width: 110%;
+    width: auto;
     /* Aumenta o tamanho da imagem para ocupar 100% do contêiner */
     height: auto;
     object-fit: contain;
@@ -483,6 +488,34 @@ body {
     color: #FFFFFF;
 }
 
+
+/*-------------------- Media Queries para telas pequenas -------------------*/
+@media screen and (max-width: 768px) {
+
+    /* Reduzir tamanho dos botões de tópicos */
+    .topic-button {
+        width: 180px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    /* Reduzir tamanho dos botões de menu */
+    .menu-button {
+        width: 400px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+    /* Reduzir tamanho do menu dropdown */
+    .dropdown-menu {
+        min-width: 150px;
+    }
+
+    /* Ajustar tamanho da imagem do roadmap em telas pequenas */
+    .roadmap-image {
+        width: auto;
+    }
+}
 
 
 

@@ -336,6 +336,12 @@ body {
         .home-right {
             margin-top: 40px;
         }
+
+                /* Classe para aumentar a largura do container */
+                .site-container.expanded {
+                    width: 100%;
+                    /* Aumenta a largura quando o menu abre */
+                }
     
 }
 

@@ -494,7 +494,7 @@ body {
 }
  /* Classe para aumentar a largura do container */
  .site-container.expanded {
-     width: 110%;
+     width:105%;
      /* Aumenta a largura quando o menu abre */
  }
 /*-------------------- Media Queries para telas pequenas -------------------*/

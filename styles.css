@@ -8,7 +8,7 @@
     margin: 0;
     /* Remove margem ao redor do contêiner */
     /*min-height: 100vh;
-    /* Garante que o container ocupe pelo menos toda a altura da tela */
+   /* Garante que o container ocupe pelo menos toda a altura da tela */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -18,14 +18,15 @@
     justify-content: space-between;
     /* Empurra o conteúdo para ocupar o espaço vertical */
     transition: width 0.3s ease;
-            /* Transição suave para mudanças de largura */
+    /* Transição suave para mudanças de largura */
 }
 
 /* Quando o menu é aberto, aumente a largura do container */
 .site-container.expanded {
-    width: 110%;
+    width: 150%;
     transition: width 0.3s ease;
 }
+
 /* Estilo para as seções fora da página Home */
 .full-height {
     min-height: 52vh;
@@ -40,8 +41,10 @@
     /* Centraliza o conteúdo verticalmente */
     box-sizing: border-box;
 }
+
 /* Garantir que os elementos do cabeçalho e das seções estejam alinhados corretamente */
-header,section {
+header,
+section {
     width: 100%;
 }
 
@@ -51,8 +54,10 @@ section {
     background-color: #333;
     color: #fff;
     margin-bottom: 20px;
-    flex-grow: 1; /* Seções ocupam espaço proporcional */
+    flex-grow: 1;
+    /* Seções ocupam espaço proporcional */
 }
+
 /* Prevenir que elementos escapem do container */
 * {
     margin: 0;
@@ -68,11 +73,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 18px 20px;
-    background-color: #222; /* Cor de fundo do cabeçalho */
+    background-color: #222;
+    /* Cor de fundo do cabeçalho */
     border-bottom: 1px solid #333;
     box-sizing: border-box;
     width: 100%;
-    max-width: 100vw; /* Limita a largura ao tamanho da viewport */
+    max-width: 100vw;
+    /* Limita a largura ao tamanho da viewport */
 }
 
 /* Estilo da logo */
@@ -80,7 +87,8 @@ header .logo {
     font-size: 24px;
     color: #fff;
     font-weight: bold;
-    white-space: nowrap; /* Impede quebra de linha na logo */
+    white-space: nowrap;
+    /* Impede quebra de linha na logo */
 }
 
 /* Estilo da navegação */
@@ -89,7 +97,8 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap; /* Permite quebra de linha para itens de navegação */
+    flex-wrap: wrap;
+    /* Permite quebra de linha para itens de navegação */
 }
 
 nav ul li {
@@ -97,16 +106,19 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff; /* Texto em branco */
+    color: #fff;
+    /* Texto em branco */
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s;
-    white-space: nowrap; /* Impede quebra de linha nos links de navegação */
+    white-space: nowrap;
+    /* Impede quebra de linha nos links de navegação */
 }
 
 nav ul li a:hover {
-    color: #00FF00; /* Cor do texto ao passar o mouse (verde) */
+    color: #00FF00;
+    /* Cor do texto ao passar o mouse (verde) */
 }
 
 /* Barra de busca */
@@ -121,7 +133,8 @@ nav ul li a:hover {
     border-radius: 5px;
     border: 1px solid #333;
     background-color: #333;
-    color: #fff; /* Texto da barra de busca em branco */
+    color: #fff;
+    /* Texto da barra de busca em branco */
 }
 
 .search-bar button {
@@ -129,45 +142,58 @@ nav ul li a:hover {
     margin-left: 10px;
     background-color: #00FF00;
     border: none;
-    color: #000; /* Texto do botão de busca */
+    color: #000;
+    /* Texto do botão de busca */
     cursor: pointer;
     border-radius: 5px;
 }
 
 .search-bar button:hover {
-    background-color: #666; /* Cor do botão ao passar o mouse */
+    background-color: #666;
+    /* Cor do botão ao passar o mouse */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Alinha itens verticalmente em telas pequenas */
-        align-items: flex-start; /* Alinha itens à esquerda */
-        padding: 10px; /* Ajuste o padding para telas menores */
+        flex-direction: column;
+        /* Alinha itens verticalmente em telas pequenas */
+        align-items: flex-start;
+        /* Alinha itens à esquerda */
+        padding: 10px;
+        /* Ajuste o padding para telas menores */
     }
 
     nav ul {
-        flex-direction: column; /* Itens de navegação em coluna */
-        width: 100%; /* Largura total do cabeçalho */
-        margin-top: 10px; /* Espaçamento superior */
+        flex-direction: column;
+        /* Itens de navegação em coluna */
+        width: 100%;
+        /* Largura total do cabeçalho */
+        margin-top: 10px;
+        /* Espaçamento superior */
     }
 
     nav ul li {
         margin-right: 0;
-        margin-bottom: 10px; /* Espaçamento inferior entre itens de navegação */
+        margin-bottom: 10px;
+        /* Espaçamento inferior entre itens de navegação */
     }
 
     .search-bar {
-        width: 100%; /* Barra de busca ocupa toda a largura */
-        margin-top: 10px; /* Espaçamento superior */
+        width: 100%;
+        /* Barra de busca ocupa toda a largura */
+        margin-top: 10px;
+        /* Espaçamento superior */
     }
 
     .search-bar input {
-        width: calc(100% - 120px); /* Ajusta a largura do input */
+        width: calc(100% - 120px);
+        /* Ajusta a largura do input */
     }
 
     .search-bar button {
-        width: 100px; /* Largura fixa para o botão de busca */
+        width: 100px;
+        /* Largura fixa para o botão de busca */
     }
 }
 
@@ -180,14 +206,16 @@ nav ul li a:hover {
 body {
     margin: 0;
     padding: 0;
-    background-color: #111; /* Fundo preto */
-    color: #fff; /* Texto em branco por padrão */
+    background-color: #111;
+    /* Fundo preto */
+    color: #fff;
+    /* Texto em branco por padrão */
     font-family: Arial, sans-serif;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    
+
 }
 
 
@@ -197,12 +225,14 @@ body {
 }
 
 .content-section h1 {
-    color: #fff; /* Cor do título em branco */
+    color: #fff;
+    /* Cor do título em branco */
     margin-bottom: 10px;
 }
 
 .content-section p {
-    color: #ccc; /* Cor do texto do parágrafo em cinza claro */
+    color: #ccc;
+    /* Cor do texto do parágrafo em cinza claro */
 }
 
 /* Exibir seção ativa */
@@ -231,18 +261,21 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 /* Seções de conteúdo */
 .content-section {
     display: none;
 }
 
 .content-section h1 {
-    color: #fff; /* Cor do título em branco */
+    color: #fff;
+    /* Cor do título em branco */
     margin-bottom: 10px;
 }
 
 .content-section p {
-    color: #ccc; /* Cor do texto do parágrafo em cinza claro */
+    color: #ccc;
+    /* Cor do texto do parágrafo em cinza claro */
 }
 
 /* Exibir seção ativa */
@@ -257,9 +290,10 @@ body {
     justify-content: space-between;
     align-items: stretch;
     width: 100%;
-        text-align: center;
-            /* Garante que o texto também fique centralizado */
+    text-align: center;
+    /* Garante que o texto também fique centralizado */
 }
+
 /* Alinhamento das seções */
 .home-left,
 .home-right {
@@ -267,55 +301,62 @@ body {
     flex-direction: column;
     justify-content: flex-start;
 }
+
 /* Parte esquerda e direita do layout */
 .home-left {
     flex: 1 1 60%;
     /* Ocupa 40% do espaço */
     padding: 20px;
     box-sizing: border-box;
-        background-color: #222;
-            /* Cor de fundo para a parte esquerda */
-            border-radius: 10px;
-                justify-content: flex-start;
-                
-        
+    background-color: #222;
+    /* Cor de fundo para a parte esquerda */
+    border-radius: 10px;
+    justify-content: flex-start;
+
+
 }
+
 /* Parte esquerda e direita do layout */
 .home-right {
     flex: 1 1 40%;
     /* Ocupa 40% do espaço */
     padding: 20px;
     box-sizing: border-box;
-  /*  background-color: #222;
-    /* Cor de fundo para a parte esquerda */
+    /*  background-color: #222;
+   /* Cor de fundo para a parte esquerda */
     border-radius: 10px;
-        margin-left: 20px;
-            /* Espaçamento entre o contêiner esquerdo e direito */ 
-                justify-content: flex-start;
-                    /* Alinha o conteúdo ao topo */
-                      /*  height: 150vh;
-                            /* Define a altura total da tela */
-                                background-color: #111;
-                                    border-radius: 13px;
+    margin-left: 20px;
+    /* Espaçamento entre o contêiner esquerdo e direito */
+    justify-content: flex-start;
+    /* Alinha o conteúdo ao topo */
+    /*  height: 150vh;
+                           /* Define a altura total da tela */
+    background-color: #111;
+    border-radius: 13px;
 
 }
+
 /* Divisão da Parte Direita em 3 partes horizontais */
-.home-right > div {
-    flex: 1; /* Cada seção ocupa o mesmo espaço vertical */
+.home-right>div {
+    flex: 1;
+    /* Cada seção ocupa o mesmo espaço vertical */
     padding: 10px;
 }
 
-.home-right > div:last-child {
-    border-bottom: none; /* Remove a linha divisória da última seção */
+.home-right>div:last-child {
+    border-bottom: none;
+    /* Remove a linha divisória da última seção */
 }
 
 /* Estilo para as seções internas */
 .home-right h2 {
-    color: #00FF00; /* Título em verde */
+    color: #00FF00;
+    /* Título em verde */
 }
 
 .home-right p {
-    color: #ccc; /* Texto em cinza claro */
+    color: #ccc;
+    /* Texto em cinza claro */
 }
 
 /* Responsividade */
@@ -329,16 +370,21 @@ body {
         flex: 1 1 100%;
         /* Ocupa 100% da largura em telas pequenas */
         padding: 0;
-            margin: 0;
+        margin: 0;
     }
 
-        /* Adiciona uma margem de 40px entre o lado esquerdo e o direito quando o layout é em coluna */
-        .home-right {
-            margin-top: 40px;
-        }
+    /* Adiciona uma margem de 40px entre o lado esquerdo e o direito quando o layout é em coluna */
+    .home-right {
+        margin-top: 40px;
+    }
 
-               
-    
+    /* Classe para aumentar a largura do container */
+    .site-container.expanded {
+        width: 110%;
+        /* Aumenta a largura quando o menu abre */
+    }
+
+
 }
 
 /*-------------------------------------Lado esquerdo-------------------------------------------------------------*/
@@ -354,6 +400,7 @@ body {
     gap: 20px;
     /* Espaço entre o texto e a imagem */
 }
+
 /* Contêiner da imagem do roadmap */
 .roadmap-container {
     position: relative;
@@ -362,13 +409,15 @@ body {
     justify-content: center;
     flex: 1;
     /* O contêiner da imagem ocupa espaço proporcional ao conteúdo */
-    
+
 }
+
 /* Botões fixos na imagem */
 .button-container {
     position: absolute;
     /* Os botões serão posicionados em relação ao roadmap-container */
 }
+
 .roadmap-image {
     width: auto;
     /* Aumenta o tamanho da imagem para ocupar 100% do contêiner */
@@ -406,7 +455,8 @@ body {
 
 /* Estilo do menu dropdown */
 .dropdown-menu {
-    display: none; /* Escondido por padrão */
+    display: none;
+    /* Escondido por padrão */
     position: absolute;
     top: 0;
     left: 110%;
@@ -423,9 +473,11 @@ body {
 /* Estilo da imagem no menu - manter o tamanho original */
 .menu-image img {
     display: block;
-    max-width: none; /* Evita que a imagem ultrapasse o tamanho do menu */
-    height: none; /* Mantém a proporção da imagem */
-    position: relative ;
+    max-width: none;
+    /* Evita que a imagem ultrapasse o tamanho do menu */
+    height: none;
+    /* Mantém a proporção da imagem */
+    position: relative;
 }
 
 
@@ -443,7 +495,8 @@ body {
 
 
 .dropdown-button:hover {
-    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    background-color: #0056b3;
+    /* Cor de fundo ao passar o mouse */
 }
 
 /* Quando o menu é visível */
@@ -493,125 +546,132 @@ body {
     border: 1.5px solid #00FF00;
 }
 
+/* Classe para aumentar a largura do container */
+.site-container.expanded {
+    width: 110%;
+    /* Aumenta a largura quando o menu abre */
+}
+
 /*-------------------- Media Queries para telas pequenas -------------------*/
-    @media screen and (max-width: 768px) {
-        /* Remover background-color do lado direito */
-            .home-right {
-                background-color: transparent;
-                /* Remove o fundo */
-            }
-        
-            /* Ajustar roadmap container */
-            .roadmap-container {
-                height: auto;
-                /* Ajusta a altura conforme o conteúdo */
-            }
-            
-        
-            /* Ajustar tamanho da imagem do roadmap em telas pequenas */
-            .roadmap-image {
-                width: 100%;
-                height: auto;
-                object-fit: contain;
-                /* A imagem ocupa 100% da largura e ajusta a proporção corretamente */
-            }
+@media screen and (max-width: 768px) {
 
-            /* Reduzir tamanho dos botões de tópicos */
-            .topic-button {
-            width: 120px;
-            height: 20px;
-            font-size: 10px;
-            border-radius: 3px;
-        }
-
-        /* Esconde a imagem do menu */
-        .menu-image {
-            display: none;
-            /* Esconde a imagem */
-        }
-
-                .topic-button.active {
-                    background-color: #161616;
-                    /* Cor verde quando o menu estiver aberto */
-                    color: white;
-                    border: 1.5px solid #00FF00;
-                }
-
-                /* Efeito hover para botões de tópicos */
-                .topic-button:hover {
-                    background-color: #666;
-                    color: #FFFFFF;
-                }
-        
-                /* Estilo do menu dropdown */
-                .dropdown-menu {
-                    display: none;
-                    /* Escondido por padrão */
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    background-color: #4a4d4a;
-                    border: 1px solid #000000;
-                    border-radius: 10px;
-                    width:190px;
-                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-                    z-index: 100;
-                    padding: 10px;
-                }
-        
-                /* Quando o menu é exibido */
-                .dropdown-menu.show {
-                    display: block;
-                    /* Exibe o menu */
-                }
-        
-                           /* Estilo para os botões do menu */
-                           .menu-button {
-                               width: 180px;
-                               height: 28px;
-                               font-size: 9px;
-                               font-weight: bold;
-                               color: rgb(7, 7, 7);
-                               background-color: #00FF00;
-                               border: 1px solid #000000;
-                               border-radius: 2px;
-                               cursor: pointer;
-                               display: flex;
-                               align-items: center;
-                               justify-content: center;
-                               text-align: center;
-                               margin-bottom: 5px;
-                               transition: background-color 0.3s;
-                           }
-                                                   /* Estilo dos botões dentro do menu dropdown */
-                                                   .dropdown-menu ul {
-                                                       list-style-type: none;
-                                                       padding: 0;
-                                                       margin: 0;
-                                                   }
-                        
-                                                   .dropdown-menu ul li {
-                                                       margin-bottom: 5px;
-                                                   }
-                /* Efeito hover para botões do menu */
-                .menu-button:hover {
-                    background-color: #555;
-                    /* Cor ao passar o mouse */
-                }
-        
-             
-                                /* Contêiner para botões sobre a imagem */
-                                .menu-button-container {
-                                position: relative;
-                                left: 0 !important;
-                                }
- /* Classe para aumentar a largura do container */
- .site-container.expanded {
-     width: 110%;
-     /* Aumenta a largura quando o menu abre */
- }
-                                                               
+    /* Remover background-color do lado direito */
+    .home-right {
+        background-color: transparent;
+        /* Remove o fundo */
     }
+
+    /* Ajustar roadmap container */
+    .roadmap-container {
+        height: auto;
+        /* Ajusta a altura conforme o conteúdo */
+    }
+
+
+    /* Ajustar tamanho da imagem do roadmap em telas pequenas */
+    .roadmap-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        /* A imagem ocupa 100% da largura e ajusta a proporção corretamente */
+    }
+
+    /* Reduzir tamanho dos botões de tópicos */
+    .topic-button {
+        width: 120px;
+        height: 20px;
+        font-size: 10px;
+        border-radius: 3px;
+    }
+
+    /* Esconde a imagem do menu */
+    .menu-image {
+        display: none;
+        /* Esconde a imagem */
+    }
+
+    .topic-button.active {
+        background-color: #161616;
+        /* Cor verde quando o menu estiver aberto */
+        color: white;
+        border: 1.5px solid #00FF00;
+    }
+
+    /* Efeito hover para botões de tópicos */
+    .topic-button:hover {
+        background-color: #666;
+        color: #FFFFFF;
+    }
+
+    /* Estilo do menu dropdown */
+    .dropdown-menu {
+        display: none;
+        /* Escondido por padrão */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #4a4d4a;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        width: 190px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+        padding: 10px;
+    }
+
+    /* Quando o menu é exibido */
+    .dropdown-menu.show {
+        display: block;
+        /* Exibe o menu */
+    }
+
+    /* Estilo para os botões do menu */
+    .menu-button {
+        width: 180px;
+        height: 28px;
+        font-size: 9px;
+        font-weight: bold;
+        color: rgb(7, 7, 7);
+        background-color: #00FF00;
+        border: 1px solid #000000;
+        border-radius: 2px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 5px;
+        transition: background-color 0.3s;
+    }
+
+    /* Estilo dos botões dentro do menu dropdown */
+    .dropdown-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-menu ul li {
+        margin-bottom: 5px;
+    }
+
+    /* Efeito hover para botões do menu */
+    .menu-button:hover {
+        background-color: #555;
+        /* Cor ao passar o mouse */
+    }
+
+
+    /* Contêiner para botões sobre a imagem */
+    .menu-button-container {
+        position: relative;
+        left: 0 !important;
+    }
+
+
+
+}
+
 /*----------------------------------------------Lado direito-seção3-----------------------------------------*/
 .section-1,
 .section-2,
@@ -619,6 +679,7 @@ body {
     margin-bottom: 40px;
     /* Ajuste este valor conforme necessário espaçamento entre seções */
 }
+
 /*----------------------------------------------Seção 1---------------------------------------*/
 /* Seção 1 */
 .section-1 {
@@ -744,9 +805,11 @@ body {
     position: relative;
     padding: 5px;
     background-color: #222;
-        border-radius: 12px;
-    min-height: 300px; /* Ajuste conforme necessário */
-    overflow: hidden; /* Garante que nada ultrapasse os limites da seção */
+    border-radius: 12px;
+    min-height: 300px;
+    /* Ajuste conforme necessário */
+    overflow: hidden;
+    /* Garante que nada ultrapasse os limites da seção */
 }
 
 /* Título da seção 2 */
@@ -759,8 +822,10 @@ body {
 /* Contêiner do carrossel de notícias */
 .news-carousel {
     position: relative;
-    width: 100%; /* Ocupa toda a largura da seção */
-    height: 100%; /* Ajuste conforme necessário */
+    width: 100%;
+    /* Ocupa toda a largura da seção */
+    height: 100%;
+    /* Ajuste conforme necessário */
     overflow: hidden;
     box-sizing: border-box;
     display: flex;
@@ -806,28 +871,35 @@ body {
 
 /* Estilos da Seção 3 */
 .section-3 {
-   /* padding: 20px;*/
+    /* padding: 20px;*/
     background-color: #222;
-        border-radius: 12px;
+    border-radius: 12px;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto; /* Permite que a altura se ajuste ao conteúdo */
-    box-sizing: border-box; /* Garante que o padding seja incluído no cálculo do tamanho */
+    height: auto;
+    /* Permite que a altura se ajuste ao conteúdo */
+    box-sizing: border-box;
+    /* Garante que o padding seja incluído no cálculo do tamanho */
     width: 100%;
 }
+
 /* Ajuste no contêiner do computador */
 .computer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centraliza verticalmente dentro do contêiner da Seção 3 */
-    max-width: 100%; /* Garante que não ultrapasse os limites */
-    margin: 0 auto; /* Centraliza o contêiner */
-    height: auto; /* Ajusta a altura automaticamente conforme o conteúdo */
+    justify-content: center;
+    /* Centraliza verticalmente dentro do contêiner da Seção 3 */
+    max-width: 100%;
+    /* Garante que não ultrapasse os limites */
+    margin: 0 auto;
+    /* Centraliza o contêiner */
+    height: auto;
+    /* Ajusta a altura automaticamente conforme o conteúdo */
     margin-top: 50px;
 
 }
@@ -840,7 +912,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 8px 16px rgb(255, 254, 254);
     position: relative;
-    border: 2px solid #ffffff; /* Adiciona a borda branca */
+    border: 2px solid #ffffff;
+    /* Adiciona a borda branca */
 
 }
 
@@ -854,8 +927,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid #00ff00; /* Adiciona a borda verde */
-    border-radius: 5px; /* Para um efeito arredondado nas bordas */
+    border: 4px solid #00ff00;
+    /* Adiciona a borda verde */
+    border-radius: 5px;
+    /* Para um efeito arredondado nas bordas */
 }
 
 
@@ -868,19 +943,26 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     opacity: 0;
-    animation: appear 2s forwards 1s; /* Animação de aparecer */
+    animation: appear 2s forwards 1s;
+    /* Animação de aparecer */
 }
 
 /* Arco do cadeado (corrigido) */
 .lock-icon::before {
     content: "";
     position: absolute;
-    top: -35px; /* Levanta o arco para ficar mais visível */
-    left: 10px; /* Ajuste horizontal para centralizar */
-    width: 30px; /* Largura do arco */
-    height: 40px; /* Altura do arco */
-    border: 5px solid #00FF00; /* Cor e espessura do arco */
-    border-radius: 20px 20px 0 0; /* Bordas arredondadas apenas na parte superior */
+    top: -35px;
+    /* Levanta o arco para ficar mais visível */
+    left: 10px;
+    /* Ajuste horizontal para centralizar */
+    width: 30px;
+    /* Largura do arco */
+    height: 40px;
+    /* Altura do arco */
+    border: 5px solid #00FF00;
+    /* Cor e espessura do arco */
+    border-radius: 20px 20px 0 0;
+    /* Bordas arredondadas apenas na parte superior */
     background-color: transparent;
 }
 
@@ -891,7 +973,8 @@ body {
     background-color: #444;
     margin-top: 10px;
     border-radius: 5px;
-    border: 1px solid #ffffff; /* Adiciona a borda branca */
+    border: 1px solid #ffffff;
+    /* Adiciona a borda branca */
 }
 
 /* Animação de aparecer e desaparecer o cadeado */
@@ -900,14 +983,17 @@ body {
         transform: scale(0);
         opacity: 0;
     }
+
     25% {
         transform: scale(1);
         opacity: 1;
     }
+
     75% {
         transform: scale(1);
         opacity: 1;
     }
+
     100% {
         transform: scale(0);
         opacity: 0;
@@ -923,7 +1009,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     opacity: 0;
-    animation: appear-disappear 10s infinite; /* Aparece e desaparece a cada 5 segundos */
+    animation: appear-disappear 10s infinite;
+    /* Aparece e desaparece a cada 5 segundos */
 }
 
 
@@ -933,8 +1020,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Ocupa toda a largura do contêiner */
-    margin-top: 20px; /* Espaçamento entre o computador e o texto */
+    width: 100%;
+    /* Ocupa toda a largura do contêiner */
+    margin-top: 20px;
+    /* Espaçamento entre o computador e o texto */
     margin-bottom: 50px;
 }
 
@@ -943,16 +1032,19 @@ body {
     font-size: 24px;
     font-weight: bold;
     opacity: 0;
-    animation: fadeInOut 10s infinite; /* Atualiza a duração da animação para 10 segundos */
+    animation: fadeInOut 10s infinite;
+    /* Atualiza a duração da animação para 10 segundos */
 }
 
 @keyframes fadeInOut {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -965,114 +1057,155 @@ body {
 /************************************************************Rodappé*****************************************************************************/
 /* Estilo do rodapé -------------------------------------------------------------------------------------*/
 .footer {
-    background-color: #222; /* Cor de fundo do rodapé */
-    color: #fff; /* Cor do texto */
-    padding: 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-    font-size: 14px; /* Tamanho da fonte */
-    position: relative; /* Permite que o botão "Voltar ao Topo" fique posicionado corretamente */
-        border-top: 0.5px solid #413f3f;
-            /* Linha branca de 2px */
+    background-color: #222;
+    /* Cor de fundo do rodapé */
+    color: #fff;
+    /* Cor do texto */
+    padding: 20px;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o texto */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    position: relative;
+    /* Permite que o botão "Voltar ao Topo" fique posicionado corretamente */
+    border-top: 0.5px solid #413f3f;
+    /* Linha branca de 2px */
 }
 
 /* Estilo do conteúdo do rodapé */
 .footer-content {
-    display: flex; /* Flexbox para layout em linha */
-    justify-content: space-around; /* Distribui o espaço igualmente */
-    flex-wrap: wrap; /* Permite a quebra de linha */
-    margin-bottom: 20px; /* Espaçamento inferior antes do rodapé inferior */
+    display: flex;
+    /* Flexbox para layout em linha */
+    justify-content: space-around;
+    /* Distribui o espaço igualmente */
+    flex-wrap: wrap;
+    /* Permite a quebra de linha */
+    margin-bottom: 20px;
+    /* Espaçamento inferior antes do rodapé inferior */
 }
 
 .footer-section {
-    flex: 1; /* Cada seção ocupa o mesmo espaço */
-    min-width: 200px; /* Largura mínima para seções */
-    padding: 10px; /* Espaçamento interno das seções */
+    flex: 1;
+    /* Cada seção ocupa o mesmo espaço */
+    min-width: 200px;
+    /* Largura mínima para seções */
+    padding: 10px;
+    /* Espaçamento interno das seções */
 }
 
 .footer-section h2 {
-    font-size: 18px; /* Tamanho do título das seções */
-    margin-top: 0; /* Remove a margem superior */
-    margin-bottom: 10px; /* Margem inferior para separar o título do conteúdo */
+    font-size: 18px;
+    /* Tamanho do título das seções */
+    margin-top: 0;
+    /* Remove a margem superior */
+    margin-bottom: 10px;
+    /* Margem inferior para separar o título do conteúdo */
 }
 
 .footer-section ul {
-    list-style: none; /* Remove marcadores da lista */
-    padding: 0; /* Remove o preenchimento padrão */
-    margin: 0; /* Remove a margem padrão */
+    list-style: none;
+    /* Remove marcadores da lista */
+    padding: 0;
+    /* Remove o preenchimento padrão */
+    margin: 0;
+    /* Remove a margem padrão */
 }
 
 .footer-section ul li {
-    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+    margin-bottom: 10px;
+    /* Espaçamento entre os itens da lista */
 }
 
 .footer-section a {
-    color: #00FF00; /* Cor dos links */
-    text-decoration: none; /* Remove sublinhado dos links */
+    color: #00FF00;
+    /* Cor dos links */
+    text-decoration: none;
+    /* Remove sublinhado dos links */
 }
 
 .footer-section a:hover {
-    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+    text-decoration: underline;
+    /* Sublinha o link ao passar o mouse */
 }
 
 /* Estilo do conteúdo do rodapé */
 .footer-content {
-    display: flex; /* Flexbox para layout em linha */
-    justify-content: space-between; /* Distribui o espaço entre as seções */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    flex-wrap: nowrap; /* Impede que os itens quebrem para a próxima linha */
-    gap: 1px; /* Espaçamento geral entre as seções */
-    margin-bottom: 0px; /* Espaçamento inferior */
+    display: flex;
+    /* Flexbox para layout em linha */
+    justify-content: space-between;
+    /* Distribui o espaço entre as seções */
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
+    flex-wrap: nowrap;
+    /* Impede que os itens quebrem para a próxima linha */
+    gap: 1px;
+    /* Espaçamento geral entre as seções */
+    margin-bottom: 0px;
+    /* Espaçamento inferior */
 }
 
 /* Primeira seção (Cybersecurity) centralizada horizontalmente */
 .footer-title {
-    flex: 1 1 25%; /* Ocupa 25% da largura */
-    text-align: center; /* Centraliza o texto */
+    flex: 1 1 25%;
+    /* Ocupa 25% da largura */
+    text-align: center;
+    /* Centraliza o texto */
     margin-bottom: 0;
 }
 
 .footer-title h1 {
-    font-size: 36px; /* Aumenta o tamanho do título */
-    margin: 0; /* Remove as margens padrão */
-    color: #00FF00; /* Cor verde (igual ao cabeçalho) */
+    font-size: 36px;
+    /* Aumenta o tamanho do título */
+    margin: 0;
+    /* Remove as margens padrão */
+    color: #00FF00;
+    /* Cor verde (igual ao cabeçalho) */
 }
 
 /* Segunda seção (Sobre e Direitos Reservados) ocupa um pouco mais de espaço */
 .footer-section {
-    flex: 1 1 100%; /* Aumenta para 40% da largura */
+    flex: 1 1 100%;
+    /* Aumenta para 40% da largura */
     padding: 0px;
     text-align: center;
 }
 
 /* Terceira seção (Links Úteis) */
 .footer-section:last-of-type {
-    flex: 1 1 1%; /* Ocupa 20% da largura */
+    flex: 1 1 1%;
+    /* Ocupa 20% da largura */
     padding: 0px;
     text-align: center;
 }
 
 /* Última seção (botão Voltar ao Topo) ocupa menos espaço */
 .footer-back-to-top {
-    flex: 0 0 1%; /* Ocupa 10% da largura */
-    text-align: right; /* Alinha o botão à direita */
+    flex: 0 0 1%;
+    /* Ocupa 10% da largura */
+    text-align: right;
+    /* Alinha o botão à direita */
     padding: 0px;
 }
 
 /* Estilo do botão Voltar ao Topo */
 .back-to-top-container {
     display: flex;
-    justify-content: center; /* Alinha o botão ao final (direita) */
+    justify-content: center;
+    /* Alinha o botão ao final (direita) */
 }
 
 .back-to-top img {
-    width: 50px; /* Define o tamanho da imagem SVG */
+    width: 50px;
+    /* Define o tamanho da imagem SVG */
     height: 50px;
     cursor: pointer;
 }
 
 .back-to-top {
     display: block;
-    width: 50px; /* Define o tamanho do botão */
+    width: 50px;
+    /* Define o tamanho do botão */
     height: 50px;
     background: none;
     border: none;
@@ -1081,63 +1214,83 @@ body {
 
 /* Efeito hover sobre a imagem do botão */
 .back-to-top img:hover {
-    opacity: 0.8; /* Pequena alteração na opacidade ao passar o mouse */
+    opacity: 0.8;
+    /* Pequena alteração na opacidade ao passar o mouse */
 }
 
 /* Mudar a cor ao clicar (estado ativo) */
 .back-to-top:active img {
-    filter: brightness(50%); /* Torna o botão mais escuro (cinza) ao clicar */
-    transition: filter 0.2s; /* Adiciona uma transição suave */
+    filter: brightness(50%);
+    /* Torna o botão mais escuro (cinza) ao clicar */
+    transition: filter 0.2s;
+    /* Adiciona uma transição suave */
 }
 
 /* Mudar a cor ao passar o mouse */
 .back-to-top img:hover {
-    filter: brightness(80%); /* Torna o botão mais escuro ao passar o mouse */
-    transition: filter 0.2s; /* Suaviza a mudança */
+    filter: brightness(80%);
+    /* Torna o botão mais escuro ao passar o mouse */
+    transition: filter 0.2s;
+    /* Suaviza a mudança */
 }
 
 
 /* Seções do rodapé (Sobre, Links Úteis) */
 .footer-section h2 {
-    font-size: 18px; /* Tamanho do título das seções */
-    margin-top: 0; /* Remove a margem superior */
-    margin-bottom: 0px; /* Espaçamento inferior */
+    font-size: 18px;
+    /* Tamanho do título das seções */
+    margin-top: 0;
+    /* Remove a margem superior */
+    margin-bottom: 0px;
+    /* Espaçamento inferior */
 }
 
 .footer-section ul {
-    list-style: none; /* Remove marcadores */
-    padding: 0; /* Remove preenchimento */
-    margin: 0; /* Remove margem */
+    list-style: none;
+    /* Remove marcadores */
+    padding: 0;
+    /* Remove preenchimento */
+    margin: 0;
+    /* Remove margem */
 }
 
 .footer-section ul li {
-    margin-bottom: 7px; /* Espaçamento entre itens */
+    margin-bottom: 7px;
+    /* Espaçamento entre itens */
 }
 
 .footer-section ul li a {
-    color: #00FF00; /* Cor dos links */
+    color: #00FF00;
+    /* Cor dos links */
     text-decoration: none;
 }
 
 .footer-section ul li a:hover {
-    text-decoration: underline; /* Sublinha os links ao passar o mouse */
+    text-decoration: underline;
+    /* Sublinha os links ao passar o mouse */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .footer-content {
-        flex-wrap: wrap; /* Permite quebra em linha para telas menores */
-        gap: 10px; /* Reduz o espaçamento entre as seções em telas pequenas */
+        flex-wrap: wrap;
+        /* Permite quebra em linha para telas menores */
+        gap: 10px;
+        /* Reduz o espaçamento entre as seções em telas pequenas */
     }
 
-    .footer-section, .footer-title, .footer-back-to-top {
-        flex: 1 1 100%; /* Cada seção ocupa 100% da largura em telas pequenas */
-        text-align: center; /* Alinha todos os elementos ao centro */
+    .footer-section,
+    .footer-title,
+    .footer-back-to-top {
+        flex: 1 1 100%;
+        /* Cada seção ocupa 100% da largura em telas pequenas */
+        text-align: center;
+        /* Alinha todos os elementos ao centro */
         margin-bottom: 20px;
     }
 
     .footer-back-to-top {
-        text-align: center; /* Alinha o botão ao centro em telas pequenas */
+        text-align: center;
+        /* Alinha o botão ao centro em telas pequenas */
     }
 }
-/***********************************************************Fim do Rodapé************************************************************************/

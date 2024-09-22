@@ -498,6 +498,10 @@ body {
 
 /*-------------------- Media Queries para telas pequenas -------------------*/
 @media screen and (max-width: 768px) {
+    .roadmap-container {
+            height: auto;
+            /* Ajusta a altura conforme o conteúdo */
+        }
 
     /* Reduzir tamanho dos botões de tópicos */
     .topic-button {
@@ -507,15 +511,23 @@ body {
         border-radius: 3px;
     }
 
-   
+    /* Reduzir tamanho dos botões de menu */
+    .menu-button {
+        width: 400px;
+        height: 60px;
+        font-size: 16px;
+    }
+
     /* Ajustar tamanho da imagem do roadmap em telas pequenas */
     .roadmap-image {
         width: auto;
         height: auto;
+            /* Mantém a proporção correta */
         object-fit: contain;
+            /* Ajusta a imagem no contêiner sem cortes */
     }
-       
 }
+
 
 
 /*----------------------------------------------Lado direito-seção3-----------------------------------------*/

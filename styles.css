@@ -23,7 +23,7 @@
 
 /* Quando o menu é aberto, aumente a largura do container */
 .site-container.expanded {
-    width: 150%;
+    width: 110%;
     transition: width 0.3s ease;
 }
 /* Estilo para as seções fora da página Home */
@@ -492,11 +492,7 @@ body {
     color: white;
     border: 1.5px solid #00FF00;
 }
- /* Classe para aumentar a largura do container */
- .site-container.expanded {
-     width:140%;
-     /* Aumenta a largura quando o menu abre */
- }
+
 /*-------------------- Media Queries para telas pequenas -------------------*/
     @media screen and (max-width: 768px) {
         /* Remover background-color do lado direito */

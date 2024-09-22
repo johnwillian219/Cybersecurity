@@ -609,7 +609,11 @@ body {
                                 position: relative;
                                 left: 0 !important;
                                 }
-
+ /* Classe para aumentar a largura do container */
+ .site-container.expanded {
+     width: 108%;
+     /* Aumenta a largura quando o menu abre */
+ }
                                                                
     }
 /*----------------------------------------------Lado direito-seção3-----------------------------------------*/

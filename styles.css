@@ -507,40 +507,64 @@ body {
         border-radius: 3px;
     }
 
-    /* Reduzir tamanho dos botões de menu */
-    .menu-button {
-        width: 400px;
-        height: 60px;
-        font-size: 16px;
-    }
-
-    /* Reduzir tamanho do menu dropdown */
-    .dropdown-menu {
-        min-width: 150px;
-    }
-
+   
     /* Ajustar tamanho da imagem do roadmap em telas pequenas */
     .roadmap-image {
         width: auto;
-    }
-}
-
-/* Ajustes para telas pequenas (telemóveis) */
-@media screen and (max-width: 768px) {
-    .roadmap-container {
         height: auto;
-        /* Ajusta a altura conforme o conteúdo */
-    }
-
-    .roadmap-image {
-        width: 100%;
-        /* A imagem ocupa 100% da largura */
-        height: auto;
-        /* Mantém a proporção correta */
         object-fit: contain;
-        /* Ajusta a imagem no contêiner sem cortes */
     }
+        /* Ajustar largura e posicionamento do dropdown menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            /* Aparece abaixo do botão */
+            left: 0;
+            /* Alinhar com o container */
+            width: 100%;
+            /* Ocupa toda a largura do container */
+            min-width: unset;
+            /* Remover min-width */
+            box-sizing: border-box;
+            z-index: 100;
+        }
+    
+        /* Ajustar tamanho dos botões de tópicos */
+        .topic-button {
+            width: 180px;
+            /* Diminuir o tamanho dos botões */
+            height: 35px;
+            font-size: 16px;
+            /* Diminuir o tamanho da fonte */
+        }
+    
+        /* Ajustar os botões do menu dropdown */
+        .menu-button {
+            width: 100%;
+            height: 50px;
+            /* Diminuir altura */
+            font-size: 16px;
+            border-radius: 10px;
+            /* Menor raio de borda */
+        }
+    
+        /* Garantir que o dropdown se ajuste à tela */
+        .dropdown-menu ul {
+            padding: 10px;
+        }
+    
+        .dropdown-menu ul li {
+            margin-bottom: 10px;
+        }
+    
+        /* Evitar que o conteúdo saia da tela */
+        .site-container {
+            padding: 10px;
+            overflow-x: hidden;
+            /* Evitar overflow horizontal */
+        }
 }
+
 
 /*----------------------------------------------Lado direito-seção3-----------------------------------------*/
 .section-1,

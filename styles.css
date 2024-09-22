@@ -21,11 +21,6 @@
     /* Transição suave para mudanças de largura */
 }
 
-/* Quando o menu é aberto, aumente a largura do container */
-.site-container.expanded {
-    width: 150%;
-    transition: width 0.3s ease;
-}
 
 /* Estilo para as seções fora da página Home */
 .full-height {
@@ -548,7 +543,7 @@ body {
 
 /* Classe para aumentar a largura do container */
 .site-container.expanded {
-    width: 110%;
+    width: 105%;
     /* Aumenta a largura quando o menu abre */
 }
 

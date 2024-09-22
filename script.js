@@ -52,6 +52,7 @@ fundamentalSkillsBtn.addEventListener('click', function() {
 
 OperatingSystemsBtn.addEventListener('click', function() {
     OperatingSystemsMenu.classList.toggle('show');
+    siteContainer.classList.toggle('expanded');
     OperatingSystemsBtn.classList.toggle('active');
 });
 
@@ -62,6 +63,7 @@ computerNetworksBtn.addEventListener('click', function() {
 
 VirtualizationBtn.addEventListener('click', function() {
     VirtualizationMenu.classList.toggle('show');
+    siteContainer.classList.toggle('expanded');
     VirtualizationBtn.classList.toggle('active');
 });
 
@@ -72,6 +74,7 @@ SecurityKnowledgeBtn.addEventListener('click', function() {
 
 CloudSkillsBtn.addEventListener('click', function() {
     CloudSkillsMenu.classList.toggle('show');
+    siteContainer.classList.toggle('expanded');
     CloudSkillsBtn.classList.toggle('active');
 });
 
@@ -82,6 +85,7 @@ ProgrammingSkillsBtn.addEventListener('click', function() {
 
 DistrosToolsBtn.addEventListener('click', function() {
     DistrosToolsMenu.classList.toggle('show');
+    siteContainer.classList.toggle('expanded');
     DistrosToolsBtn.classList.toggle('active');
 });
 
@@ -92,8 +96,7 @@ WebBtn.addEventListener('click', function() {
 
 OthersBtn.addEventListener('click', function() {
     OthersMenu.classList.toggle('show'); 
-        siteContainer.classList.toggle('expanded');
-
+    siteContainer.classList.toggle('expanded');
     OthersBtn.classList.toggle('active');
 });
 
@@ -109,7 +112,7 @@ window.addEventListener('click', function(event) {
     if (!OperatingSystemsBtn.contains(event.target) && !OperatingSystemsMenu.contains(event.target)) {
         OperatingSystemsMenu.classList.remove('show');
         OperatingSystemsBtn.classList.remove('active');
-
+        siteContainer.classList.remove('expanded');
     }
 
      if (!computerNetworksBtn.contains(event.target) && !computerNetworksMenu.contains(event.target)) {
@@ -120,8 +123,7 @@ window.addEventListener('click', function(event) {
      if (!VirtualizationBtn.contains(event.target) && !VirtualizationMenu.contains(event.target)) {
         VirtualizationMenu.classList.remove('show');
         VirtualizationBtn.classList.remove('active');
-
-        
+        siteContainer.classList.remove('expanded');    
     }
 
     if (!SecurityKnowledgeBtn.contains(event.target) && !SecurityKnowledgeMenu.contains(event.target)) {
@@ -133,7 +135,7 @@ window.addEventListener('click', function(event) {
      if (!CloudSkillsBtn.contains(event.target) && !CloudSkillsMenu.contains(event.target)) {
         CloudSkillsMenu.classList.remove('show');
         CloudSkillsBtn.classList.remove('active');
-
+        siteContainer.classList.remove('expanded');
     }
 
       if (!ProgrammingSkillsBtn.contains(event.target) && !ProgrammingSkillsMenu.contains(event.target)) {
@@ -146,6 +148,7 @@ window.addEventListener('click', function(event) {
       if (!DistrosToolsBtn.contains(event.target) && !DistrosToolsMenu.contains(event.target)) {
         DistrosToolsMenu.classList.remove('show');
         DistrosToolsBtn.classList.remove('active');
+        siteContainer.classList.remove('expanded');
 
     }
 
@@ -158,7 +161,7 @@ window.addEventListener('click', function(event) {
     if (!OthersBtn.contains(event.target) && !OthersMenu.contains(event.target)) {
         OthersMenu.classList.remove('show');
         OthersBtn.classList.remove('active');
-                siteContainer.classList.remove('expanded'); // Remove a largura expandida quando o menu fecha
+        siteContainer.classList.remove('expanded');
 
 
     }

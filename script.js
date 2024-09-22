@@ -182,3 +182,13 @@ function stopNewsRotation() {
 startNewsRotation();
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const OthersBtn = document.getElementById('others-btn');
+    const OthersMenu = document.getElementById('others-menu');
+    const siteContainer = document.querySelector('.site-container');
+
+    OthersBtn.addEventListener('click', function () {
+        OthersMenu.classList.toggle('show');
+        siteContainer.classList.toggle('expanded', OthersMenu.classList.contains('show'));
+    });
+});

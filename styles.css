@@ -526,6 +526,37 @@ body {
         height: auto;
         /* Ajusta a altura conforme o conteúdo */
     }
+
+         /* Estilo do menu dropdown (sem imagem de fundo) */
+         .dropdown-menu {
+             background-color: #333;
+             /* Cor de fundo escura */
+             border: 1px solid #FFF;
+             /* Borda branca */
+             border-radius: 8px;
+             min-width: 150px;
+             /* Largura mínima */
+             padding: 10px;
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+             /* Sombra para efeito de elevação */
+         }
+    
+         /* Estilo dos botões de menu */
+         .menu-button {
+             width: 350px;
+             height: 50px;
+             font-size: 14px;
+             border-radius: 5px;
+             background-color: #00FF00;
+             /* Cor de fundo verde */
+             color: #000;
+             border: none;
+         }
+    
+         /* Estilo dos itens dentro do menu dropdown */
+         .dropdown-menu ul li {
+             margin-bottom: 8px;
+         }
 }
 /*----------------------------------------------Lado direito-seção3-----------------------------------------*/
 .section-1,

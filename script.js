@@ -96,8 +96,9 @@ WebBtn.addEventListener('click', function() {
 
 OthersBtn.addEventListener('click', function() {
     OthersMenu.classList.toggle('show'); 
+        siteContainer.classList.toggle('expanded');
+
     OthersBtn.classList.toggle('active');
-    siteContainer.classList.toggle('expanded');
 
 });
 

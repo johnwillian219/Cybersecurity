@@ -533,8 +533,8 @@ body {
                     display: none;
                     /* Escondido por padrão */
                     position: absolute;
-                    top: 0;
-                    left: 100%;
+                    top: 100%;
+                    left: 0;
                     background-color: #4a4d4a;
                     border: 1px solid #000000;
                     border-radius: 10px;
@@ -588,8 +588,7 @@ body {
                                 /* Contêiner para botões sobre a imagem */
                                 .menu-button-container {
                                 position: relative;
-                                    left: 0%;
-                    
+                                left: 0 !important;
                                 }
              
     }

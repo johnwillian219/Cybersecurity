@@ -339,7 +339,7 @@ body {
 
                 /* Classe para aumentar a largura do container */
                 .site-container.expanded {
-                    width: 100%;
+                    width: 110%;
                     /* Aumenta a largura quando o menu abre */
                 }
     

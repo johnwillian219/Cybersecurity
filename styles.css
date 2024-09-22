@@ -454,7 +454,7 @@ body {
     /* Escondido por padrão */
     position: absolute;
     top: 0;
-    left: 110%;
+    left: 100%;
     background-color: #4a4d4a;
     border: 1px solid #000000;
     border-radius: 14px;
@@ -541,11 +541,7 @@ body {
     border: 1.5px solid #00FF00;
 }
 
-/* Classe para aumentar a largura do container */
-.site-container.expanded {
-    width: 108%;
-    /* Aumenta a largura quando o menu abre */
-}
+
 
 /*-------------------- Media Queries para telas pequenas -------------------*/
 @media screen and (max-width: 768px) {
@@ -663,7 +659,11 @@ body {
         left: 0 !important;
     }
 
-
+/* Classe para aumentar a largura do container */
+.site-container.expanded {
+    width: 108%;
+    /* Aumenta a largura quando o menu abre */
+}
 
 }
 

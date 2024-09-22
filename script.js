@@ -45,65 +45,117 @@ const OthersMenu = document.getElementById('others-menu');
 
 // Adiciona um evento de clique ao botão
 fundamentalSkillsBtn.addEventListener('click', function() {
-    // Alterna a classe 'show' para mostrar ou esconder o menu
     fundamentalSkillsMenu.classList.toggle('show');
+    fundamentalSkillsBtn.classList.toggle('active');
 });
 
 OperatingSystemsBtn.addEventListener('click', function() {
-    // Alterna a classe 'show' para mostrar ou esconder o menu
     OperatingSystemsMenu.classList.toggle('show');
+    OperatingSystemsBtn.classList.toggle('active');
 });
 
-computerNetworksBtn.addEventListener('click', function() {computerNetworksMenu.classList.toggle('show');});
-VirtualizationBtn.addEventListener('click', function() {VirtualizationMenu.classList.toggle('show');});
-SecurityKnowledgeBtn.addEventListener('click', function() {SecurityKnowledgeMenu.classList.toggle('show');});
-CloudSkillsBtn.addEventListener('click', function() {CloudSkillsMenu.classList.toggle('show');});
-ProgrammingSkillsBtn.addEventListener('click', function() {ProgrammingSkillsMenu.classList.toggle('show');});
-DistrosToolsBtn.addEventListener('click', function() {DistrosToolsMenu.classList.toggle('show');});
-WebBtn.addEventListener('click', function() {WebMenu.classList.toggle('show');});
-OthersBtn.addEventListener('click', function() {OthersMenu.classList.toggle('show');});
+computerNetworksBtn.addEventListener('click', function() {
+    computerNetworksMenu.classList.toggle('show');
+    computerNetworksBtn.classList.toggle('active');
+});
+
+VirtualizationBtn.addEventListener('click', function() {
+    VirtualizationMenu.classList.toggle('show');
+    VirtualizationBtn.classList.toggle('active');
+});
+
+SecurityKnowledgeBtn.addEventListener('click', function() {
+    SecurityKnowledgeMenu.classList.toggle('show');
+    SecurityKnowledgeBtn.classList.toggle('active');
+});
+
+CloudSkillsBtn.addEventListener('click', function() {
+    CloudSkillsMenu.classList.toggle('show');
+    CloudSkillsBtn.classList.toggle('active');
+});
+
+ProgrammingSkillsBtn.addEventListener('click', function() {
+    ProgrammingSkillsMenu.classList.toggle('show');
+    ProgrammingSkillsBtn.classList.toggle('active');
+});
+
+DistrosToolsBtn.addEventListener('click', function() {
+    DistrosToolsMenu.classList.toggle('show');
+    DistrosToolsBtn.classList.toggle('active');
+});
+
+WebBtn.addEventListener('click', function() {
+    WebMenu.classList.toggle('show');
+    WebBtn.classList.toggle('active');
+});
+
+OthersBtn.addEventListener('click', function() {
+    OthersMenu.classList.toggle('show'); 
+    OthersBtn.classList.toggle('active');
+});
 
 
 // Fechar o menu se clicar fora dele
 window.addEventListener('click', function(event) {
     if (!fundamentalSkillsBtn.contains(event.target) && !fundamentalSkillsMenu.contains(event.target)) {
         fundamentalSkillsMenu.classList.remove('show');
+        fundamentalSkillsBtn.classList.remove('active');
+
     }
 
     if (!OperatingSystemsBtn.contains(event.target) && !OperatingSystemsMenu.contains(event.target)) {
         OperatingSystemsMenu.classList.remove('show');
+        OperatingSystemsBtn.classList.remove('active');
+
     }
 
      if (!computerNetworksBtn.contains(event.target) && !computerNetworksMenu.contains(event.target)) {
         computerNetworksMenu.classList.remove('show');
+        computerNetworksBtn.classList.remove('active');
+
     }
      if (!VirtualizationBtn.contains(event.target) && !VirtualizationMenu.contains(event.target)) {
         VirtualizationMenu.classList.remove('show');
+        VirtualizationBtn.classList.remove('active');
+
+        
     }
 
     if (!SecurityKnowledgeBtn.contains(event.target) && !SecurityKnowledgeMenu.contains(event.target)) {
         SecurityKnowledgeMenu.classList.remove('show');
+        SecurityKnowledgeBtn.classList.remove('active');
+
     }
 
      if (!CloudSkillsBtn.contains(event.target) && !CloudSkillsMenu.contains(event.target)) {
         CloudSkillsMenu.classList.remove('show');
+        CloudSkillsBtn.classList.remove('active');
+
     }
 
       if (!ProgrammingSkillsBtn.contains(event.target) && !ProgrammingSkillsMenu.contains(event.target)) {
         ProgrammingSkillsMenu.classList.remove('show');
+        ProgrammingSkillsBtn.classList.remove('active');
+
     }
 
     
       if (!DistrosToolsBtn.contains(event.target) && !DistrosToolsMenu.contains(event.target)) {
         DistrosToolsMenu.classList.remove('show');
+        DistrosToolsBtn.classList.remove('active');
+
     }
 
     if (!WebBtn.contains(event.target) && !WebMenu.contains(event.target)) {
         WebMenu.classList.remove('show');
+        WebBtn.classList.remove('active');
+
     }
 
     if (!OthersBtn.contains(event.target) && !OthersMenu.contains(event.target)) {
         OthersMenu.classList.remove('show');
+        OthersBtn.classList.remove('active');
+
     }
 
 

@@ -484,7 +484,12 @@ body {
     color: #FFFFFF;
 }
 
-
+.topic-button.active {
+    background-color: #161616;
+    /* Cor verde quando o menu estiver aberto */
+    color: white;
+    border: 1.5px solid #00FF00;
+}
 /*-------------------- Media Queries para telas pequenas -------------------*/
     @media screen and (max-width: 768px) {
         /* Remover background-color do lado direito */
@@ -538,7 +543,7 @@ body {
                     background-color: #4a4d4a;
                     border: 1px solid #000000;
                     border-radius: 10px;
-                    min-width: 190px;
+                    min-width: 185px;
                     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
                     z-index: 100;
                     padding: 10px;

@@ -498,6 +498,11 @@ body {
 
 /*-------------------- Media Queries para telas pequenas -------------------*/
 @media screen and (max-width: 768px) {
+    /* Remover background-color do lado direito */
+        .home-right {
+            background-color: transparent;
+            /* Remove o fundo */
+        }
 
     /* Reduzir tamanho dos botões de tópicos */
     .topic-button {

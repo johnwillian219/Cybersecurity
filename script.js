@@ -163,14 +163,7 @@ window.addEventListener('click', function(event) {
         OthersBtn.classList.remove('active');
         siteContainer.classList.remove('expanded');
 
-
     }
-
-
-
-
-
-
 });
 
 

@@ -550,7 +550,7 @@ body {
                     background-color: #4a4d4a;
                     border: 1px solid #000000;
                     border-radius: 10px;
-                    max-width:160px;
+                    width:190px;
                     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
                     z-index: 100;
                     padding: 10px;
@@ -564,8 +564,8 @@ body {
         
                            /* Estilo para os botões do menu */
                            .menu-button {
-                               width: 170px;
-                               height: 25px;
+                               width: 180px;
+                               height: 28px;
                                font-size: 9px;
                                font-weight: bold;
                                color: rgb(7, 7, 7);

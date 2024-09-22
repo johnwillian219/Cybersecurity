@@ -527,6 +527,13 @@ body {
             /* Esconde a imagem */
         }
 
+                .topic-button.active {
+                    background-color: #161616;
+                    /* Cor verde quando o menu estiver aberto */
+                    color: white;
+                    border: 1.5px solid #00FF00;
+                }
+
                 /* Efeito hover para botões de tópicos */
                 .topic-button:hover {
                     background-color: #666;
@@ -543,7 +550,7 @@ body {
                     background-color: #4a4d4a;
                     border: 1px solid #000000;
                     border-radius: 10px;
-                    width: 175px;
+                    max-width:160px;
                     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
                     z-index: 100;
                     padding: 10px;

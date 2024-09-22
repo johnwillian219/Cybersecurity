@@ -42,6 +42,7 @@ const WebMenu = document.getElementById('web-menu');
 const OthersBtn = document.getElementById('others-btn');
 const OthersMenu = document.getElementById('others-menu');
 
+const siteContainer = document.querySelector('.site-container'); // Seleciona o container principal do site
 
 // Adiciona um evento de clique ao botão
 fundamentalSkillsBtn.addEventListener('click', function() {
@@ -91,6 +92,8 @@ WebBtn.addEventListener('click', function() {
 
 OthersBtn.addEventListener('click', function() {
     OthersMenu.classList.toggle('show'); 
+        siteContainer.classList.toggle('expanded');
+
     OthersBtn.classList.toggle('active');
 });
 
@@ -155,6 +158,8 @@ window.addEventListener('click', function(event) {
     if (!OthersBtn.contains(event.target) && !OthersMenu.contains(event.target)) {
         OthersMenu.classList.remove('show');
         OthersBtn.classList.remove('active');
+                siteContainer.classList.remove('expanded'); // Remove a largura expandida quando o menu fecha
+
 
     }
 

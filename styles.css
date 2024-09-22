@@ -337,11 +337,7 @@ body {
             margin-top: 40px;
         }
 
-                /* Classe para aumentar a largura do container */
-                .site-container.expanded {
-                    width: 110%;
-                    /* Aumenta a largura quando o menu abre */
-                }
+               
     
 }
 
@@ -496,6 +492,11 @@ body {
     color: white;
     border: 1.5px solid #00FF00;
 }
+ /* Classe para aumentar a largura do container */
+ .site-container.expanded {
+     width: 110%;
+     /* Aumenta a largura quando o menu abre */
+ }
 /*-------------------- Media Queries para telas pequenas -------------------*/
     @media screen and (max-width: 768px) {
         /* Remover background-color do lado direito */
@@ -608,7 +609,8 @@ body {
                                 position: relative;
                                 left: 0 !important;
                                 }
-             
+
+                                                               
     }
 /*----------------------------------------------Lado direito-seção3-----------------------------------------*/
 .section-1,

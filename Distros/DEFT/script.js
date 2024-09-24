@@ -14,3 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
         checkbox.checked = isChecked;
     });
 });
+
+
+
+//individual
+function updateToolsCheckbox(checkbox) {
+    const count = parseInt(localStorage.getItem('toolsCheckedCount')) || 0;
+    if (checkbox.checked) {
+        localStorage.setItem('toolsCheckedCount', count + 1);
+    } else {
+        localStorage.setItem('toolsCheckedCount', count - 1);
+    }
+    updateToolsProgress();
+}
+
+// Atualiza o progresso ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    const toolsCount = parseInt(localStorage.getItem('toolsCheckedCount')) || 0;
+    const toolsCheckboxes = document.querySelectorAll('#distros-tools-menu input[type="checkbox"]');
+
+    toolsCheckboxes.forEach((checkbox, index) => {
+        checkbox.checked = index < toolsCount; // Marca os checkboxes com base na contagem
+    });
+
+    updateToolsProgress();
+});
+ 

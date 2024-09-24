@@ -14,3 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
         checkbox.checked = isChecked;
     });
 });
+
+
+//individual
+function updateSecurityCheckbox(checkbox) {
+    const count = parseInt(localStorage.getItem('securityCheckedCount')) || 0;
+    if (checkbox.checked) {
+        localStorage.setItem('securityCheckedCount', count + 1);
+    } else {
+        localStorage.setItem('securityCheckedCount', count - 1);
+    }
+    updateSecurityProgress();
+}
+
+// Atualiza o progresso ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    const securityCount = parseInt(localStorage.getItem('securityCheckedCount')) || 0;
+    const securityCheckboxes = document.querySelectorAll('#security-knowledge-menu input[type="checkbox"]');
+
+    securityCheckboxes.forEach((checkbox, index) => {
+        checkbox.checked = index < securityCount; // Marca os checkboxes com base na contagem
+    });
+
+    updateSecurityProgress();
+});
+ 

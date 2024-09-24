@@ -326,7 +326,7 @@ body {
     /* Alinha o conteúdo ao topo */
     /*  height: 150vh;
                            /* Define a altura total da tela */
-    background-color: #111;
+    background-color: #222;
     border-radius: 13px;
 
 }
@@ -676,6 +676,7 @@ body {
 }
 
 /*----------------------------------------------Seção 1---------------------------------------*/
+/*----------------------------------------------Seção 1---------------------------------------*/
 /* Seção 1 */
 .section-1 {
     display: flex;
@@ -684,18 +685,15 @@ body {
     align-items: center;
     background-color: #222;
     border-radius: 12px;
-    /* Fundo escuro */
     color: white;
-    /* Cor do texto padrão */
+    padding: 20px;
 }
 
 /* Estilo do título */
 .section-title {
     font-size: 40px;
     color: #00ff00;
-    /* Cor verde */
-    margin-bottom: 0px;
-    /* Espaçamento entre o título e o círculo */
+    margin-bottom: 20px;
 }
 
 /* Container para o disco de progresso */
@@ -705,7 +703,6 @@ body {
     align-items: center;
     height: 220px;
     margin-bottom: 14px;
-    /* Espaçamento entre o disco e as caixas de seleção */
 }
 
 /* Círculo maior */
@@ -713,14 +710,13 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: #555;
-    /* Cor da parte não preenchida */
+    background-color: #222;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     border: 20px solid #00ff00;
-    /* Cor de progresso */
+    cursor: pointer;
 }
 
 /* Círculo menor (interior) */
@@ -728,72 +724,153 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #c1b8b8;
-    /* Cor interna */
+    background-color: #222;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 15px solid #313d31;
+    position: relative;
 }
 
 /* Texto de progresso no centro */
 .progress-text {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
-    /* Cor do texto */
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
-/*funcionamento do progresso--------------------------------------------------*/
-/* Estilos do container de progresso */
-.progress-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-/* Estilos do círculo externo (progresso total) */
+/*animação do botão
+/* Adicionando transição suave */
 .progress-circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: conic-gradient(#00FF00 0%, #00FF00 0%, #333 0%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Estilos do círculo interno */
+/* Efeito ao passar o mouse */
+.progress-circle:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho do círculo */
+    box-shadow: 0px 0px 20px 10px rgba(0, 255, 0, 0.7);
+    /* Adiciona um brilho ao redor */
+}
+
+/* Efeito no círculo interno */
 .progress-inner-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #333;
-    /* Cor interna */
-    display: flex;
+    transition: transform 0.3s ease;
+}
+
+/* Animação adicional para o círculo interno */
+.progress-circle:hover .progress-inner-circle {
+    transform: scale(1.1);
+    /* Aumenta levemente o círculo interno */
+}
+/*--------------------------------------Menu de Tópicos-----------------------------------------*/
+.progress-container {
+    transition: opacity 0.3s ease;
+    /* Transição suave para a opacidade */
+}
+.progress-container.hidden {
+    opacity: 0;
+    /* Torna invisível */
+    pointer-events: none;
+    /* Impede interações enquanto estiver invisível */
+}
+.progress-container.hidden {
+    opacity: 0;
+    /* Torna invisível */
+    pointer-events: none;
+    /* Impede interações enquanto estiver invisível */
+}
+/* Menu de Tópicos */
+.topics-menu {
+    display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    color: white;
+    margin-top: -220px;
+    /* Ajuste esta margem para que o menu fique sobre o círculo */
+    z-index: 1;
+    /* Garante que o menu fique acima de outros elementos */
 }
-
-/* Texto da percentagem */
-.progress-text {
-    font-size: 24px;
-    color: #00FF00;
-}
-
-/* Estilo dos checkpoints */
-.checkpoint-container {
-    margin-top: 30px;
+.topics-menu.open {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+}
+
+/* Estilo da barra de progresso */
+.topic-progress {
+    position: relative;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.progress-bar-container {
+    display: flex;
     align-items: center;
+    height: 37px;
+    width: 100% ;
+    background-color: #7c7777;
+    border-radius: 4px;
+    position: relative;
+    border: 2px solid #000000;
 }
 
-.checkpoint input[type="checkbox"] {
-    margin-right: 10px;
+.progress-bar {
+    height: 100%;
+    background-color: #00ff00;
+    width: 0;
+    border-radius: 4px;
+    transition: width 0.3s ease;
 }
 
+.progress-percentage {
+    position: absolute;
+    left: 10px;
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Nome do tópico à direita da barra */
+.topic-name {
+    position: absolute;
+    /* Permite que o texto fique em cima da barra */
+    right: 10px;
+    /* Alinha o texto à direita com um espaçamento */
+    top: 50%;
+    /* Posiciona verticalmente */
+    transform: translateY(-50%);
+    /* Centraliza verticalmente */
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 1;
+    /* Garante que o texto fique acima da barra */
+}
+
+/*animação barra---------------------*/
+/* Animação ao passar o mouse na barra */
+.topic-progress:hover {
+    transform: scale(1.05);
+    /* Aumenta levemente o tamanho da barra */
+}
+/* Animação de destaque ao passar o mouse */
+.progress-bar-container:hover {
+    box-shadow: 0px 0px 15px 5px rgba(3, 241, 3, 0.5);
+    /* Adiciona um brilho verde ao redor da barra */
+}
+/* Animação de cor ao passar o mouse */
+.progress-bar-container:hover .progress-bar {
+    background-color: #32cd32;
+    /* Muda a cor da barra para um tom mais claro de verde */
+}
 /*-------------------------------------------------seçao 2-----------------------------------------*/
 /* Seção 2 */
 .section-2 {
@@ -835,7 +912,7 @@ body {
     height: 85%;
     /*padding: 15px;*/
     margin-bottom: 15px;
-    background-color: #504f4f;
+    background-color: #222;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;

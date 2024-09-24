@@ -14,3 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
         checkbox.checked = isChecked;
     });
 });
+
+
+//individual
+function updateProgrammingCheckbox(checkbox) {
+    const count = parseInt(localStorage.getItem('programmingCheckedCount')) || 0;
+    if (checkbox.checked) {
+        localStorage.setItem('programmingCheckedCount', count + 1);
+    } else {
+        localStorage.setItem('programmingCheckedCount', count - 1);
+    }
+    updateProgrammingProgress();
+}
+
+// Atualiza o progresso ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    const programmingCount = parseInt(localStorage.getItem('programmingCheckedCount')) || 0;
+    const programmingCheckboxes = document.querySelectorAll('#programming-skills-menu input[type="checkbox"]');
+
+    programmingCheckboxes.forEach((checkbox, index) => {
+        checkbox.checked = index < programmingCount; // Marca os checkboxes com base na contagem
+    });
+
+    updateProgrammingProgress();
+});
+ 

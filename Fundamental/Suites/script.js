@@ -14,3 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
         checkbox.checked = isChecked;
     });
 });
+
+
+//individual
+function updateITCheckbox(checkbox) {
+    const count = parseInt(localStorage.getItem('ITCheckedCount')) || 0;
+    if (checkbox.checked) {
+        localStorage.setItem('ITCheckedCount', count + 1);
+    } else {
+        localStorage.setItem('ITCheckedCount', count - 1);
+    }
+    updateITProgress();
+}
+
+// Atualiza o progresso ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    const ITCount = parseInt(localStorage.getItem('ITCheckedCount')) || 0;
+    const ITCheckboxes = document.querySelectorAll('#fundamental-it-skills-menu input[type="checkbox"]');
+
+    ITCheckboxes.forEach((checkbox, index) => {
+        checkbox.checked = index < ITCount; // Marca os checkboxes com base na contagem
+    });
+
+    updateITProgress();
+});

@@ -14,3 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
         checkbox.checked = isChecked;
     });
 });
+
+
+//individual
+function updateVirtualizationCheckbox(checkbox) {
+    const count = parseInt(localStorage.getItem('virtualizationCheckedCount')) || 0;
+    if (checkbox.checked) {
+        localStorage.setItem('virtualizationCheckedCount', count + 1);
+    } else {
+        localStorage.setItem('virtualizationCheckedCount', count - 1);
+    }
+    updateVirtualizationProgress();
+}
+
+// Atualiza o progresso ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    const virtualizationCount = parseInt(localStorage.getItem('virtualizationCheckedCount')) || 0;
+    const virtualizationCheckboxes = document.querySelectorAll('#Virtualization-menu input[type="checkbox"]');
+
+    virtualizationCheckboxes.forEach((checkbox, index) => {
+        checkbox.checked = index < virtualizationCount; // Marca os checkboxes com base na contagem
+    });
+
+    updateVirtualizationProgress();
+});

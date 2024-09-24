@@ -437,9 +437,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s;
-    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;    text-align: center;
     z-index: 5;
+}
+/* Animação de Hover e Toque para Botões de Tópicos */
+.topic-button:hover,
+.topic-button:focus {
+    background-color: #666;
+    color: #FFFFFF;
+    transform: scale(1.05);
+    /* Aumenta de tamanho */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Sombra ao passar o mouse */
 }
 
 /* Efeito hover para botões de tópicos */
@@ -520,7 +529,18 @@ body {
     justify-content: center;
     text-align: center;
     margin-bottom: 5px;
-    transition: background-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+/* Animação de Hover e Toque para Botões do Menu */
+.menu-button:hover,
+.menu-button:focus {
+    background-color: #666;
+    color: #FFFFFF;
+    transform: scale(1.05);
+    /* Aumenta de tamanho */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Sombra ao passar o mouse */
 }
 
 /* Efeito hover para botões do menu */
@@ -664,6 +684,19 @@ body {
     width: 108%;
     /* Aumenta a largura quando o menu abre */
 }
+
+ .topic-button:active {
+     transform: scale(1.05);
+     /* Aumenta de tamanho ao tocar */
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+     /* Sombra ao toque */
+ }
+ .menu-button:active {
+     transform: scale(1.05);
+     /* Aumenta de tamanho ao tocar */
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+     /* Sombra ao toque */
+ }
 
 }
 

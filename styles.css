@@ -863,13 +863,30 @@ body {
 }
 /* Animação de destaque ao passar o mouse */
 .progress-bar-container:hover {
-    box-shadow: 0px 0px 15px 5px rgba(3, 241, 3, 0.5);
+    box-shadow: 0px 0px 15px 5px rgba(247, 248, 247, 0.5);
     /* Adiciona um brilho verde ao redor da barra */
 }
 /* Animação de cor ao passar o mouse */
 .progress-bar-container:hover .progress-bar {
     background-color: #32cd32;
     /* Muda a cor da barra para um tom mais claro de verde */
+}
+
+/*animação para despositivos moveis..........*/
+/* Animação para dispositivos móveis (ao toque) */
+@media (max-width: 768px) {
+    .progress-circle:active {
+        transform: scale(1.1);
+        /* Aumenta o tamanho ao tocar */
+        box-shadow: 0px 0px 20px 10px rgba(0, 255, 0, 0.7);
+        /* Brilho ao toque */
+        .progress-bar-container:active {
+                transform: scale(1.05);
+                /* Aumenta levemente ao toque */
+                box-shadow: 0px 0px 15px 5px rgba(0, 255, 0, 0.5);
+                /* Brilho ao toque */
+            }
+    }
 }
 /*-------------------------------------------------seçao 2-----------------------------------------*/
 /* Seção 2 */

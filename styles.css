@@ -23,52 +23,48 @@
 
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
-    /* Classe para aumentar a largura do container */
-        .site-container.expanded {
-            width: 200%;
-            /* Aumenta a largura quando o menu abre */
-        }
-
-/* Garantir que o rodapé ocupe corretamente o espaço */
-    footer {
-        display: flex;
-        flex-direction: column;
-        /* Organiza os elementos em coluna */
-        align-items: center;
-        /* Centraliza o conteúdo */
-        padding: 20px;
-        margin-top: 20px;
-    }
-
-    /* Separar a seção 'Sobre' do título 'Cibersecurity' */
-    .sobre-section,
-    .cibersecurity-title {
-        margin-bottom: 10px;
-        /* Adicionar espaço entre os elementos */
-    }
-
-    /* Garantir que o botão 'Voltar ao topo' esteja dentro do site-container */
-    .back-to-top {
-        position: relative;
-        /* Garante que o botão esteja contido no rodapé */
-        bottom: 0;
-        margin-top: 20px;
-        /* Espaçamento adequado entre o conteúdo */
+.footer-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
         width: 100%;
-        /* Ajusta a largura do botão */
-        max-width: 200px;
-        /* Limita a largura em dispositivos pequenos */
-        text-align: center;
-        /* Centraliza o botão */
     }
 
-    /* Ajustar o site-container para evitar que os elementos saiam dele */
-    .site-container {
-        padding: 0px;
-        box-sizing: border-box;
-        /* Garante que o padding não faça os elementos transbordarem */
-       /* overflow: hidden;
-        /* Impede que o conteúdo saia do contêiner */
+    /* As três primeiras seções em linha */
+    .footer-section.footer-title,
+    .footer-section:nth-child(2),
+    .footer-section:nth-child(3) {
+        flex: 1;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Ajustando a altura e o espaçamento para as três seções */
+    .footer-section h1,
+    .footer-section h2 {
+        font-size: 18px;
+        /* Reduzir tamanho da fonte */
+    }
+
+    /* A seção 'Sobre' deve ficar abaixo das três seções */
+    .footer-section:nth-child(2) {
+        order: 4;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajustando a largura do botão 'Voltar ao Topo' */
+    .footer-back-to-top {
+        flex: 1;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .back-to-top img {
+        width: 35px;
+        /* Ajustando o tamanho do ícone no modo paisagem */
+        height: 35px;
     }
 /* Remover background-color do lado direito */
     .home-right {

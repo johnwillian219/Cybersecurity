@@ -22,7 +22,7 @@
 }
 
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
-@media (orientation: landscape) and (max-height: 500px) {
+@media (orientation: landscape) and (max-height: 480px) {
 
     
 /* Remover background-color do lado direito */

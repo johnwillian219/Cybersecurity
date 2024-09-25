@@ -21,6 +21,15 @@
     /* Transição suave para mudanças de largura */
 }
 
+/* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
+@media (orientation: landscape) and (max-height: 500px) {
+    .site-container {
+        max-width: 100%;
+        /* Permite que o container use 100% da largura no modo paisagem */
+        padding: 0 10px;
+        /* Ajusta o padding para ser menor */
+    }
+}
 
 /* Estilo para as seções fora da página Home */
 .full-height {

@@ -86,41 +86,53 @@
         margin-top: 40px;
     }
 
-        header {
-            flex-direction: row;
-            /* Alinha itens na horizontal */
-            justify-content: space-between;
-            /* Distribui espaço entre itens */
-            align-items: center;
-            /* Alinha itens ao centro */
+          header {
+              flex-direction: row;
+              /* Muda para horizontal */
+              justify-content: space-between;
+              /* Espaça uniformemente os itens */
+              align-items: center;
+              /* Centraliza verticalmente */
+          }
+        header .logo {
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+            white-space: nowrap;
+            /* Impede quebra de linha na logo */
         }
+          nav ul {
+              margin-top: 0;
+              /* Remove margem superior */
+              flex-wrap: nowrap;
+              /* Não permite quebra de linha */
+          }
     
-        nav ul {
-            margin-top: 0;
-            /* Remove margem superior em telas pequenas */
-        }
+          nav ul li {
+              margin-bottom: 0;
+              /* Remove margem inferior */
+              padding: 0px;
+              /* Ajuste o padding, se necessário */
+              font-size: 11px;
+              /* Reduz o tamanho da fonte */
+          }
     
-        nav ul li {
-            margin-bottom: 0;
-            /* Remove margem inferior em telas pequenas */
-            padding: 10px;
-            /* Ajuste o padding, se necessário */
-        }
+          .search-bar {
+              margin-top: 0;
+              /* Remove margem superior da barra de busca */
+          }
     
-        .search-bar {
-            margin-top: 0;
-            /* Remove margem superior da barra de busca */
-        }
+          .search-bar input {
+              font-size: 11px;
+              /* Reduz o tamanho da fonte do input */
+          }
     
-        .search-bar input {
-            width: calc(100% - 120px);
-            /* Ajusta a largura do input */
-        }
-    
-        .search-bar button {
-            width: 100px;
-            /* Largura fixa para o botão de busca */
-        }
+          .search-bar button {
+              width: 70px;
+              /* Largura fixa reduzida para o botão de busca */
+              font-size: 11px;
+              /* Reduz o tamanho da fonte do botão */
+          }
 
     
 }

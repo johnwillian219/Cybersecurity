@@ -24,7 +24,9 @@
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
 
-    
+.site-container{
+    height: 100vh;
+}
 /* Remover background-color do lado direito */
     .home-right {
         background-color: transparent;

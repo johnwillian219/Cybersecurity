@@ -54,47 +54,7 @@
         border-radius: 3px;
     }
 
-          header {
-              flex-direction: row;
-              /* Alinha itens verticalmente em telas pequenas */
-              /*align-items: flex-start;
-            /* Alinha itens à esquerda */
-              padding: 10px;
-              /* Ajuste o padding para telas menores */
-          }
-    
-          nav ul {
-              flex-direction: row;
-              /* Itens de navegação em coluna */
-              width: 100%;
-              /* Largura total do cabeçalho */
-              margin-top: 20px;
-              /* Espaçamento superior */
-          }
-    
-          nav ul li {
-              margin-right: 0;
-              padding: 10px;
-              margin-bottom: 10px;
-              /* Espaçamento inferior entre itens de navegação */
-          }
-    
-          .search-bar {
-              width: 80%;
-              /* Barra de busca ocupa toda a largura */
-              margin-top: 10px;
-              /* Espaçamento superior */
-          }
-    
-          .search-bar input {
-              width: calc(100% - 120px);
-              /* Ajusta a largura do input */
-          }
-    
-          .search-bar button {
-              width: 100px;
-              /* Largura fixa para o botão de busca */
-          }
+   
 
     .topic-button.active {
         background-color: #161616;
@@ -126,7 +86,90 @@
         margin-top: 40px;
     }
 
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 20px;
+            background-color: #222;
+            /* Cor de fundo do cabeçalho */
+            border-bottom: 1px solid #333;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 100vw;
+            /* Limita a largura ao tamanho da viewport */
+        }
     
+        /* Estilo da logo */
+        header .logo {
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+            white-space: nowrap;
+            /* Impede quebra de linha na logo */
+        }
+    
+        /* Estilo da navegação */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            /* Permite quebra de linha para itens de navegação */
+        }
+    
+        nav ul li {
+            margin-right: 20px;
+        }
+    
+        nav ul li a {
+            color: #fff;
+            /* Texto em branco */
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+            white-space: nowrap;
+            /* Impede quebra de linha nos links de navegação */
+        }
+    
+        nav ul li a:hover {
+            color: #00FF00;
+            /* Cor do texto ao passar o mouse (verde) */
+        }
+    
+        /* Barra de busca */
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+    
+        .search-bar input {
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            background-color: #333;
+            color: #fff;
+            /* Texto da barra de busca em branco */
+        }
+    
+        .search-bar button {
+            padding: 5px 10px;
+            margin-left: 10px;
+            background-color: #00FF00;
+            border: none;
+            color: #000;
+            /* Texto do botão de busca */
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    
+        .search-bar button:hover {
+            background-color: #666;
+            /* Cor do botão ao passar o mouse */
+        }
 
     
 }

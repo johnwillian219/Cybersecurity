@@ -54,11 +54,47 @@
         border-radius: 3px;
     }
 
-    /* Esconde a imagem do menu */
-    .menu-image {
-        display: none;
-        /* Esconde a imagem */
-    }
+          header {
+              flex-direction: row;
+              /* Alinha itens verticalmente em telas pequenas */
+              /*align-items: flex-start;
+            /* Alinha itens à esquerda */
+              padding: 10px;
+              /* Ajuste o padding para telas menores */
+          }
+    
+          nav ul {
+              flex-direction: row;
+              /* Itens de navegação em coluna */
+              width: 100%;
+              /* Largura total do cabeçalho */
+              margin-top: 20px;
+              /* Espaçamento superior */
+          }
+    
+          nav ul li {
+              margin-right: 0;
+              padding: 10px;
+              margin-bottom: 10px;
+              /* Espaçamento inferior entre itens de navegação */
+          }
+    
+          .search-bar {
+              width: 80%;
+              /* Barra de busca ocupa toda a largura */
+              margin-top: 10px;
+              /* Espaçamento superior */
+          }
+    
+          .search-bar input {
+              width: calc(100% - 120px);
+              /* Ajusta a largura do input */
+          }
+    
+          .search-bar button {
+              width: 100px;
+              /* Largura fixa para o botão de busca */
+          }
 
     .topic-button.active {
         background-color: #161616;
@@ -90,111 +126,8 @@
         margin-top: 40px;
     }
 
-        .footer-title h1 {
-            font-size: 30px;
-            /* Aumenta o tamanho do título */
-            margin: 0;
-            /* Remove as margens padrão */
-            color: #00FF00;
-            /* Cor verde (igual ao cabeçalho) */
-        }
- .topic-button.active {
-     background-color: #161616;
-     /* Cor verde quando o menu estiver aberto */
-     color: white;
-     border: 1.5px solid #00FF00;
- }
+    
 
- /* Efeito hover para botões de tópicos */
- .topic-button:hover {
-     background-color: #666;
-     color: #FFFFFF;
- }
-
- /* Estilo do menu dropdown */
- .dropdown-menu {
-     display: none;
-     /* Escondido por padrão */
-     position: absolute;
-     top: 100%;
-     left: 0;
-     background-color: #4a4d4a;
-     border: 1px solid #000000;
-     border-radius: 10px;
-     width: 190px;
-     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-     z-index: 100;
-     padding: 10px;
- }
-
- /* Quando o menu é exibido */
- .dropdown-menu.show {
-     display: block;
-     /* Exibe o menu */
- }
-
- /* Estilo para os botões do menu */
- .menu-button {
-     width: 180px;
-     height: 28px;
-     font-size: 9px;
-     font-weight: bold;
-     color: rgb(7, 7, 7);
-     background-color: #00FF00;
-     border: 1px solid #000000;
-     border-radius: 2px;
-     cursor: pointer;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     margin-bottom: 5px;
-     transition: background-color 0.3s;
- }
-
- /* Estilo dos botões dentro do menu dropdown */
- .dropdown-menu ul {
-     list-style-type: none;
-     padding: 0;
-     margin: 0;
- }
-
- .dropdown-menu ul li {
-     margin-bottom: 5px;
- }
-
- /* Efeito hover para botões do menu */
- .menu-button:hover {
-     background-color: #555;
-     /* Cor ao passar o mouse */
- }
-
-
- /* Contêiner para botões sobre a imagem */
- .menu-button-container {
-     position: relative;
-     left: 0 !important;
- }
-
- /* Classe para aumentar a largura do container */
- .site-container.expanded {
-     width: 108%;
-     /* Aumenta a largura quando o menu abre */
- }
-
- .topic-button:active {
-     transform: scale(1.05);
-     /* Aumenta de tamanho ao tocar */
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-     /* Sombra ao toque */
- }
-
- .menu-button:active {
-     transform: scale(1.05);
-     /* Aumenta de tamanho ao tocar */
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-     /* Sombra ao toque */
- }
     
 }
 

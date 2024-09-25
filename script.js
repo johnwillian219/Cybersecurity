@@ -343,3 +343,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+
+//seão contacto
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Lógica de validação ou envio de formulário
+    const subject = document.getElementById('subject').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (subject && email && message) {
+        alert('Mensagem enviada com sucesso!');
+        // Aqui você pode adicionar lógica para enviar o formulário via AJAX, etc.
+    } else {
+        alert('Por favor, preencha todos os campos.');
+    }
+});

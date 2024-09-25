@@ -704,7 +704,7 @@ body {
 .section-1,
 .section-2,
 .section-3 {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     /* Ajuste este valor conforme necessário espaçamento entre seções */
 }
 
@@ -923,70 +923,39 @@ body {
 }
 /*-------------------------------------------------seçao 2-----------------------------------------*/
 /* Seção 2 */
-.section-2 {
-    position: relative;
-    padding: 5px;
+/* Estilo da Seção 1 e Menu de Tópicos - Já existentes */
+
+/* Seção de Contato */
+.section-contact {
+    text-align: center;
+    padding: 20px;
     background-color: #222;
     border-radius: 12px;
-    min-height: 300px;
-    /* Ajuste conforme necessário */
-    overflow: hidden;
-    /* Garante que nada ultrapasse os limites da seção */
+    color: white;
+    margin-top: 30px;
 }
 
-/* Título da seção 2 */
-.section-2 h1 {
-    text-align: center;
-    margin-bottom: 0px;
-    margin-top: 15px;
+.section-contact .section-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #00ff00;
 }
 
-/* Contêiner do carrossel de notícias */
-.news-carousel {
-    position: relative;
-    width: 100%;
-    /* Ocupa toda a largura da seção */
-    height: 100%;
-    /* Ajuste conforme necessário */
-    overflow: hidden;
-    box-sizing: border-box;
+.contact-icons {
     display: flex;
-    align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
-/* Cada notícia */
-.news-item {
-    display: none;
-    width: 150%;
-    height: 85%;
-    /*padding: 15px;*/
-    margin-bottom: 15px;
-    background-color: #222;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+.contact-icon img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
 }
 
-.news-item.active {
-    display: block;
+.contact-icon img:hover {
+    transform: scale(1.1);
 }
-
-
-.news-navigation button {
-    background-color: #00FF00;
-    border: none;
-    color: #333;
-    padding: 5px;
-    border-radius: 50%;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.news-navigation button:hover {
-    background-color: #00cc00;
-}
-
 
 /* --------------Animação-------------------------------------------------------------------------------------------------------------*/
 /* Estilos da Seção 3 */

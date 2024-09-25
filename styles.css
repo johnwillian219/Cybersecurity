@@ -25,7 +25,7 @@
 @media (orientation: landscape) and (max-height: 500px) {
 
 .site-container{
-    height: 100vh;
+    width: 100vw;
 }
 /* Remover background-color do lado direito */
     .home-right {

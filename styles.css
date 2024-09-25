@@ -22,7 +22,7 @@
 }
 
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
-@media (orientation: landscape) and (max-height: 480px) {
+@media (orientation: landscape) and (max-height: 500px) {
 
     
 /* Remover background-color do lado direito */
@@ -86,53 +86,68 @@
         margin-top: 40px;
     }
 
-          header {
-              flex-direction: row;
-              /* Muda para horizontal */
-              justify-content: space-between;
-              /* Espaça uniformemente os itens */
-              align-items: center;
-              /* Centraliza verticalmente */
-          }
-        header .logo {
-            font-size: 20px;
-            color: #fff;
-            font-weight: bold;
-            white-space: nowrap;
-            /* Impede quebra de linha na logo */
-        }
-          nav ul {
-              margin-top: 0;
-              /* Remove margem superior */
-              flex-wrap: nowrap;
-              /* Não permite quebra de linha */
-          }
+         header {
+             display: flex;
+             flex-direction: row;
+             /* Força os itens do cabeçalho em linha */
+             justify-content: space-between;
+             /* Distribui espaço entre itens */
+             align-items: center;
+             /* Alinha os itens ao centro verticalmente */
+             flex-wrap: nowrap;
+             /* Não deixa os itens quebrarem para a próxima linha */
+         }
     
-          nav ul li {
-              margin-bottom: 0;
-              /* Remove margem inferior */
-              padding: 0px;
-              /* Ajuste o padding, se necessário */
-              font-size: 11px;
-              /* Reduz o tamanho da fonte */
-          }
+         nav ul {
+             margin-top: 0;
+             /* Remove margem superior */
+             display: flex;
+             flex-wrap: nowrap;
+             /* Não permite quebra de linha */
+             justify-content: space-between;
+             /* Espaça os itens do menu */
+             align-items: center;
+             /* Alinha os itens verticalmente */
+             width: auto;
+             /* Ajusta o tamanho do menu */
+         }
     
-          .search-bar {
-              margin-top: 0;
-              /* Remove margem superior da barra de busca */
-          }
+         nav ul li {
+             flex-shrink: 1;
+             /* Permite que os itens diminuam de tamanho */
+             margin: 0 5px;
+             /* Ajusta margens para economizar espaço */
+             padding: 5px;
+             /* Ajuste o padding */
+             font-size: 12px;
+             /* Reduz o tamanho da fonte */
+         }
     
-          .search-bar input {
-              font-size: 11px;
-              /* Reduz o tamanho da fonte do input */
-          }
+         .search-bar {
+             display: flex;
+             width: auto;
+             /* Ajusta o tamanho da barra de busca */
+             margin: 0;
+             /* Remove margem */
+         }
     
-          .search-bar button {
-              width: 70px;
-              /* Largura fixa reduzida para o botão de busca */
-              font-size: 11px;
-              /* Reduz o tamanho da fonte do botão */
-          }
+         .search-bar input {
+             flex-shrink: 1;
+             /* Permite que o input diminua de tamanho */
+             font-size: 12px;
+             /* Reduz o tamanho da fonte */
+             width: 60%;
+             /* Ajusta a largura do input */
+         }
+    
+         .search-bar button {
+             flex-shrink: 1;
+             /* Permite que o botão diminua de tamanho */
+             width: 60px;
+             /* Largura menor para o botão */
+             font-size: 12px;
+             /* Reduz o tamanho da fonte */
+         }
 
     
 }

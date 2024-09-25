@@ -153,23 +153,24 @@ nav ul li a:hover {
     header {
         flex-direction: column;
         /* Alinha itens verticalmente em telas pequenas */
-        align-items: flex-start;
+        /*align-items: flex-start;
         /* Alinha itens à esquerda */
         padding: 10px;
         /* Ajuste o padding para telas menores */
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
         /* Itens de navegação em coluna */
         width: 100%;
         /* Largura total do cabeçalho */
-        margin-top: 10px;
+        margin-top: 30px;
         /* Espaçamento superior */
     }
 
     nav ul li {
         margin-right: 0;
+        padding: 10px;
         margin-bottom: 10px;
         /* Espaçamento inferior entre itens de navegação */
     }

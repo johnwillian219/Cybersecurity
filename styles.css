@@ -25,7 +25,7 @@
 @media (orientation: landscape) and (max-height: 500px) {
 
 .site-container{
-    width: 100vw;
+    width: auto;
 }
 /* Remover background-color do lado direito */
     .home-right {
@@ -117,9 +117,9 @@
          nav ul li {
              flex-shrink: 1;
              /* Permite que os itens diminuam de tamanho */
-             margin: 0 5px;
+             margin: 0 0px;
              /* Ajusta margens para economizar espaço */
-             padding: 5px;
+             padding: 0px;
              /* Ajuste o padding */
              font-size: 12px;
              /* Reduz o tamanho da fonte */

@@ -87,88 +87,39 @@
     }
 
         header {
-            display: flex;
+            flex-direction: row;
+            /* Alinha itens na horizontal */
             justify-content: space-between;
+            /* Distribui espaço entre itens */
             align-items: center;
-            padding: 18px 20px;
-            background-color: #222;
-            /* Cor de fundo do cabeçalho */
-            border-bottom: 1px solid #333;
-            box-sizing: border-box;
-            width: 100%;
-            max-width: 100vw;
-            /* Limita a largura ao tamanho da viewport */
+            /* Alinha itens ao centro */
         }
     
-        /* Estilo da logo */
-        header .logo {
-            font-size: 24px;
-            color: #fff;
-            font-weight: bold;
-            white-space: nowrap;
-            /* Impede quebra de linha na logo */
-        }
-    
-        /* Estilo da navegação */
         nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-            /* Permite quebra de linha para itens de navegação */
+            margin-top: 0;
+            /* Remove margem superior em telas pequenas */
         }
     
         nav ul li {
-            margin-right: 20px;
+            margin-bottom: 0;
+            /* Remove margem inferior em telas pequenas */
+            padding: 10px;
+            /* Ajuste o padding, se necessário */
         }
     
-        nav ul li a {
-            color: #fff;
-            /* Texto em branco */
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            transition: color 0.3s;
-            white-space: nowrap;
-            /* Impede quebra de linha nos links de navegação */
-        }
-    
-        nav ul li a:hover {
-            color: #00FF00;
-            /* Cor do texto ao passar o mouse (verde) */
-        }
-    
-        /* Barra de busca */
         .search-bar {
-            display: flex;
-            align-items: center;
+            margin-top: 0;
+            /* Remove margem superior da barra de busca */
         }
     
         .search-bar input {
-            padding: 5px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 1px solid #333;
-            background-color: #333;
-            color: #fff;
-            /* Texto da barra de busca em branco */
+            width: calc(100% - 120px);
+            /* Ajusta a largura do input */
         }
     
         .search-bar button {
-            padding: 5px 10px;
-            margin-left: 10px;
-            background-color: #00FF00;
-            border: none;
-            color: #000;
-            /* Texto do botão de busca */
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    
-        .search-bar button:hover {
-            background-color: #666;
-            /* Cor do botão ao passar o mouse */
+            width: 100px;
+            /* Largura fixa para o botão de busca */
         }
 
     

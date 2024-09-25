@@ -23,6 +23,11 @@
 
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
+    /* Classe para aumentar a largura do container */
+        .site-container.expanded {
+            width: 200%;
+            /* Aumenta a largura quando o menu abre */
+        }
 
 /* Garantir que o rodapé ocupe corretamente o espaço */
     footer {

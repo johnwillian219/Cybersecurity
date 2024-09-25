@@ -24,10 +24,47 @@
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
 
-.site-container{
-    width: auto;
-    height: auto;
-}
+/* Garantir que o rodapé ocupe corretamente o espaço */
+    footer {
+        display: flex;
+        flex-direction: column;
+        /* Organiza os elementos em coluna */
+        align-items: center;
+        /* Centraliza o conteúdo */
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    /* Separar a seção 'Sobre' do título 'Cibersecurity' */
+    .sobre-section,
+    .cibersecurity-title {
+        margin-bottom: 10px;
+        /* Adicionar espaço entre os elementos */
+    }
+
+    /* Garantir que o botão 'Voltar ao topo' esteja dentro do site-container */
+    .back-to-top {
+        position: relative;
+        /* Garante que o botão esteja contido no rodapé */
+        bottom: 0;
+        margin-top: 20px;
+        /* Espaçamento adequado entre o conteúdo */
+        width: 100%;
+        /* Ajusta a largura do botão */
+        max-width: 200px;
+        /* Limita a largura em dispositivos pequenos */
+        text-align: center;
+        /* Centraliza o botão */
+    }
+
+    /* Ajustar o site-container para evitar que os elementos saiam dele */
+    .site-container {
+        padding: 0px;
+        box-sizing: border-box;
+        /* Garante que o padding não faça os elementos transbordarem */
+       /* overflow: hidden;
+        /* Impede que o conteúdo saia do contêiner */
+    }
 /* Remover background-color do lado direito */
     .home-right {
         background-color: transparent;

@@ -30,41 +30,20 @@
      width: 147%;
      /* Aplica a mesma largura do site container */
  }
-/* Estilo do menu dropdown */
-.dropdown-menu {
-    display: none;
-    /* Escondido por padrão */
-    position: absolute;
-    /* Permite posicionamento relativo ao elemento pai */
-    top: 100%;
-    /* Coloca logo abaixo do botão */
-    left: 0;
-    /* Alinha à esquerda do botão */
-    background-color: #4a4d4a;
-    /* Cor de fundo do dropdown */
-    border: 1px solid #000000;
-    /* Borda do dropdown */
-    border-radius: 14px;
-    /* Cantos arredondados */
-    min-width: 200px;
-    /* Largura mínima do dropdown */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Sombra para destaque */
-    z-index: 100;
-    /* Garante que o dropdown fique sobre outros elementos */
-    padding: 10px;
-    /* Espaçamento interno */
-}
-
-/* Exibir o menu ao passar o mouse ou ao clicar no botão */
-nav ul li:hover .dropdown-menu,
-nav ul li:focus-within .dropdown-menu {
-    display: block;
-    /* Exibe o dropdown ao passar o mouse ou focar */
+/* Classe para aumentar a largura do container em modo paisagem */
+.site-container.expanded-landscape {
+    width: 157%;
+    /* Ajuste a largura conforme necessário */
 }
 
 }
 
+
+/* Classe para aumentar a largura do container em modo paisagem */
+.site-container.expanded-landscape {
+    width: 157%;
+    /* Ajuste a largura conforme necessário */
+}
 /* Estilo para as seções fora da página Home */
 .full-height {
     min-height: 52vh;

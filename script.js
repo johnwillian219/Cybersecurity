@@ -361,3 +361,21 @@ document.querySelector('.contact-form').addEventListener('submit', function(even
         alert('Por favor, preencha todos os campos.');
     }
 });
+
+// Supondo que você tenha uma função para abrir o menu
+function toggleDropdown() {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const siteContainer = document.querySelector('.site-container');
+    
+    if (dropdownMenu.classList.contains('show')) {
+        dropdownMenu.classList.remove('show');
+        siteContainer.classList.remove('expanded-landscape'); // Remove a classe de expansão quando o menu é fechado
+    } else {
+        dropdownMenu.classList.add('show');
+        siteContainer.classList.add('expanded-landscape'); // Adiciona a classe de expansão quando o menu é aberto
+    }
+}
+
+// Exemplo de uso
+document.querySelector('.topic-button').addEventListener('click', toggleDropdown);
+

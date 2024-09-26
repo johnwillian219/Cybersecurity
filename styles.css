@@ -121,10 +121,36 @@
             /* Garante que a barra de pesquisa esteja oculta */
         }
 /*rodapé***********/
-                   .footer-back-to-top {
-                       display: none;
-                       /* Oculta o botão "Voltar ao Topo" */
-                   }
+ .footer-back-to-top {
+     display: none;
+     /* Oculta o botão "Voltar ao Topo" */
+ }
+
+ .footer-content {
+     gap: 30px;
+     /* Aumenta o espaço entre as seções */
+ }
+
+ .footer-section h2 {
+     font-size: 15px;
+     /* Diminui o tamanho das letras dos títulos das seções */
+ }
+
+ .footer-section ul li {
+     font-size: 11px;
+     /* Diminui o tamanho das letras dos itens da lista */
+ }
+
+ .footer-title h1 {
+     font-size: 16px;
+
+     /* Diminui o tamanho do título principal */
+ }
+
+ .footer {
+     font-size: 12px;
+     /* Diminui o tamanho da fonte geral do rodapé */
+ }
 }
 
 /* Estilo para as seções fora da página Home */

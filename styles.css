@@ -120,6 +120,11 @@
             display: none !important;
             /* Garante que a barra de pesquisa esteja oculta */
         }
+/*rodapé***********/
+                   .footer-back-to-top {
+                       display: none;
+                       /* Oculta o botão "Voltar ao Topo" */
+                   }
 }
 
 /* Estilo para as seções fora da página Home */

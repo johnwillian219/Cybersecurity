@@ -25,7 +25,7 @@
 @media (orientation: landscape) and (max-height: 500px) {
 .site-container{
     width: 160%;
-    height: 2000%;
+    height: 400%;
 }
  header {
      width: 147%;

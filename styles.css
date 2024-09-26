@@ -23,7 +23,7 @@
 
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
-  
+
 /* Remover background-color do lado direito */
     .home-right {
         background-color: transparent;
@@ -84,37 +84,48 @@
     .home-right {
         margin-top: 40px;
     }
-        header {
-            flex-direction: row;
-            /* Mantém a direção em linha */
-            padding: 5px;
-            /* Diminui o espaçamento */
-        }
+
+           header {
+               flex-direction: column;
+               /* Alinha itens verticalmente em telas pequenas */
+               /*align-items: flex-start;
+            /* Alinha itens à esquerda */
+               padding: 10px;
+               /* Ajuste o padding para telas menores */
+           }
     
-        .logo {
-            font-size: 20px;
-            /* Diminui o tamanho da fonte do logo */
-        }
+           nav ul {
+               flex-direction: row;
+               /* Itens de navegação em coluna */
+               width: 100%;
+               /* Largura total do cabeçalho */
+               margin-top: 20px;
+               /* Espaçamento superior */
+           }
     
-        nav ul li {
-            margin: 0 5px;
-            /* Diminui o espaçamento entre itens */
-        }
+           nav ul li {
+               margin-right: 0;
+               padding: 10px;
+               margin-bottom: 10px;
+               /* Espaçamento inferior entre itens de navegação */
+           }
     
-        nav ul li a {
-            font-size: 14px;
-            /* Diminui o tamanho da fonte dos links */
-        }
+           .search-bar {
+               width: 100%;
+               /* Barra de busca ocupa toda a largura */
+               margin-top: 10px;
+               /* Espaçamento superior */
+           }
     
-        .search-bar input {
-            font-size: 14px;
-            /* Diminui o tamanho da fonte do campo de busca */
-        }
+           .search-bar input {
+               width: calc(100% - 120px);
+               /* Ajusta a largura do input */
+           }
     
-        .search-bar button {
-            font-size: 14px;
-            /* Diminui o tamanho da fonte do botão de busca */
-        }
+           .search-bar button {
+               width: 100px;
+               /* Largura fixa para o botão de busca */
+           }
 }
 
 /* Estilo para as seções fora da página Home */

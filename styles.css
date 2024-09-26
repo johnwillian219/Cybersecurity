@@ -32,18 +32,17 @@
  }
 /* Classe para aumentar a largura do container em modo paisagem */
 .site-container.expanded-landscape {
-    width: 157%;
+    width: 200%;
     /* Ajuste a largura conforme necessário */
 }
-
 }
-
-
 /* Classe para aumentar a largura do container em modo paisagem */
 .site-container.expanded-landscape {
-    width: 157%;
+    width: 200%;
     /* Ajuste a largura conforme necessário */
 }
+
+
 /* Estilo para as seções fora da página Home */
 .full-height {
     min-height: 52vh;

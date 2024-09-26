@@ -23,20 +23,7 @@
 
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
-    .footer-content {
-            grid-template-columns: 1fr 1fr;
-            /* Mantém duas colunas */
-            grid-template-rows: auto auto;
-            /* Mantém duas linhas */
-        }
-    
-        .footer-title,
-        .footer-links,
-        .footer-about,
-        .footer-back-to-top {
-            font-size: 14px;
-            /* Ajuste o tamanho das letras para caber melhor em telas pequenas */
-        }
+  
 /* Remover background-color do lado direito */
     .home-right {
         background-color: transparent;
@@ -97,54 +84,61 @@
     .home-right {
         margin-top: 40px;
     }
+ /* Reorganizando o cabeçalho em duas linhas */
+ .header-default {
+     display: flex;
+     flex-direction: column;
+     align-items: stretch;
+     padding: 10px;
+     width: 100%;
+ }
 
-         header {
-             flex-direction: row;
-             justify-content: space-between;
-             /* Deixa o título e a barra de pesquisa na mesma linha */
-             align-items: center;
-         }
-    
-         .logo {
-             font-size: 18px;
-             /* Diminui o tamanho da fonte no modo paisagem */
-             margin-bottom: 0;
-             /* Remove o espaçamento inferior */
-         }
-    
-         /* Coloca o botão de pesquisa na mesma linha que o título */
-         .search-bar {
-             margin-top: 0;
-             width: auto;
-             flex-grow: 1;
-             /* Faz a barra de busca se ajustar ao espaço disponível */
-             display: flex;
-             justify-content: flex-end;
-         }
-    
-         .search-bar input {
-             width: auto;
-             margin-right: 10px;
-         }
-    
-         nav {
-             margin-top: 10px;
-             /* Adiciona um espaço entre o título e a navegação */
-             width: 100%;
-             /* Navegação ocupa toda a largura */
-         }
-    
-         nav ul {
-             flex-direction: row;
-             /* Mantém os itens em linha */
-             justify-content: space-around;
-         }
-    
-         nav ul li {
-             font-size: 14px;
-             /* Diminui o tamanho do texto na navegação */
-         }
-    
+ /* Primeira linha: Logo e barra de busca */
+ .header-default .logo,
+ .header-default .search-bar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     margin: 0;
+ }
+
+ /* Ajuste no tamanho da fonte da logo */
+ .header-default .logo {
+     font-size: 22px;
+     margin-bottom: 5px;
+ }
+
+ /* Barra de busca ocupando espaço junto da logo */
+ .header-default .search-bar {
+     width: 100%;
+     justify-content: flex-end;
+ }
+
+ .header-default .search-bar input {
+     width: 70%;
+ }
+
+ .header-default .search-bar button {
+     width: 25%;
+ }
+
+ /* Segunda linha: Navegação abaixo da logo e da barra de busca */
+ .header-default nav ul {
+     flex-direction: row;
+     justify-content: space-around;
+     margin-top: 10px;
+     width: 100%;
+ }
+
+ .header-default nav ul li {
+     margin: 0 10px;
+ }
+
+ /* Diminuir o tamanho da fonte dos links para caber na tela */
+ .header-default nav ul li a {
+     font-size: 14px;
+ }
 }
 
 /* Estilo para as seções fora da página Home */

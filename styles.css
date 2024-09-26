@@ -23,15 +23,7 @@
 
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
-    /* Esconde o cabeçalho padrão */
-        .header-default {
-            display: none;
-        }
-    
-        /* Exibe o cabeçalho para dispositivos virados de lado */
-        .header-landscape {
-            display: block;
-        }
+  
 /* Remover background-color do lado direito */
     .home-right {
         background-color: transparent;
@@ -92,7 +84,37 @@
     .home-right {
         margin-top: 40px;
     }
-
+        header {
+            flex-direction: row;
+            /* Mantém a direção em linha */
+            padding: 5px;
+            /* Diminui o espaçamento */
+        }
+    
+        .logo {
+            font-size: 20px;
+            /* Diminui o tamanho da fonte do logo */
+        }
+    
+        nav ul li {
+            margin: 0 5px;
+            /* Diminui o espaçamento entre itens */
+        }
+    
+        nav ul li a {
+            font-size: 14px;
+            /* Diminui o tamanho da fonte dos links */
+        }
+    
+        .search-bar input {
+            font-size: 14px;
+            /* Diminui o tamanho da fonte do campo de busca */
+        }
+    
+        .search-bar button {
+            font-size: 14px;
+            /* Diminui o tamanho da fonte do botão de busca */
+        }
 }
 
 /* Estilo para as seções fora da página Home */
@@ -149,15 +171,7 @@ header {
     max-width: 100vw;
     /* Limita a largura ao tamanho da viewport */
 }
-/* Estilo padrão: esconde o cabeçalho para paisagem */
-.header-landscape {
-    display: none;
-}
 
-/* Exibe o cabeçalho padrão em todas as telas */
-.header-default {
-    display: block;
-}
 /* Estilo da logo */
 header .logo {
     font-size: 24px;

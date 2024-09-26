@@ -24,7 +24,8 @@
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
 .site-container{
-    width: 157%;
+    width: 160%;
+    height: 2000%;
 }
  header {
      width: 147%;

@@ -25,7 +25,6 @@
 @media (orientation: landscape) and (max-height: 500px) {
 .site-container{
     width: 160%;
-    height: 500%;
 }
  header {
      width: 147%;
@@ -721,7 +720,7 @@ body {
 .section-1,
 .section-2,
 .section-3 {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     /* Ajuste este valor conforme necessário espaçamento entre seções */
 }
 
@@ -840,12 +839,12 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #222;
-    padding: 20px;
+    padding: 0px;
     border-radius: 12px;
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     color: white;
-    margin-top: -220px;
+    margin-top: -230px;
     /* Ajuste esta margem para que o menu fique sobre o círculo */
     z-index: 1;
     /* Garante que o menu fique acima de outros elementos */
@@ -858,7 +857,7 @@ body {
 .topic-progress {
     position: relative;
     width: 100%;
-    margin: 5px 0;
+    margin: 0px 0;
 }
 
 .progress-bar-container {

@@ -85,47 +85,41 @@
         margin-top: 40px;
     }
 
-           header {
-               flex-direction: column;
-               /* Alinha itens verticalmente em telas pequenas */
-               /*align-items: flex-start;
-            /* Alinha itens à esquerda */
-               padding: 10px;
-               /* Ajuste o padding para telas menores */
-           }
+        header {
+            display: flex;
+            /* Utiliza flexbox para alinhar itens na mesma linha */
+            justify-content: space-between;
+            /* Espaçamento entre o título e os links */
+            align-items: center;
+            /* Alinha verticalmente os itens */
+            padding: 10px;
+        }
     
-           nav ul {
-               flex-direction: row;
-               /* Itens de navegação em coluna */
-               width: 100%;
-               /* Largura total do cabeçalho */
-               margin-top: 20px;
-               /* Espaçamento superior */
-           }
+        .logo {
+            display: block;
+            /* Mostra o título "Cybersecurity" */
+        }
     
-           nav ul li {
-               margin-right: 0;
-               padding: 10px;
-               margin-bottom: 10px;
-               /* Espaçamento inferior entre itens de navegação */
-           }
+        nav ul {
+            display: flex;
+            /* Alinha os itens de navegação em linha */
+            flex-direction: row;
+            /* Itens de navegação em linha */
+            width: auto;
+            /* Largura automática */
+            margin: 0;
+            /* Remove margens */
+        }
     
-           .search-bar {
-               width: 100%;
-               /* Barra de busca ocupa toda a largura */
-               margin-top: 10px;
-               /* Espaçamento superior */
-           }
+        nav ul li {
+            margin-right: 15px;
+            /* Espaçamento entre os itens de navegação */
+        }
     
-           .search-bar input {
-               width: calc(100% - 120px);
-               /* Ajusta a largura do input */
-           }
-    
-           .search-bar button {
-               width: 100px;
-               /* Largura fixa para o botão de busca */
-           }
+        .search-bar {
+            display: none !important;
+            /* Garante que a barra de pesquisa esteja oculta */
+        }
 }
 
 /* Estilo para as seções fora da página Home */

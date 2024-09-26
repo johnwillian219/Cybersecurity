@@ -23,40 +23,43 @@
 
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
-    .home-right {
-            display: flex;
-            /* Ativa o Flexbox */
-            flex-direction: row;
-            /* Coloca as seções lado a lado */
-            justify-content: space-between;
-            /* Espaça as seções igualmente */
-            padding: 0 10px;
-            /* Adiciona um pouco de espaçamento lateral, se necessário */
-        }
-    
-        .section-1,
-        .section-2 {
-            flex: 1;
-            /* Faz as seções 1 e 2 ocuparem igualmente o espaço disponível */
-            margin: 0 10px;
-            /* Adiciona margem lateral para espaçamento entre as seções */
-            margin-bottom: 0;
-            /* Remove a margem inferior para as seções 1 e 2 */
-        }
-    
-        .section-3 {
-            flex-basis: 100%;
-            /* A seção 3 ocupa toda a largura disponível */
-            margin-top: 20px;
-            /* Espaço entre as seções 1 e 2 e a seção 3 */
-        }
-/* Remover background-color do lado direito */
-
-    .home-right {
-        background-color: transparent;
-        /* Remove o fundo */
+.home-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* Isso permite que as seções se reorganizem para uma nova linha, se necessário */
     }
 
+    /* Seção 1 e Seção 2 ocupam metade do espaço cada uma */
+    .section-1,
+    .section-3 {
+        flex: 1 1 50%;
+        /* As seções ocupam 50% cada uma */
+        box-sizing: border-box;
+        /* Garante que padding e borders sejam inclusos no cálculo do tamanho */
+        padding: 0px;
+        /* Espaçamento interno das seções */
+        margin-bottom: 0;
+    }
+
+    /* A seção 3 ocupa toda a largura disponível e fica abaixo das seções 1 e 2 */
+    .section-contact {
+        flex-basis: 100%;
+        margin-top: 20px;
+        /* Espaço entre a seção 3 e as seções anteriores */
+    }
+    
+/* Remover background-color do lado direito */
+
+.home-right {
+        background-color: transparent;
+        /* Remove o fundo */
+        display: flex;
+        /* Ativa o Flexbox */
+        flex-direction: column;
+        /* Mantém o layout em coluna */
+    }
     /* Ajustar roadmap container */
     .roadmap-container {
         height: auto;
@@ -71,15 +74,16 @@
         /* A imagem ocupa 100% da largura e ajusta a proporção corretamente */
     }
 
-    /* Reduzir tamanho dos botões de tópicos */
-    .topic-button {
-        width: 100px;
-        /* Diminuído para melhor ajuste */
-        height: 20px;
-        font-size: 9px;
-        /* Tamanho da fonte ajustado */
-        border-radius: 3px;
-    }
+  /* Estilo para os botões de tópicos */
+  .topic-button {
+      width: 100px;
+      /* Dimensões ajustadas */
+      height: 20px;
+      font-size: 9px;
+      border-radius: 3px;
+      margin-right: 5px;
+      /* Espaço entre os botões */
+  }
 
     /* Esconde a imagem do menu */
     .menu-image {
@@ -161,25 +165,18 @@
         /* Cor ao passar o mouse */
     }
 
-    /* Contêiner para botões sobre a imagem */
-    .menu-button-container {
-        position: relative;
-        left: 0 !important;
-    }
 
+  /* Contêiner para botões sobre a imagem */
+  .menu-button-container {
+      position: absolute;
+      left: 0 !important;
+  }
     /* Ajustar flexbox para a home-container */
     .home-container {
         flex-direction: column;
     }
 
-    .home-left,
-    .home-right {
-        flex: 1 1 100%;
-        /* Ocupa 100% da largura em telas pequenas */
-        padding: 0;
-        margin: 0;
-    }
-
+   
     /* Adiciona uma margem de 40px entre o lado esquerdo e o direito quando o layout é em coluna */
     .home-right {
         margin-top: 40px;

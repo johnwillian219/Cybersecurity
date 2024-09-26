@@ -24,39 +24,50 @@
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
 .footer-content {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
+        flex-direction: column;
+        /* Mantenha as seções em coluna */
+        align-items: center;
+        /* Centraliza as seções */
         width: 100%;
+        /* Ocupar 100% da largura */
     }
 
-    /* As três primeiras seções em linha */
-    .footer-section.footer-title,
+    /* Seções na primeira linha */
+    .footer-title,
+    /* Cybersecurity */
     .footer-section:nth-child(2),
-    .footer-section:nth-child(3) {
-        flex: 1;
+    /* Links Úteis */
+    .footer-back-to-top {
+        /* Voltar ao topo */
+        display: inline-block;
+        /* Manter seções em linha */
+        width: auto;
+        /* Ajustar a largura automaticamente */
+        margin: 0 5px;
+        /* Espaço horizontal entre as seções */
         text-align: center;
-        margin-bottom: 10px;
+        /* Centraliza o texto */
     }
 
-    /* Ajustando a altura e o espaçamento para as três seções */
+    /* Seção 'Sobre' deve ficar embaixo */
+    .footer-section:nth-child(4) {
+        width: 100%;
+        /* Ocupa a largura total */
+        text-align: center;
+        /* Centraliza o texto */
+        margin-top: 10px;
+        /* Espaço acima da seção 'Sobre' */
+    }
+
+    /* Ajustando a altura e o espaçamento para as seções */
     .footer-section h1,
     .footer-section h2 {
         font-size: 18px;
         /* Reduzir tamanho da fonte */
     }
 
-    /* A seção 'Sobre' deve ficar abaixo das três seções */
-    .footer-section:nth-child(2) {
-        order: 4;
-        width: 100%;
-        text-align: center;
-    }
-
     /* Ajustando a largura do botão 'Voltar ao Topo' */
     .footer-back-to-top {
-        flex: 1;
         margin-top: 0;
         text-align: center;
     }
@@ -190,7 +201,52 @@
              /* Reduz o tamanho da fonte */
          }
 
+        header {
+            flex-direction: row;
+            justify-content: space-between;
+            /* Deixa o título e a barra de pesquisa na mesma linha */
+            align-items: center;
+        }
     
+        .logo {
+            font-size: 18px;
+            /* Diminui o tamanho da fonte no modo paisagem */
+            margin-bottom: 0;
+            /* Remove o espaçamento inferior */
+        }
+    
+        /* Coloca o botão de pesquisa na mesma linha que o título */
+        .search-bar {
+            margin-top: 0;
+            width: auto;
+            flex-grow: 1;
+            /* Faz a barra de busca se ajustar ao espaço disponível */
+            display: flex;
+            justify-content: flex-end;
+        }
+    
+        .search-bar input {
+            width: auto;
+            margin-right: 10px;
+        }
+    
+        nav {
+            margin-top: 10px;
+            /* Adiciona um espaço entre o título e a navegação */
+            width: 100%;
+            /* Navegação ocupa toda a largura */
+        }
+    
+        nav ul {
+            flex-direction: row;
+            /* Mantém os itens em linha */
+            justify-content: space-around;
+        }
+    
+        nav ul li {
+            font-size: 14px;
+            /* Diminui o tamanho do texto na navegação */
+        }
 }
 
 /* Estilo para as seções fora da página Home */

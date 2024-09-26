@@ -23,60 +23,20 @@
 
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
-.footer-content {
-        flex-direction: column;
-        /* Mantenha as seções em coluna */
-        align-items: center;
-        /* Centraliza as seções */
-        width: 100%;
-        /* Ocupar 100% da largura */
-    }
-
-    /* Seções na primeira linha */
-    .footer-title,
-    /* Cybersecurity */
-    .footer-section:nth-child(2),
-    /* Links Úteis */
-    .footer-back-to-top {
-        /* Voltar ao topo */
-        display: inline-block;
-        /* Manter seções em linha */
-        width: auto;
-        /* Ajustar a largura automaticamente */
-        margin: 0 5px;
-        /* Espaço horizontal entre as seções */
-        text-align: center;
-        /* Centraliza o texto */
-    }
-
-    /* Seção 'Sobre' deve ficar embaixo */
-    .footer-section:nth-child(4) {
-        width: 100%;
-        /* Ocupa a largura total */
-        text-align: center;
-        /* Centraliza o texto */
-        margin-top: 10px;
-        /* Espaço acima da seção 'Sobre' */
-    }
-
-    /* Ajustando a altura e o espaçamento para as seções */
-    .footer-section h1,
-    .footer-section h2 {
-        font-size: 18px;
-        /* Reduzir tamanho da fonte */
-    }
-
-    /* Ajustando a largura do botão 'Voltar ao Topo' */
-    .footer-back-to-top {
-        margin-top: 0;
-        text-align: center;
-    }
-
-    .back-to-top img {
-        width: 35px;
-        /* Ajustando o tamanho do ícone no modo paisagem */
-        height: 35px;
-    }
+    .footer-content {
+            grid-template-columns: 1fr 1fr;
+            /* Mantém duas colunas */
+            grid-template-rows: auto auto;
+            /* Mantém duas linhas */
+        }
+    
+        .footer-title,
+        .footer-links,
+        .footer-about,
+        .footer-back-to-top {
+            font-size: 14px;
+            /* Ajuste o tamanho das letras para caber melhor em telas pequenas */
+        }
 /* Remover background-color do lado direito */
     .home-right {
         background-color: transparent;
@@ -139,114 +99,52 @@
     }
 
          header {
-             display: flex;
              flex-direction: row;
-             /* Força os itens do cabeçalho em linha */
              justify-content: space-between;
-             /* Distribui espaço entre itens */
+             /* Deixa o título e a barra de pesquisa na mesma linha */
              align-items: center;
-             /* Alinha os itens ao centro verticalmente */
-             flex-wrap: nowrap;
-             /* Não deixa os itens quebrarem para a próxima linha */
          }
     
-         nav ul {
-             margin-top: 0;
-             /* Remove margem superior */
-             display: flex;
-             flex-wrap: nowrap;
-             /* Não permite quebra de linha */
-             justify-content: space-between;
-             /* Espaça os itens do menu */
-             align-items: center;
-             /* Alinha os itens verticalmente */
-             width: auto;
-             /* Ajusta o tamanho do menu */
+         .logo {
+             font-size: 18px;
+             /* Diminui o tamanho da fonte no modo paisagem */
+             margin-bottom: 0;
+             /* Remove o espaçamento inferior */
          }
     
-         nav ul li {
-             flex-shrink: 1;
-             /* Permite que os itens diminuam de tamanho */
-             margin: 0 0px;
-             /* Ajusta margens para economizar espaço */
-             padding: 0px;
-             /* Ajuste o padding */
-             font-size: 12px;
-             /* Reduz o tamanho da fonte */
-         }
-    
+         /* Coloca o botão de pesquisa na mesma linha que o título */
          .search-bar {
-             display: flex;
+             margin-top: 0;
              width: auto;
-             /* Ajusta o tamanho da barra de busca */
-             margin: 0;
-             /* Remove margem */
+             flex-grow: 1;
+             /* Faz a barra de busca se ajustar ao espaço disponível */
+             display: flex;
+             justify-content: flex-end;
          }
     
          .search-bar input {
-             flex-shrink: 1;
-             /* Permite que o input diminua de tamanho */
-             font-size: 12px;
-             /* Reduz o tamanho da fonte */
-             width: 60%;
-             /* Ajusta a largura do input */
+             width: auto;
+             margin-right: 10px;
          }
     
-         .search-bar button {
-             flex-shrink: 1;
-             /* Permite que o botão diminua de tamanho */
-             width: 60px;
-             /* Largura menor para o botão */
-             font-size: 12px;
-             /* Reduz o tamanho da fonte */
+         nav {
+             margin-top: 10px;
+             /* Adiciona um espaço entre o título e a navegação */
+             width: 100%;
+             /* Navegação ocupa toda a largura */
          }
-
-        header {
-            flex-direction: row;
-            justify-content: space-between;
-            /* Deixa o título e a barra de pesquisa na mesma linha */
-            align-items: center;
-        }
     
-        .logo {
-            font-size: 18px;
-            /* Diminui o tamanho da fonte no modo paisagem */
-            margin-bottom: 0;
-            /* Remove o espaçamento inferior */
-        }
+         nav ul {
+             flex-direction: row;
+             /* Mantém os itens em linha */
+             justify-content: space-around;
+         }
     
-        /* Coloca o botão de pesquisa na mesma linha que o título */
-        .search-bar {
-            margin-top: 0;
-            width: auto;
-            flex-grow: 1;
-            /* Faz a barra de busca se ajustar ao espaço disponível */
-            display: flex;
-            justify-content: flex-end;
-        }
+         nav ul li {
+             font-size: 14px;
+             /* Diminui o tamanho do texto na navegação */
+         }
     
-        .search-bar input {
-            width: auto;
-            margin-right: 10px;
-        }
-    
-        nav {
-            margin-top: 10px;
-            /* Adiciona um espaço entre o título e a navegação */
-            width: 100%;
-            /* Navegação ocupa toda a largura */
-        }
-    
-        nav ul {
-            flex-direction: row;
-            /* Mantém os itens em linha */
-            justify-content: space-around;
-        }
-    
-        nav ul li {
-            font-size: 14px;
-            /* Diminui o tamanho do texto na navegação */
-        }
 }
 
 /* Estilo para as seções fora da página Home */

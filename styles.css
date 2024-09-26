@@ -26,6 +26,43 @@
 .site-container{
     width: 147%;
 }
+ header {
+     width: 147%;
+     /* Aplica a mesma largura do site container */
+ }
+/* Estilo do menu dropdown */
+.dropdown-menu {
+    display: none;
+    /* Escondido por padrão */
+    position: absolute;
+    /* Permite posicionamento relativo ao elemento pai */
+    top: 100%;
+    /* Coloca logo abaixo do botão */
+    left: 0;
+    /* Alinha à esquerda do botão */
+    background-color: #4a4d4a;
+    /* Cor de fundo do dropdown */
+    border: 1px solid #000000;
+    /* Borda do dropdown */
+    border-radius: 14px;
+    /* Cantos arredondados */
+    min-width: 200px;
+    /* Largura mínima do dropdown */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Sombra para destaque */
+    z-index: 100;
+    /* Garante que o dropdown fique sobre outros elementos */
+    padding: 10px;
+    /* Espaçamento interno */
+}
+
+/* Exibir o menu ao passar o mouse ou ao clicar no botão */
+nav ul li:hover .dropdown-menu,
+nav ul li:focus-within .dropdown-menu {
+    display: block;
+    /* Exibe o dropdown ao passar o mouse ou focar */
+}
+
 }
 
 /* Estilo para as seções fora da página Home */
@@ -71,7 +108,7 @@ section {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 18px 20px;
     background-color: #222;
@@ -79,7 +116,8 @@ header {
     border-bottom: 1px solid #333;
     box-sizing: border-box;
     width: 100%;
-    max-width: 100vw;
+  /*  max-width: 100vw;*/
+        flex-wrap: wrap;
     /* Limita a largura ao tamanho da viewport */
 }
 
@@ -104,6 +142,7 @@ nav ul {
 
 nav ul li {
     margin-right: 20px;
+        flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -115,6 +154,7 @@ nav ul li a {
     transition: color 0.3s;
     white-space: nowrap;
     /* Impede quebra de linha nos links de navegação */
+        flex-wrap: wrap;
 }
 
 nav ul li a:hover {
@@ -126,6 +166,7 @@ nav ul li a:hover {
 .search-bar {
     display: flex;
     align-items: center;
+        flex-wrap: wrap;
 }
 
 .search-bar input {

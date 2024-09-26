@@ -23,6 +23,9 @@
 
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
+
+
+
 .home-right {
         display: flex;
         flex-direction: row;
@@ -38,7 +41,7 @@
         /* As seções ocupam 50% cada uma */
         box-sizing: border-box;
         /* Garante que padding e borders sejam inclusos no cálculo do tamanho */
-        padding: 0px;
+        padding: 10px;
         /* Espaçamento interno das seções */
         margin-bottom: 0;
     }
@@ -49,159 +52,6 @@
         margin-top: 20px;
         /* Espaço entre a seção 3 e as seções anteriores */
     }
-    
-/* Remover background-color do lado direito */
-
-.home-right {
-        background-color: transparent;
-        /* Remove o fundo */
-        display: flex;
-        /* Ativa o Flexbox */
-        flex-direction: column;
-        /* Mantém o layout em coluna */
-    }
-    /* Ajustar roadmap container */
-    .roadmap-container {
-        height: auto;
-        /* Ajusta a altura conforme o conteúdo */
-    }
-
-    /* Ajustar tamanho da imagem do roadmap em telas pequenas */
-    .roadmap-image {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        /* A imagem ocupa 100% da largura e ajusta a proporção corretamente */
-    }
-
-  /* Estilo para os botões de tópicos */
-  .topic-button {
-      width: 100px;
-      /* Dimensões ajustadas */
-      height: 20px;
-      font-size: 9px;
-      border-radius: 3px;
-      margin-right: 5px;
-      /* Espaço entre os botões */
-  }
-
-    /* Esconde a imagem do menu */
-    .menu-image {
-        display: none;
-        /* Esconde a imagem */
-    }
-
-    .topic-button.active {
-        background-color: #161616;
-        /* Cor verde quando o menu estiver aberto */
-        color: white;
-        border: 1.5px solid #00FF00;
-    }
-
-    /* Efeito hover para botões de tópicos */
-    .topic-button:hover {
-        background-color: #666;
-        color: #FFFFFF;
-    }
-
-    /* Estilo do menu dropdown */
-    .dropdown-menu {
-        display: none;
-        /* Escondido por padrão */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #4a4d4a;
-        border: 1px solid #000000;
-        border-radius: 10px;
-        width: 160px;
-        /* Diminuído para melhor ajuste */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        z-index: 100;
-        padding: 10px;
-    }
-
-    /* Quando o menu é exibido */
-    .dropdown-menu.show {
-        display: block;
-        /* Exibe o menu */
-    }
-
-    /* Estilo para os botões do menu */
-    .menu-button {
-        width: 120px;
-        /* Ajustado para melhor ajuste em modo paisagem */
-        height: 20px;
-        font-size: 8px;
-        /* Tamanho da fonte ajustado */
-        font-weight: bold;
-        color: rgb(7, 7, 7);
-        background-color: #00FF00;
-        border: 1px solid #000000;
-        border-radius: 2px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 5px;
-        transition: background-color 0.3s;
-    }
-
-    /* Estilo dos botões dentro do menu dropdown */
-    .dropdown-menu ul {
-        list-style-type: none;
-        padding: 10px;
-        margin: 0;
-    }
-
-    .dropdown-menu ul li {
-        margin-bottom: 5px;
-    }
-
-    /* Efeito hover para botões do menu */
-    .menu-button:hover {
-        background-color: #555;
-        /* Cor ao passar o mouse */
-    }
-
-
-  /* Contêiner para botões sobre a imagem */
-  .menu-button-container {
-      position: absolute;
-      left: 0 !important;
-  }
-    /* Ajustar flexbox para a home-container */
-    .home-container {
-        flex-direction: column;
-    }
-
-   
-    /* Adiciona uma margem de 40px entre o lado esquerdo e o direito quando o layout é em coluna */
-    .home-right {
-        margin-top: 40px;
-    }
-
-    /* Classe para aumentar a largura do container */
-    .site-container.expanded {
-        width: 110%;
-        /* Aumenta a largura quando o menu abre */
-    }
-
-    .progress-circle:active {
-        transform: scale(1.1);
-        /* Aumenta o tamanho ao tocar */
-        box-shadow: 0px 0px 20px 10px rgba(0, 255, 0, 0.7);
-        /* Brilho ao toque */
-    }
-
-    .progress-bar-container:active {
-        transform: scale(1.05);
-        /* Aumenta levemente ao toque */
-        box-shadow: 0px 0px 15px 5px rgba(0, 255, 0, 0.5);
-        /* Brilho ao toque */
-    }
-
         header {
             display: flex;
             /* Utiliza flexbox para alinhar itens na mesma linha */

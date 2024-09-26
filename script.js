@@ -31,6 +31,7 @@ function toggleMenu(buttonId, menuId, expandContainer = false) {
             if (expandContainer) {
                 siteContainer.classList.toggle('expanded');
             }
+            
         });
     }
 }
@@ -362,38 +363,3 @@ document.querySelector('.contact-form').addEventListener('submit', function(even
     }
 });
 
-// Função para alternar menus e atualizar o container do site
-function toggleMenu(buttonId, menuId, expandContainer = false, landscapeExpand = false) {
-    const button = document.getElementById(buttonId);
-    const menu = document.getElementById(menuId);
-    const siteContainer = document.querySelector('.site-container'); // Seleciona o container do site
-
-    // Verifica se o botão e o menu existem
-    if (button && menu) {
-        button.addEventListener('click', function(event) {
-            event.stopPropagation(); // Impede que o clique se propague para o evento de fechamento global
-
-            // Fecha outros menus antes de abrir o atual
-            closeAllMenusExcept(menuId);
-
-            // Alterna o menu e o estado do botão ativo
-            menu.classList.toggle('show');
-            button.classList.toggle('active');
-
-            // Expande/recolhe o container se necessário
-            if (expandContainer) {
-                siteContainer.classList.toggle('expanded');
-            }
-
-            // Verifica se deve expandir em modo paisagem
-            if (landscapeExpand && window.innerHeight < window.innerWidth) {
-                siteContainer.classList.toggle('expanded-landscape');
-            } else {
-                siteContainer.classList.remove('expanded-landscape'); // Remove a classe caso não esteja em modo paisagem
-            }
-        });
-    }
-}
-
-// Exemplo de uso da função
-toggleMenu('buttonId', 'menuId', true, true); // Passando true para expandir o container

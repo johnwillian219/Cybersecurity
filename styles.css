@@ -24,22 +24,12 @@
 /* Ajustes para quando o dispositivo é virado de lado (modo paisagem) */
 @media (orientation: landscape) and (max-height: 500px) {
 .site-container{
-    width: 147%;
+    width: 157%;
 }
  header {
      width: 147%;
      /* Aplica a mesma largura do site container */
  }
-/* Classe para aumentar a largura do container em modo paisagem */
-.site-container.expanded-landscape {
-    width: 200%;
-    /* Ajuste a largura conforme necessário */
-}
-}
-/* Classe para aumentar a largura do container em modo paisagem */
-.site-container.expanded-landscape {
-    width: 200%;
-    /* Ajuste a largura conforme necessário */
 }
 
 

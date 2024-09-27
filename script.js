@@ -1,42 +1,33 @@
-// Função para mostrar a seção selecionada e ocultar as outras
+// Função para mostrar a seção selecionada e ocultar as outras----------------------------------------------------//
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.content-section');
     sections.forEach(section => {
-        section.style.display = 'none'; // Esconde todas as seções
+        section.style.display = 'none';
     });
-    document.getElementById(sectionId).style.display = 'block'; // Mostra a seção selecionada
+    document.getElementById(sectionId).style.display = 'block';
 }
-
-// Mostra a seção Início por padrão
 showSection('home');
 
-// Função para alternar menus e atualizar o container do site
+// Função para alternar menus e atualizar o container do site-----------------------------------------------------//
 function toggleMenu(buttonId, menuId, expandContainer = false) {
     const button = document.getElementById(buttonId);
     const menu = document.getElementById(menuId);
 
-    // Verifica se o botão e o menu existem
     if (button && menu) {
-        button.addEventListener('click', function(event) {
-            event.stopPropagation(); // Impede que o clique se propague para o evento de fechamento global
-
-            // Fecha outros menus antes de abrir o atual
+        button.addEventListener('click', function (event) {
+            event.stopPropagation();
             closeAllMenusExcept(menuId);
-
-            // Alterna o menu e o estado do botão ativo
             menu.classList.toggle('show');
             button.classList.toggle('active');
-
-            // Expande/recolhe o container se necessário
             if (expandContainer) {
                 siteContainer.classList.toggle('expanded');
             }
-            
+
         });
     }
 }
 
-// Função para fechar todos os menus, exceto o menu atual
+// Função para fechar todos os menus, exceto o menu atual--------------------------------------------------------//
 function closeAllMenusExcept(currentMenuId) {
     const allMenus = document.querySelectorAll('.dropdown-menu');
     const allButtons = document.querySelectorAll('.topic-button');
@@ -48,20 +39,19 @@ function closeAllMenusExcept(currentMenuId) {
     });
 
     allButtons.forEach(button => {
-        if (!document.getElementById(currentMenuId)?.classList.contains('show')) {
+        if (!document.getElementById(currentMenuId).classList.contains('show')) {
             button.classList.remove('active');
         }
     });
 
-    // Recolhe o site container se nenhum menu estiver aberto
     const anyMenuOpen = document.querySelectorAll('.dropdown-menu.show').length > 0;
     if (!anyMenuOpen) {
         siteContainer.classList.remove('expanded');
     }
 }
 
-// Inicializa todos os botões e menus
-const siteContainer = document.querySelector('.site-container'); // Seleciona o container principal do site
+// Inicializa todos os botões e menus----------------------------------------------------------------------------//
+const siteContainer = document.querySelector('.site-container');
 
 toggleMenu('fundamental-it-skills-btn', 'fundamental-it-skills-menu');
 toggleMenu('operating-systems-btn', 'operating-systems-menu', true);
@@ -74,55 +64,15 @@ toggleMenu('distros-tools-btn', 'distros-tools-menu', true);
 toggleMenu('web-btn', 'web-menu');
 toggleMenu('others-btn', 'others-menu', true);
 
-// Fechar o menu se clicar fora dele
-window.addEventListener('click', function() {
+// Fechar o menu se clicar fora dele-----------------------------------------------------------------------------//
+window.addEventListener('click', function () {
     closeAllMenusExcept(null);
 });
 
-
-// Rotação de notícias
-const newsItems = document.querySelectorAll('.news-item');
-let currentIndex = 0;
-const totalNewsItems = newsItems.length;
-let newsInterval;
-
-// Função para exibir a notícia atual
-function showNewsItem(index) {
-    newsItems.forEach((item, i) => {
-        item.classList.remove('active');
-        if (i === index) {
-            item.classList.add('active');
-        }
-    });
-}
-
-// Função para mostrar a próxima notícia
-function showNextNews() {
-    currentIndex = (currentIndex + 1) % totalNewsItems;
-    showNewsItem(currentIndex);
-}
-
-// Função para iniciar a rotação automática
-function startNewsRotation() {
-    newsInterval = setInterval(showNextNews, 10000); // Muda a cada 10 segundos
-}
-
-// Função para parar a rotação automática
-function stopNewsRotation() {
-    clearInterval(newsInterval);
-}
-
-// Inicia a rotação automática assim que a página carrega
-startNewsRotation();
-
-
-
-// Função para atualizar o progresso geral e as barras de progresso de cada tópico
+// Função para atualizar o progresso geral e as barras de progresso de cada tópico------------------------------//
 function updateProgress() {
-    const totalCheckboxes = 255;  // Total de checkboxes em todos os módulos
+    const totalCheckboxes = 255;
     let checkedCount = 0;
-
-    // Conta quantas checkboxes estão marcadas no total
     for (let i = 0; i < totalCheckboxes; i++) {
         const isChecked = localStorage.getItem(`checkbox_${i}`) === 'true';
         if (isChecked) {
@@ -130,11 +80,9 @@ function updateProgress() {
         }
     }
 
-    // Calcula a percentagem do progresso total
     const progressPercentage = (checkedCount / totalCheckboxes) * 100;
     document.querySelector('.progress-text').innerText = `${progressPercentage.toFixed(2)}%`;
 
-    // Atualiza o título com base no progresso total
     const sectionTitle = document.querySelector('.section-title');
     if (progressPercentage === 0) {
         sectionTitle.innerText = "Let's Start";
@@ -143,86 +91,50 @@ function updateProgress() {
     } else if (progressPercentage === 100) {
         sectionTitle.innerText = "Congratulations!";
     }
-
-    // Atualiza o progresso de cada tópico individual
-    updateAllTopicProgress();
 }
 
-// Função para calcular o progresso de cada tópico individual
-function updateAllTopicProgress() {
-    Object.keys(topics).forEach(topic => {
-        const { totalCheckboxes } = topics[topic];
-        let checkedCount = 0;
-
-        // Verifica o estado dos checkboxes de cada tópico
-        for (let i = 0; i < totalCheckboxes; i++) {
-            const isChecked = localStorage.getItem(`checkbox_${topic}_${i}`) === 'true';
-            if (isChecked) {
-                checkedCount++;
-            }
-        }
-
-        // Calcula a percentagem do progresso do tópico
-        const percentage = (checkedCount / totalCheckboxes) * 100;
-        const progressBar = document.querySelector(`#${topic}-progress .progress-bar`);
-        const progressPercentage = document.querySelector(`#${topic}-progress .progress-percentage`);
-
-        // Atualiza a barra de progresso e o texto da percentagem para o tópico
-        if (progressBar && progressPercentage) {
-            progressBar.style.width = `${percentage}%`;
-            progressPercentage.innerText = `${percentage.toFixed(2)}%`;
-        }
-
-        // Armazena o progresso no objeto topics
-        topics[topic].checkedCount = checkedCount;
-    });
-}
-
-// Função de checkbox para atualizar o localStorage e recalcular o progresso
+// Função de checkbox para atualizar o localStorage e recalcular o progresso-------------------------------------//
 function updateCheckbox(checkbox) {
     const topic = checkbox.getAttribute('data-topic');
     const index = checkbox.getAttribute('data-index');
     localStorage.setItem(`checkbox_${topic}_${index}`, checkbox.checked);
-    updateProgress();  // Recalcula o progresso após marcar/desmarcar um checkbox
+    updateProgress();
 }
 
-// Função para abrir o menu de tópicos ao clicar no círculo de progresso
+// Função para abrir o menu de tópicos ao clicar no círculo de progresso----------------------------------------//
 document.getElementById('progress-button').addEventListener('click', function () {
     const topicsMenu = document.getElementById('topics-menu');
     const progressContainer = document.getElementById('progress-container');
 
-    // Alterna o menu de tópicos entre aberto e fechado
     topicsMenu.classList.toggle('open');
 
-    // Esconde o círculo de progresso se o menu estiver aberto
     if (topicsMenu.classList.contains('open')) {
-        progressContainer.classList.add('hidden');  // Esconde o círculo de progresso
+        progressContainer.classList.add('hidden');
     } else {
-        progressContainer.classList.remove('hidden');  // Mostra o círculo de progresso
+        progressContainer.classList.remove('hidden');
     }
 });
 
-// Fechar o menu se clicar fora dele
-window.addEventListener('click', function(event) {
+// Fechar o menu se clicar fora dele----------------------------------------------------------------------------//
+window.addEventListener('click', function (event) {
     const topicsMenu = document.getElementById('topics-menu');
     const progressContainer = document.getElementById('progress-container');
     const progressButton = document.getElementById('progress-button');
 
-    // Verifica se o clique ocorreu fora do menu e do botão de progresso
     if (topicsMenu.classList.contains('open') && !topicsMenu.contains(event.target) && !progressButton.contains(event.target)) {
-        topicsMenu.classList.remove('open');  // Fecha o menu
-        progressContainer.classList.remove('hidden');  // Mostra o círculo de progresso
+        topicsMenu.classList.remove('open');
+        progressContainer.classList.remove('hidden');
     }
 });
 
-// Atualiza o progresso ao carregar a página principal
+// Atualiza o progresso ao carregar a página principal---------------------------------------------------------//
 document.addEventListener('DOMContentLoaded', () => {
     updateProgress();
 });
 
 
 
-//progressso inidividual-----------------------------------------
+//progressso inidividual--------------------------------------------------------------------------------------//
 let othersCheckedCount = 0;
 let webCheckedCount = 0;
 let toolsCheckedCount = 0;
@@ -233,9 +145,6 @@ let virtualizationCheckedCount = 0;
 let computerCheckedCount = 0;
 let SOCheckedCount = 0;
 let ITCheckedCount = 0;
-
-
-
 
 
 function updateOthersProgress() {
@@ -310,7 +219,7 @@ function updateITProgress() {
 
 
 
-// Atualiza o progresso ao carregar a página
+// Atualiza o progresso ao carregar a página--------------------------------------------------------------------//
 document.addEventListener('DOMContentLoaded', () => {
     othersCheckedCount = parseInt(localStorage.getItem('othersCheckedCount')) || 0;
     updateOthersProgress();
@@ -329,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     securityCheckedCount = parseInt(localStorage.getItem('securityCheckedCount')) || 0;
     updateSecurityProgress();
-    
+
     virtualizationCheckedCount = parseInt(localStorage.getItem('virtualizationCheckedCount')) || 0;
     updateVirtualizationProgress();
 
@@ -344,22 +253,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
-
-
-//seão contacto
-document.querySelector('.contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    // Lógica de validação ou envio de formulário
-    const subject = document.getElementById('subject').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    if (subject && email && message) {
-        alert('Mensagem enviada com sucesso!');
-        // Aqui você pode adicionar lógica para enviar o formulário via AJAX, etc.
-    } else {
-        alert('Por favor, preencha todos os campos.');
-    }
-});
-

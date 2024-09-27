@@ -276,6 +276,11 @@ body {
   .topic-item {
     text-align: center; /* Centraliza os tópicos em telas menores */
   }
+  .topic-icon {
+    width: 100%; /* Ajuste a largura conforme necessário */
+    max-width: 300px; /* Define um tamanho máximo */
+    height: auto; /* Mantém a proporção da imagem */
+  }
 }
 
 /*-------------------- Divisão da Seção Home em duas partes (esquerda e direita)------------------------------- */

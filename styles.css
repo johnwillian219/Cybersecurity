@@ -231,7 +231,10 @@ body {
   display: block; /* Garante que a imagem seja tratada como um bloco */
   margin: 0 auto; /* Centraliza horizontalmente */
 }
-
+/* Esconder a imagem móvel por padrão */
+.mobile-icon {
+  display: none;
+}
 .topic-description h2 {
   margin-bottom: 10px;
 }
@@ -245,7 +248,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Alinha os ícones e descrições à esquerda */
-  margin-left: 20px; /* Espaçamento à esquerda para o bloco dos ícones */
+  margin-left: 118px; /* Espaçamento à esquerda para o bloco dos ícones */
 }
 
 .icon-item {
@@ -276,10 +279,12 @@ body {
   .topic-item {
     text-align: center; /* Centraliza os tópicos em telas menores */
   }
-  .topic-icon {
-    width: 100%; /* Ajuste a largura conforme necessário */
-    max-width: 300px; /* Define um tamanho máximo */
-    height: auto; /* Mantém a proporção da imagem */
+  .desktop-icon {
+    display: none; /* Esconde a imagem do desktop em dispositivos móveis */
+  }
+  .mobile-icon {
+    display: block; /* Mostra a imagem móvel em dispositivos móveis */
+    margin-left: 20px; /* Alinhamento, se necessário */
   }
 }
 

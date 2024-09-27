@@ -24,11 +24,6 @@
   box-sizing: border-box;
 }
 
-header,
-section {
-  width: 100%;
-}
-
 section {
   padding: 0px;
   background-color: #333;
@@ -1063,6 +1058,6 @@ body {
     width: 160%;
   }
   header {
-    width: 147%;
+    width: 100%;
   }
 }

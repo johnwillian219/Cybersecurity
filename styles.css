@@ -284,7 +284,7 @@ body {
   }
   .mobile-icon {
     display: block; /* Mostra a imagem móvel em dispositivos móveis */
-    margin-left: 20px; /* Alinhamento, se necessário */
+    margin-left: 0px; /* Alinhamento, se necessário */
   }
 }
 

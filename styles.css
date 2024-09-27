@@ -211,6 +211,73 @@ body {
   display: block;
 }
 
+/********************************************seção sobre *******************************************************/
+#about {
+  text-align: center;
+  padding: 20px;
+}
+
+#about h1,
+#about p {
+  margin-bottom: 40px; /* Espaçamento entre o título, parágrafo e tópicos */
+}
+
+.topic-item {
+  margin-bottom: 50px; /* Espaço entre os tópicos */
+  text-align: left;
+}
+
+.topic-icon {
+  display: block; /* Garante que a imagem seja tratada como um bloco */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.topic-description h2 {
+  margin-bottom: 10px;
+}
+
+.topic-description p {
+  margin-bottom: 20px;
+}
+
+/* Estilização para os ícones abaixo de cada descrição */
+.icon-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha os ícones e descrições à esquerda */
+  margin-left: 20px; /* Espaçamento à esquerda para o bloco dos ícones */
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Espaço entre os ícones */
+}
+
+.icon-item img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px; /* Espaço entre o ícone e a descrição */
+}
+
+.icon-item p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .icon-list {
+    align-items: center; /* Centraliza os ícones em telas menores */
+  }
+
+  .icon-item {
+    justify-content: center;
+  }
+
+  .topic-item {
+    text-align: center; /* Centraliza os tópicos em telas menores */
+  }
+}
+
 /*-------------------- Divisão da Seção Home em duas partes (esquerda e direita)------------------------------- */
 .home-container {
   display: flex;

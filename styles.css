@@ -214,16 +214,23 @@ body {
 /********************************************seção sobre *******************************************************/
 #about {
   text-align: center;
-  padding: 20px;
+  padding: 0px;
 }
 .topics-container {
   background-color: #222; /* Cor de fundo do container */
   border-radius: 10px; /* Arredondamento das bordas */
   padding: 20px; /* Espaçamento interno */
   margin: 20px 0; /* Margem superior e inferior para separar dos elementos adjacentes */
-  padding-left: 0; /* Alinha o texto à esquerda */
-  padding-right: 0; /* Permite que o texto se estenda até o limite direito */
+  padding-left: 5px; /* Alinha o texto à esquerda */
+  padding-right: 5px; /* Permite que o texto se estenda até o limite direito */
+
+  width: 100%; /* Define a largura do container, ajuste conforme necessário */
+  max-width: 1200px; /* Define um limite máximo de largura */
+  margin-left: auto; /* Centraliza o container horizontalmente */
+  margin-right: auto; /* Centraliza o container horizontalmente */
+  justify-content: center;
 }
+
 .highlight {
   color: #ff6600; /* Cor diferente para o texto antes dos dois pontos */
   font-weight: bold; /* Opcional: deixar o texto em negrito */

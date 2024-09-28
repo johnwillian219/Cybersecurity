@@ -283,8 +283,11 @@ body {
     display: none; /* Esconde a imagem do desktop em dispositivos móveis */
   }
   .mobile-icon {
-    display: block; /* Mostra a imagem móvel em dispositivos móveis */
-    margin-left: 0px; /* Alinhamento, se necessário */
+    display: block; /* Mostra a imagem móvel */
+    max-width: 100%; /* Limita a largura para garantir que ela fique dentro do container */
+    height: auto; /* Mantém a proporção correta */
+    margin-left: auto; /* Centraliza a imagem horizontalmente */
+    margin-right: auto; /* Centraliza a imagem horizontalmente */
   }
 }
 

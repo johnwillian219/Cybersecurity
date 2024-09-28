@@ -291,8 +291,8 @@ body {
     margin-right: auto; /* Centraliza a imagem horizontalmente */
   }
   p {
-    text-align: justify;
     margin: 0; /* Remove margens */
+    padding: 0;
   }
 }
 

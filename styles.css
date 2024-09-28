@@ -284,8 +284,10 @@ body {
 
 .icon-item {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px; /* Espaço entre os ícones */
+  align-items: center; /* Alinha o ícone e o texto no centro verticalmente */
+  gap: 10px; /* Espaço entre o ícone e o texto */
+  word-break: break-word; /* Garante que o texto não ultrapasse o container */
+  overflow-wrap: break-word; /* Faz a quebra de texto, se necessário */
 }
 
 .icon-item img {
@@ -304,7 +306,12 @@ body {
   padding-right: 0; /* Permite que o texto se estenda até o limite direito */
   margin-bottom: 20px;
 }
-
+.icon-item p {
+  display: inline-block;
+  margin: 0; /* Remove margens ao redor do texto */
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
 @media (max-width: 768px) {
   .icon-list {
     align-items: flex-start;

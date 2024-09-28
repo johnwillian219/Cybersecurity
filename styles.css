@@ -270,6 +270,7 @@ body {
 @media (max-width: 768px) {
   .icon-list {
     align-items: center; /* Centraliza os ícones em telas menores */
+    margin-left: 0px; /* Espaçamento à esquerda para o bloco dos ícones */
   }
 
   .icon-item {
@@ -277,7 +278,7 @@ body {
   }
 
   .topic-item {
-    text-align: center; /* Centraliza os tópicos em telas menores */
+    text-align: justify; /* Centraliza os tópicos em telas menores */
   }
   .desktop-icon {
     display: none; /* Esconde a imagem do desktop em dispositivos móveis */
@@ -288,6 +289,10 @@ body {
     height: auto; /* Mantém a proporção correta */
     margin-left: auto; /* Centraliza a imagem horizontalmente */
     margin-right: auto; /* Centraliza a imagem horizontalmente */
+  }
+  p {
+    text-align: justify;
+    margin: 0; /* Remove margens */
   }
 }
 

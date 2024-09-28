@@ -254,34 +254,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// Seleciona todos os ícones das seções de tópico
-const topicIcons = document.querySelectorAll('.topic-icon');
-const descriptions = document.querySelectorAll('.topic-description');
+const topicItems = document.querySelectorAll('.topic-item');
 
-// Adiciona um evento de clique a cada ícone
-topicIcons.forEach(icon => {
-    icon.addEventListener('click', (event) => {
-        // Previne a ação padrão do clique
-        event.stopPropagation();
+// Função para limpar a classe 'active' de todos os itens
+function clearActiveItems() {
+    topicItems.forEach(item => item.classList.remove('active'));
+}
 
-        // Esconde todas as descrições
-        descriptions.forEach(description => {
-            description.classList.remove('active');
-        });
-
-        // Mostra a descrição do tópico clicado
-        const description = icon.nextElementSibling;
-        if (description.classList.contains('active')) {
-            description.classList.remove('active');
-        } else {
-            description.classList.add('active');
-        }
+topicItems.forEach(item => {
+    item.addEventListener('click', function () {
+        // Limpa o estado de ativo de todos os itens
+        clearActiveItems();
+        // Adiciona a classe 'active' apenas ao item clicado
+        this.classList.add('active');
     });
 });
 
-// Fecha a descrição ao clicar fora
-document.addEventListener('click', () => {
-    descriptions.forEach(description => {
-        description.classList.remove('active');
+// Previne que o mouseover afete o comportamento ao clicar
+topicItems.forEach(item => {
+    item.addEventListener('mouseover', function () {
+        if (!this.classList.contains('active')) {
+            // Opcional: você pode adicionar um efeito ao passar o mouse, sem interferir no clique
+        }
     });
 });

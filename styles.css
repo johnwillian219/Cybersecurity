@@ -216,6 +216,12 @@ body {
   text-align: center;
   padding: 20px;
 }
+.topics-container {
+  background-color: #222; /* Cor de fundo do container */
+  border-radius: 10px; /* Arredondamento das bordas */
+  padding: 20px; /* Espaçamento interno */
+  margin: 20px 0; /* Margem superior e inferior para separar dos elementos adjacentes */
+}
 
 #about h1,
 #about p {
@@ -291,6 +297,10 @@ body {
 .topic-description.active {
   display: block;
   animation: fadeIn 0.3s ease-in-out;
+}
+/* Quando o item do tópico está ativo, mostra a descrição */
+.topic-item.active .topic-description {
+  display: block;
 }
 
 /* Animação para suavizar a transição */

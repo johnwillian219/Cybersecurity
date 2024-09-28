@@ -235,6 +235,9 @@ body {
 .mobile-icon {
   display: none;
 }
+.desktop-icon {
+  margin-bottom: 15px;
+}
 .topic-description h2 {
   margin-bottom: 10px;
 }
@@ -248,7 +251,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Alinha os ícones e descrições à esquerda */
-  margin-left: 118px; /* Espaçamento à esquerda para o bloco dos ícones */
+  margin-left: 0; /* Remove qualquer margem à esquerda */
+  padding-left: 0; /* Remove o preenchimento à esquerda */
 }
 
 .icon-item {
@@ -265,6 +269,38 @@ body {
 
 .icon-item p {
   margin: 0;
+}
+#about p {
+  text-align: justify; /* Justifica o texto */
+  margin: 0;
+  padding-left: 0; /* Alinha o texto à esquerda */
+  padding-right: 0; /* Permite que o texto se estenda até o limite direito */
+  margin-bottom: 20px;
+}
+/* Esconde a descrição inicialmente */
+.topic-description.hidden {
+  display: none;
+}
+
+/* Mostra a descrição quando o mouse está sobre o ícone */
+.topic-item:hover .topic-description {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+/* Mostra a descrição ao clicar */
+.topic-description.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animação para suavizar a transição */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1160,5 +1196,13 @@ body {
   }
   header {
     width: 100%;
+  }
+
+  #about p {
+    text-align: justify; /* Justifica o texto */
+    margin: 0;
+    padding-left: 0; /* Alinha o texto à esquerda */
+    padding-right: 0; /* Permite que o texto se estenda até o limite direito */
+    margin-bottom: 20px;
   }
 }

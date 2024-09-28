@@ -253,3 +253,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+// Seleciona todos os ícones das seções de tópico
+const topicIcons = document.querySelectorAll('.topic-icon');
+const descriptions = document.querySelectorAll('.topic-description');
+
+// Adiciona um evento de clique a cada ícone
+topicIcons.forEach(icon => {
+    icon.addEventListener('click', (event) => {
+        // Previne a ação padrão do clique
+        event.stopPropagation();
+
+        // Esconde todas as descrições
+        descriptions.forEach(description => {
+            description.classList.remove('active');
+        });
+
+        // Mostra a descrição do tópico clicado
+        const description = icon.nextElementSibling;
+        if (description.classList.contains('active')) {
+            description.classList.remove('active');
+        } else {
+            description.classList.add('active');
+        }
+    });
+});
+
+// Fecha a descrição ao clicar fora
+document.addEventListener('click', () => {
+    descriptions.forEach(description => {
+        description.classList.remove('active');
+    });
+});

@@ -269,16 +269,18 @@ body {
 
 @media (max-width: 768px) {
   .icon-list {
-    align-items: center; /* Centraliza os ícones em telas menores */
+    align-items: flex-start; /* Centraliza os ícones em telas menores */
     margin-left: 0px; /* Espaçamento à esquerda para o bloco dos ícones */
   }
 
   .icon-item {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .topic-item {
-    text-align: justify; /* Centraliza os tópicos em telas menores */
+    text-align: flex-start; /* Centraliza os tópicos em telas menores */
+    margin: 0;
+    padding: 0;
   }
   .desktop-icon {
     display: none; /* Esconde a imagem do desktop em dispositivos móveis */
@@ -293,6 +295,7 @@ body {
   p {
     margin: 0; /* Remove margens */
     padding: 0;
+    justify-content: flex-start;
   }
 }
 

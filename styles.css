@@ -269,8 +269,9 @@ body {
 
 @media (max-width: 768px) {
   .icon-list {
-    align-items: flex-start; /* Centraliza os ícones em telas menores */
-    margin-left: 0px; /* Espaçamento à esquerda para o bloco dos ícones */
+    align-items: flex-start;
+    margin-left: 0; /* Remove qualquer margem à esquerda */
+    padding-left: 0; /* Remove o preenchimento à esquerda */
   }
 
   .icon-item {
@@ -278,24 +279,36 @@ body {
   }
 
   .topic-item {
-    text-align: flex-start; /* Centraliza os tópicos em telas menores */
+    text-align: left; /* Alinha à esquerda */
     margin: 0;
     padding: 0;
   }
+
   .desktop-icon {
-    display: none; /* Esconde a imagem do desktop em dispositivos móveis */
+    display: none; /* Esconde a imagem de desktop em dispositivos móveis */
   }
+
   .mobile-icon {
-    display: block; /* Mostra a imagem móvel */
-    max-width: 100%; /* Limita a largura para garantir que ela fique dentro do container */
-    height: auto; /* Mantém a proporção correta */
-    margin-left: auto; /* Centraliza a imagem horizontalmente */
-    margin-right: auto; /* Centraliza a imagem horizontalmente */
+    display: block; /* Mostra a imagem para mobile */
+    max-width: 100%;
+    height: auto;
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    margin-bottom: 15px;
   }
-  p {
-    margin: 0; /* Remove margens */
-    padding: 0;
-    justify-content: flex-start;
+
+  #about p {
+    text-align: justify; /* Justifica o texto */
+    margin: 0;
+    padding-left: 0; /* Alinha o texto à esquerda */
+    padding-right: 0; /* Permite que o texto se estenda até o limite direito */
+    margin-bottom: 20px;
+  }
+
+  /* Se precisar que o padding seja consistente com o dos ícones */
+  .icon-item p {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

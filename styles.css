@@ -264,6 +264,7 @@ body {
 }
 .desktop-icon {
   margin-bottom: 15px;
+  margin-left: 0;
 }
 .topic-description h2 {
   margin-bottom: 10px;
@@ -321,6 +322,11 @@ body {
 
   .icon-item {
     justify-content: flex-start;
+    display: flex;
+    align-items: center; /* Alinha o ícone e o texto no centro verticalmente */
+    gap: 10px; /* Espaço entre o ícone e o texto */
+    word-break: break-word; /* Garante que o texto não ultrapasse o container */
+    overflow-wrap: break-word; /* Faz a quebra de texto, se necessário */
   }
 
   .topic-item {
@@ -328,7 +334,12 @@ body {
     margin: 0;
     padding: 0;
   }
-
+  .icon-item p {
+    display: inline-block;
+    margin: 0; /* Remove margens ao redor do texto */
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
   .desktop-icon {
     display: none; /* Esconde a imagem de desktop em dispositivos móveis */
   }

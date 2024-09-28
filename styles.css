@@ -221,12 +221,18 @@ body {
   border-radius: 10px; /* Arredondamento das bordas */
   padding: 20px; /* Espaçamento interno */
   margin: 20px 0; /* Margem superior e inferior para separar dos elementos adjacentes */
+  padding-left: 0; /* Alinha o texto à esquerda */
+  padding-right: 0; /* Permite que o texto se estenda até o limite direito */
 }
 .highlight {
   color: #ff6600; /* Cor diferente para o texto antes dos dois pontos */
   font-weight: bold; /* Opcional: deixar o texto em negrito */
 }
 
+.home-container {
+  padding-left: 0; /* Alinha o texto à esquerda */
+  padding-right: 0; /* Permite que o texto se estenda até o limite direito */
+}
 .normal-text {
   color: #ffffff; /* Cor normal para o texto após os dois pontos */
 }

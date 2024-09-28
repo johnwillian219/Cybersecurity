@@ -222,6 +222,14 @@ body {
   padding: 20px; /* Espaçamento interno */
   margin: 20px 0; /* Margem superior e inferior para separar dos elementos adjacentes */
 }
+.highlight {
+  color: #ff6600; /* Cor diferente para o texto antes dos dois pontos */
+  font-weight: bold; /* Opcional: deixar o texto em negrito */
+}
+
+.normal-text {
+  color: #ffffff; /* Cor normal para o texto após os dois pontos */
+}
 
 #about h1,
 #about p {
@@ -268,7 +276,7 @@ body {
 }
 
 .icon-item img {
-  width: 40px;
+  width: none;
   height: auto;
   margin-right: 10px; /* Espaço entre o ícone e a descrição */
 }
@@ -282,35 +290,6 @@ body {
   padding-left: 0; /* Alinha o texto à esquerda */
   padding-right: 0; /* Permite que o texto se estenda até o limite direito */
   margin-bottom: 20px;
-}
-/* Esconde a descrição inicialmente */
-.topic-description.hidden {
-  display: none;
-}
-
-/* Mostra a descrição quando o mouse está sobre o ícone */
-.topic-item:hover .topic-description {
-  display: block;
-  animation: fadeIn 0.3s ease-in-out;
-}
-/* Mostra a descrição ao clicar */
-.topic-description.active {
-  display: block;
-  animation: fadeIn 0.3s ease-in-out;
-}
-/* Quando o item do tópico está ativo, mostra a descrição */
-.topic-item.active .topic-description {
-  display: block;
-}
-
-/* Animação para suavizar a transição */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @media (max-width: 768px) {

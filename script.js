@@ -255,26 +255,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const topicItems = document.querySelectorAll('.topic-item');
-
-// Função para limpar a classe 'active' de todos os itens
-function clearActiveItems() {
-    topicItems.forEach(item => item.classList.remove('active'));
-}
-
-topicItems.forEach(item => {
-    item.addEventListener('click', function () {
-        // Limpa o estado de ativo de todos os itens
-        clearActiveItems();
-        // Adiciona a classe 'active' apenas ao item clicado
-        this.classList.add('active');
-    });
-});
-
-// Previne que o mouseover afete o comportamento ao clicar
-topicItems.forEach(item => {
-    item.addEventListener('mouseover', function () {
-        if (!this.classList.contains('active')) {
-            // Opcional: você pode adicionar um efeito ao passar o mouse, sem interferir no clique
-        }
-    });
-});

@@ -345,6 +345,8 @@ body {
     text-align: justify;
     word-break: break-word; /* Quebra as palavras automaticamente */
     hyphens: auto; /* Adiciona hifens para evitar grandes espaços */
+    letter-spacing: 0.5px; /* Ajusta o espaçamento entre letras */
+    word-spacing: 1px; /* Ajusta o espaçamento entre palavras */
   }
   .desktop-icon {
     display: none; /* Esconde a imagem de desktop em dispositivos móveis */

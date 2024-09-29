@@ -216,6 +216,7 @@ body {
   text-align: center;
   padding: 0px;
 }
+
 .topics-container {
   background-color: #222; /* Cor de fundo do container */
   border-radius: 10px; /* Arredondamento das bordas */
@@ -223,7 +224,6 @@ body {
   margin: 20px 0; /* Margem superior e inferior para separar dos elementos adjacentes */
   padding-left: 5px; /* Alinha o texto à esquerda */
   padding-right: 5px; /* Permite que o texto se estenda até o limite direito */
-
   width: 100%; /* Define a largura do container, ajuste conforme necessário */
   max-width: 1200px; /* Define um limite máximo de largura */
   margin-left: auto; /* Centraliza o container horizontalmente */
@@ -240,6 +240,7 @@ body {
   padding-left: 0; /* Alinha o texto à esquerda */
   padding-right: 0; /* Permite que o texto se estenda até o limite direito */
 }
+
 .normal-text {
   color: #ffffff; /* Cor normal para o texto após os dois pontos */
 }
@@ -258,14 +259,17 @@ body {
   display: block; /* Garante que a imagem seja tratada como um bloco */
   margin: 0 auto; /* Centraliza horizontalmente */
 }
+
 /* Esconder a imagem móvel por padrão */
 .mobile-icon {
   display: none;
 }
+
 .desktop-icon {
   margin-bottom: 15px;
   margin-left: 0;
 }
+
 .topic-description h2 {
   margin-bottom: 10px;
 }
@@ -300,6 +304,7 @@ body {
 .icon-item p {
   margin: 0;
 }
+
 #about p {
   text-align: justify; /* Justifica o texto */
   margin: 0;
@@ -307,12 +312,14 @@ body {
   padding-right: 0; /* Permite que o texto se estenda até o limite direito */
   margin-bottom: 20px;
 }
+
 .icon-item p {
   display: inline-block;
   margin: 0; /* Remove margens ao redor do texto */
   word-break: break-word;
   overflow-wrap: break-word;
 }
+
 @media (max-width: 768px) {
   .icon-list {
     align-items: flex-start;
@@ -331,8 +338,6 @@ body {
     display: inline; /* Mantém a descrição na mesma linha */
     word-break: break-word; /* Quebra palavras longas */
     hyphens: auto; /* Permite hifens em palavras longas */
-    /* margin: 0; /* Remove margens do parágrafo */
-    /* padding: 0; /* Remove preenchimento do parágrafo */
     line-height: 1.2; /* Ajusta a altura da linha */
   }
 
@@ -341,6 +346,7 @@ body {
     margin-bottom: 15px;
     padding: 0;
   }
+
   .icon-item p {
     text-align: left;
     word-break: break-word; /* Quebra as palavras automaticamente */
@@ -348,6 +354,7 @@ body {
     letter-spacing: 0.5px; /* Ajusta o espaçamento entre letras */
     word-spacing: 1px; /* Ajusta o espaçamento entre palavras */
   }
+
   .desktop-icon {
     display: none; /* Esconde a imagem de desktop em dispositivos móveis */
   }

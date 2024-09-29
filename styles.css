@@ -346,6 +346,7 @@ body {
 
   .mobile-only {
     display: block; /* Mostrar a descrição de dispositivos móveis */
+    line-height: 1.2; /* Ajuste a altura da linha (mais compacta) */
   }
   .icon-item {
     justify-content: flex-start;

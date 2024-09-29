@@ -214,7 +214,7 @@ body {
 /********************************************seção sobre *******************************************************/
 #about {
   text-align: center;
-  padding: 0px;
+  padding: 20px;
 }
 
 .topics-container {
@@ -237,8 +237,8 @@ body {
 }
 
 .home-container {
-  padding-left: 0; /* Alinha o texto à esquerda */
-  padding-right: 0; /* Permite que o texto se estenda até o limite direito */
+  padding-left: 20px; /* Alinha o texto à esquerda */
+  padding-right: 20px; /* Permite que o texto se estenda até o limite direito */
 }
 
 .normal-text {
@@ -308,9 +308,9 @@ body {
 #about p {
   text-align: justify; /* Justifica o texto */
   margin: 0;
-  padding-left: 0; /* Alinha o texto à esquerda */
-  padding-right: 0; /* Permite que o texto se estenda até o limite direito */
-  margin-bottom: 20px;
+  padding-left: 20px; /* Alinha o texto à esquerda */
+  padding-right: 40px; /* Permite que o texto se estenda até o limite direito */
+  margin-bottom: 40px;
 }
 
 .icon-item p {
@@ -332,6 +332,7 @@ body {
     display: flex;
     align-items: center; /* Alinha o ícone e o texto no centro verticalmente */
     gap: 10px; /* Espaço entre o ícone e o texto */
+    margin-bottom: 10px;
   }
 
   .icon-description {

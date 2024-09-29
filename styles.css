@@ -338,11 +338,11 @@ body {
 
   .topic-item {
     text-align: left; /* Alinha à esquerda */
-    margin: 0;
+    margin-bottom: 15px;
     padding: 0;
   }
   .icon-item p {
-    text-align: justify;
+    text-align: left;
     word-break: break-word; /* Quebra as palavras automaticamente */
     hyphens: auto; /* Adiciona hifens para evitar grandes espaços */
     letter-spacing: 0.5px; /* Ajusta o espaçamento entre letras */

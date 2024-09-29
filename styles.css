@@ -264,6 +264,15 @@ body {
 .mobile-icon {
   display: none;
 }
+/* Exibir a descrição de desktop por padrão */
+.desktop-only {
+  display: block;
+}
+
+/* Esconder a descrição de dispositivos móveis por padrão */
+.mobile-only {
+  display: none;
+}
 
 .desktop-icon {
   margin-bottom: 15px;
@@ -331,7 +340,13 @@ body {
     margin-left: 0; /* Remove qualquer margem à esquerda */
     padding-left: 0; /* Remove o preenchimento à esquerda */
   }
+  .desktop-only {
+    display: none; /* Esconder a descrição de desktop em dispositivos móveis */
+  }
 
+  .mobile-only {
+    display: block; /* Mostrar a descrição de dispositivos móveis */
+  }
   .icon-item {
     justify-content: flex-start;
     display: flex;

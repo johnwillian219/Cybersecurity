@@ -370,6 +370,11 @@ body {
 
   #about p {
     text-align: justify; /* Justifica o texto */
+    hyphens: auto; /* Permite hifens em palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    word-break: break-all; /* Força a quebra de palavras longas */
+    word-spacing: -0.1em; /* Ajusta o espaçamento entre palavras */
+    letter-spacing: 0.2px; /* Ajuste fino no espaçamento das letras */
     margin: 0;
     padding-left: 0; /* Alinha o texto à esquerda */
     padding-right: 0; /* Permite que o texto se estenda até o limite direito */

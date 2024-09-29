@@ -277,7 +277,16 @@ body {
 .topic-description p {
   margin-bottom: 20px;
 }
-
+.icon-description {
+  text-align: left; /* Alinha o texto à esquerda */
+  line-height: 1.5; /* Ajusta a altura da linha para melhor legibilidade */
+  color: #ffffff; /* Cor do texto */
+  margin-left: 10px; /* Espaçamento à esquerda para separar do ícone */
+  flex-grow: 1; /* Faz o texto ocupar o espaço disponível */
+}
+.icon-description span {
+  display: block; /* Faz cada parte do texto ser um bloco separado */
+}
 /* Estilização para os ícones abaixo de cada descrição */
 .icon-list {
   display: flex;
@@ -288,17 +297,15 @@ body {
 }
 
 .icon-item {
-  display: flex;
-  align-items: center; /* Alinha o ícone e o texto no centro verticalmente */
-  gap: 10px; /* Espaço entre o ícone e o texto */
-  word-break: break-word; /* Garante que o texto não ultrapasse o container */
-  overflow-wrap: break-word; /* Faz a quebra de texto, se necessário */
+  display: flex; /* Usa flexbox para alinhar o ícone e a descrição */
+  align-items: center; /* Centraliza verticalmente */
+  margin-bottom: 10px; /* Espaço entre os itens */
 }
 
 .icon-item img {
   width: none;
   height: auto;
-  margin-right: 10px; /* Espaço entre o ícone e a descrição */
+  margin-right: 5px; /* Espaço entre o ícone e a descrição */
 }
 
 .icon-item p {
@@ -314,10 +321,9 @@ body {
 }
 
 .icon-item p {
-  display: inline-block;
   margin: 0; /* Remove margens ao redor do texto */
-  word-break: break-word;
-  overflow-wrap: break-word;
+
+  text-align: center;
 }
 
 @media (max-width: 768px) {

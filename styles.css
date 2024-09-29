@@ -355,25 +355,10 @@ body {
     margin-bottom: 10px;
   }
 
-  .icon-description {
-    display: inline; /* Mantém a descrição na mesma linha */
-    word-break: break-word; /* Quebra palavras longas */
-    hyphens: auto; /* Permite hifens em palavras longas */
-    line-height: 1.2; /* Ajusta a altura da linha */
-  }
-
   .topic-item {
     text-align: left; /* Alinha à esquerda */
     margin-bottom: 20px;
     padding: 0;
-  }
-
-  .icon-item p {
-    text-align: left;
-    word-break: break-word; /* Quebra as palavras automaticamente */
-    hyphens: auto; /* Adiciona hifens para evitar grandes espaços */
-    letter-spacing: 0.5px; /* Ajusta o espaçamento entre letras */
-    word-spacing: 1px; /* Ajusta o espaçamento entre palavras */
   }
 
   .desktop-icon {

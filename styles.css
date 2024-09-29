@@ -278,14 +278,10 @@ body {
   margin-bottom: 20px;
 }
 .icon-description {
-  text-align: left; /* Alinha o texto à esquerda */
-  line-height: 1.5; /* Ajusta a altura da linha para melhor legibilidade */
-  color: #ffffff; /* Cor do texto */
-  margin-left: 10px; /* Espaçamento à esquerda para separar do ícone */
-  flex-grow: 1; /* Faz o texto ocupar o espaço disponível */
-}
-.icon-description span {
-  display: block; /* Faz cada parte do texto ser um bloco separado */
+  text-align: center; /* Garante que o texto fique centralizado */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 2; /* Ajusta a altura da linha para melhor legibilidade */
 }
 /* Estilização para os ícones abaixo de cada descrição */
 .icon-list {
@@ -297,9 +293,12 @@ body {
 }
 
 .icon-item {
-  display: flex; /* Usa flexbox para alinhar o ícone e a descrição */
-  align-items: center; /* Centraliza verticalmente */
-  margin-bottom: 10px; /* Espaço entre os itens */
+  display: flex;
+  align-items: center; /* Alinha o ícone e o texto no centro verticalmente */
+  gap: 10px; /* Espaço entre o ícone e o texto */
+  word-break: break-word; /* Garante que o texto não ultrapasse o container */
+  overflow-wrap: break-word; /* Faz a quebra de texto, se necessário */
+  text-align: center; /* Centraliza o texto */
 }
 
 .icon-item img {

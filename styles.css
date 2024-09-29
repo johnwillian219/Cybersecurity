@@ -342,10 +342,9 @@ body {
     padding: 0;
   }
   .icon-item p {
-    display: inline-block;
-    margin: 0; /* Remove margens ao redor do texto */
-    word-break: break-word;
-    overflow-wrap: break-word;
+    text-align: justify;
+    word-break: break-word; /* Quebra as palavras automaticamente */
+    hyphens: auto; /* Adiciona hifens para evitar grandes espaços */
   }
   .desktop-icon {
     display: none; /* Esconde a imagem de desktop em dispositivos móveis */

@@ -288,8 +288,7 @@ body {
 }
 .icon-description {
   text-align: center; /* Garante que o texto fique centralizado */
-  margin-top: 10px;
-  margin-bottom: 10px;
+  align-items: center;
   line-height: 2; /* Ajusta a altura da linha para melhor legibilidade */
 }
 /* Estilização para os ícones abaixo de cada descrição */
@@ -316,8 +315,8 @@ body {
   margin-right: 5px; /* Espaço entre o ícone e a descrição */
 }
 
-.icon-item p {
-  margin: 0;
+.icon-item {
+  margin-bottom: 10px;
 }
 
 #about p {

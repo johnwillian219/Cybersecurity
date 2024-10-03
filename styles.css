@@ -665,55 +665,19 @@ p {
 }
 /* Estilo para dispositivos móveis */
 @media (max-width: 768px) {
-  #progress {
-    display: block; /* Garante que a seção use o layout de bloco */
-    padding: 10px; /* Espaçamento da seção */
-  }
-
-  .progress-container {
-    display: flex; /* Define a exibição como flex */
+  #progress .progress-container {
     flex-direction: column; /* Alinha as colunas em uma coluna */
-    width: 100%; /* Garante que a seção ocupe 100% da largura */
-    margin: 0; /* Remove margens */
   }
-
   .progress-left,
   .progress-right {
     width: 100%; /* As colunas ocupam 100% da largura */
-    margin-bottom: 20px; /* Espaçamento entre as colunas */
-    padding: 15px; /* Espaçamento interno */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar as colunas */
+    margin-bottom: 20px; /* Espaçamento entre as colunas em dispositivos móveis */
   }
 
-  h1,
-  h2 {
-    font-size: 20px; /* Aumenta o tamanho da fonte dos títulos */
-    text-align: center; /* Centraliza o texto dos títulos */
-  }
-
-  .progress-bar-container {
-    height: 40px; /* Aumenta a altura da barra de progresso */
-  }
-
-  .progress-percentage {
-    position: absolute; /* Para sobrepor o percentual na barra de progresso */
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold; /* Deixa o texto em negrito */
-  }
-
-  /* Ajustes adicionais para melhorar a legibilidade */
-  p {
-    font-size: 16px; /* Aumenta o tamanho da fonte dos parágrafos */
-    text-align: justify; /* Justifica o texto */
-  }
-
-  .highlight {
-    font-weight: bold; /* Destaca o texto com negrito */
-    color: #ff5722; /* Cor para o texto destacado */
+  #progress .progress-right {
+    height: 800px;
   }
 }
-
 /*-------------------- Divisão da Seção Home em duas partes (esquerda e direita)------------------------------- */
 .home-container {
   display: flex;

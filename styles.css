@@ -665,19 +665,71 @@ p {
 }
 /* Estilo para dispositivos móveis */
 @media (max-width: 768px) {
-  #progress .progress-container {
-    flex-direction: column; /* Alinha as colunas em uma coluna */
+  #progress {
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding no cálculo da altura */
+    background-color: #222; /* Cor de fundo da seção */
+    color: white; /* Cor do texto */
+    border: 4px solid #222; /* Borda das colunas */
+    border-radius: 10px; /* Arredondamento das bordas */
+    height: auto; /* Permite que a altura se ajuste automaticamente */
   }
+
+  .progress-container {
+    display: flex;
+    flex-direction: column; /* Alinha as colunas verticalmente */
+    width: 100%; /* Garante que a seção ocupe 100% da largura */
+    margin: 0; /* Remove margens */
+  }
+
   .progress-left,
   .progress-right {
     width: 100%; /* As colunas ocupam 100% da largura */
-    margin-bottom: 20px; /* Espaçamento entre as colunas em dispositivos móveis */
+    margin-bottom: 20px; /* Espaçamento entre as colunas */
+    padding: 15px; /* Espaçamento interno */
+    border: 1px solid #222; /* Borda das colunas */
+    border-radius: 10px; /* Arredondamento das bordas */
+    background-color: #333; /* Cor de fundo da coluna */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o conteúdo */
+    box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho */
+    min-height: 200px; /* Garante que as colunas tenham altura mínima */
+    overflow: auto; /* Permite rolagem se o conteúdo for maior que a área disponível */
   }
 
-  #progress .progress-right {
-    height: 800px;
+  /* Ajustes adicionais para melhorar a legibilidade */
+  h1,
+  h2 {
+    font-size: 24px; /* Aumenta o tamanho da fonte dos títulos */
+    margin-bottom: 15px; /* Espaço abaixo dos títulos */
+    text-align: center; /* Centraliza o texto dos títulos */
+  }
+
+  p {
+    font-size: 14px; /* Aumenta o tamanho da fonte dos parágrafos */
+    text-align: justify; /* Justifica o texto */
+    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+  }
+
+  /* Estilo do círculo de progresso */
+  .progress-circle {
+    width: 150px; /* Diminui o tamanho do círculo */
+    height: 150px;
+  }
+
+  .progress-text {
+    font-size: 18px; /* Diminui o tamanho do texto dentro do círculo */
+  }
+
+  .progress-bar-container {
+    height: 30px; /* Diminui a altura da barra de progresso */
+  }
+
+  .progress-percentage {
+    font-size: 14px; /* Diminui o tamanho do texto de porcentagem */
   }
 }
+
 /*-------------------- Divisão da Seção Home em duas partes (esquerda e direita)------------------------------- */
 .home-container {
   display: flex;

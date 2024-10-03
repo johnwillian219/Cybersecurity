@@ -218,58 +218,56 @@ body {
 }
 
 .topics-container {
-  background-color: #222; /* Cor de fundo do container */
-  border-radius: 10px; /* Arredondamento das bordas */
-  padding: 20px; /* Espaçamento interno */
-  margin: 20px 0; /* Margem superior e inferior para separar dos elementos adjacentes */
-  padding-left: 5px; /* Alinha o texto à esquerda */
-  padding-right: 5px; /* Permite que o texto se estenda até o limite direito */
-  width: 100%; /* Define a largura do container, ajuste conforme necessário */
-  max-width: 1200px; /* Define um limite máximo de largura */
-  margin-left: auto; /* Centraliza o container horizontalmente */
-  margin-right: auto; /* Centraliza o container horizontalmente */
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
 }
 
 .highlight {
-  color: #ff6600; /* Cor diferente para o texto antes dos dois pontos */
-  font-weight: bold; /* Opcional: deixar o texto em negrito */
+  color: #ff6600;
+  font-weight: bold;
 }
 
 .home-container {
-  padding-left: 0; /* Alinha o texto à esquerda */
-  padding-right: 0; /* Permite que o texto se estenda até o limite direito */
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .normal-text {
-  color: #ffffff; /* Cor normal para o texto após os dois pontos */
+  color: #ffffff;
 }
 
 #about h1,
 #about p {
-  margin-bottom: 40px; /* Espaçamento entre o título, parágrafo e tópicos */
+  margin-bottom: 40px;
 }
 
 .topic-item {
-  margin-bottom: 50px; /* Espaço entre os tópicos */
+  margin-bottom: 50px;
   text-align: left;
 }
 
 .topic-icon {
-  display: block; /* Garante que a imagem seja tratada como um bloco */
-  margin: 0 auto; /* Centraliza horizontalmente */
+  display: block;
+  margin: 0 auto;
 }
 
-/* Esconder a imagem móvel por padrão */
 .mobile-icon {
   display: none;
 }
-/* Exibir a descrição de desktop por padrão */
+
 .desktop-only {
   display: block;
 }
 
-/* Esconder a descrição de dispositivos móveis por padrão */
 .mobile-only {
   display: none;
 }
@@ -287,32 +285,32 @@ body {
   margin-bottom: 20px;
 }
 .icon-description {
-  text-align: center; /* Garante que o texto fique centralizado */
+  text-align: center;
   align-items: center;
-  line-height: 2; /* Ajusta a altura da linha para melhor legibilidade */
+  line-height: 2;
 }
-/* Estilização para os ícones abaixo de cada descrição */
+
 .icon-list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinha os ícones e descrições à esquerda */
-  margin-left: 0; /* Remove qualquer margem à esquerda */
-  padding-left: 0; /* Remove o preenchimento à esquerda */
+  align-items: flex-start;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .icon-item {
   display: flex;
-  align-items: center; /* Alinha o ícone e o texto no centro verticalmente */
-  gap: 10px; /* Espaço entre o ícone e o texto */
-  word-break: break-word; /* Garante que o texto não ultrapasse o container */
-  overflow-wrap: break-word; /* Faz a quebra de texto, se necessário */
-  text-align: center; /* Centraliza o texto */
+  align-items: center;
+  gap: 10px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
 }
 
 .icon-item img {
   width: none;
   height: auto;
-  margin-right: 5px; /* Espaço entre o ícone e a descrição */
+  margin-right: 5px;
 }
 
 .icon-item {
@@ -320,57 +318,56 @@ body {
 }
 
 #about p {
-  text-align: justify; /* Justifica o texto */
+  text-align: justify;
   margin: 0;
-  padding-left: 20px; /* Alinha o texto à esquerda */
-  padding-right: 40px; /* Permite que o texto se estenda até o limite direito */
+  padding-left: 20px;
+  padding-right: 40px;
   margin-bottom: 40px;
 }
 
 .icon-item p {
-  margin: 0; /* Remove margens ao redor do texto */
-
+  margin: 0;
   text-align: center;
 }
 
 @media (max-width: 768px) {
   .icon-list {
     align-items: flex-start;
-    margin-left: 0; /* Remove qualquer margem à esquerda */
-    padding-left: 0; /* Remove o preenchimento à esquerda */
+    margin-left: 0;
+    padding-left: 0;
   }
   .desktop-only {
-    display: none; /* Esconder a descrição de desktop em dispositivos móveis */
+    display: none;
   }
 
   .mobile-only {
-    display: block; /* Mostrar a descrição de dispositivos móveis */
-    line-height: 1.2; /* Ajuste a altura da linha (mais compacta) */
+    display: block;
+    line-height: 1.2;
   }
   .icon-item {
     justify-content: flex-start;
     display: flex;
-    align-items: center; /* Alinha o ícone e o texto no centro verticalmente */
-    gap: 10px; /* Espaço entre o ícone e o texto */
+    align-items: center;
+    gap: 10px;
     margin-bottom: 10px;
   }
 
   .topic-item {
-    text-align: left; /* Alinha à esquerda */
+    text-align: left;
     margin-bottom: 20px;
     padding: 0;
   }
 
   .desktop-icon {
-    display: none; /* Esconde a imagem de desktop em dispositivos móveis */
+    display: none;
   }
 
   .mobile-icon {
-    display: block; /* Mostra a imagem para mobile */
+    display: block;
     max-width: 100%;
     height: auto;
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 15px;
   }
 
@@ -386,7 +383,7 @@ body {
     padding-right: 0;
     margin-bottom: 20px;
   }
-  /* Se precisar que o padding seja consistente com o dos ícones */
+
   .icon-item p {
     padding-left: 0;
     padding-right: 0;
@@ -394,95 +391,126 @@ body {
 }
 
 .nav-button {
-  position: fixed; /* Trocar de absolute para fixed para manter na posição ao rolar a página */
-  top: 50%; /* Centraliza verticalmente */
-  transform: translateY(
-    -50%
-  ); /* Ajusta para que o centro do botão esteja no meio */
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo translúcido */
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 15px;
   font-size: 30px;
   cursor: pointer;
-  border-radius: 50%; /* Botão circular */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   z-index: 100;
-  width: 60px; /* Largura e altura igual para manter o botão circular */
+  width: 60px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Seta esquerda */
 #prev-topic {
-  left: 10px; /* Continua alinhado à esquerda */
+  left: 10px;
 }
 
-/* Seta direita */
 #next-topic {
-  right: 10px; /* Continua alinhado à direita */
+  right: 10px;
 }
 
-/* Efeito hover para os botões */
 .nav-button:hover {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Fundo branco ao passar o mouse */
-  color: black; /* Seta preta ao passar o mouse */
-  transform: translateY(-50%) scale(1.1); /* Mantém a centralização e aumenta o tamanho */
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  transform: translateY(-50%) scale(1.1);
 }
 
 /*---------------------Seção Progresso-------------------------------------------------------------------------*/
 /* Estilo geral da seção de progresso */
 #progress {
   padding: 20px;
-  text-align: flex-start;
-  min-height: 100vh; /* Garante que a seção ocupe a altura total da tela */
+  text-align: center; /* Pode ser removido se não for necessário */
   box-sizing: border-box; /* Garante que padding seja incluído no cálculo de altura */
   position: relative; /* Garante que o conteúdo não sobreponha outros elementos */
+  background-color: #222; /* Cor de fundo da seção */
+  color: white; /* Cor do texto */
+  border: 4px solid #222; /* Borda das colunas */
+  border-radius: 10px; /* Arredondamento das bordas */
+  flex-direction: column; /* Permite que os filhos cresçam na vertical */
+  height: 800px; /* Garante que o progresso ocupe a tela toda inicialmente */
 }
-
-.progress-container {
+/* Estilo do título da seção */
+#progress .section-title {
+  font-size: 40px;
+  color: #00ff00;
+  margin-bottom: 20px;
+}
+#progress .progress-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* Garante que os itens comecem no topo, mas cresçam conforme o conteúdo */
+  justify-content: space-between; /* Distribui espaço entre as colunas */
+  /*align-items: center; /* Alinha os itens no topo */
   gap: 20px;
   flex-wrap: wrap; /* Permite que os itens sejam reposicionados em telas menores */
+  flex-grow: 1; /* Faz com que a progress-container cresça com o conteúdo */
+  align-items: stretch; /* Faz as colunas esquerda e direita terem a mesma altura */
 }
 
-.progress-left,
-.progress-right {
+#progress-container1 {
+  background-color: #333; /* Define a cor de fundo do container */
+  padding: 20px; /* Adiciona um pouco de preenchimento para espaçamento interno */
+  border-radius: 10px; /* Opcional: arredonda os cantos do container */
+  display: flex; /* Opcional: permite centralizar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Estilos para a coluna esquerda */
+#progress .progress-left,
+#progress .progress-right {
   margin-top: 20px;
   flex: 1;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #222; /* Cor de fundo #222 para ambas as colunas */
-  color: white; /* Cor do texto para melhor contraste */
-  text-align: center; /* Conteúdo centralizado */
+  border: 1px solid #222; /* Borda das colunas */
+  border-radius: 10px; /* Arredondamento das bordas */
+  background-color: #333; /* Cor de fundo da coluna */
+  color: white; /* Cor do texto */
+  text-align: center; /* Centraliza o conteúdo */
   box-sizing: border-box; /* Garante que padding e border sejam considerados no tamanho */
-  min-height: 100%; /* Garante que as colunas cresçam conforme o conteúdo */
+  min-height: 200px; /* Garante que as colunas tenham altura mínima */
+  overflow: auto; /* Permite rolagem se o conteúdo for maior que a área disponível */
 }
 
-/* Estilos específicos para a coluna esquerda */
-.progress-left {
-  background-color: #222;
-  align-items: center;
-  /* Você pode adicionar estilos personalizados para a esquerda aqui, se necessário */
+/* Estilos para a coluna esquerda */
+#progress .progress-left {
+  margin-top: 0px;
+  flex: 1;
+  padding: 20px;
+  /*border: 2px solid #333; /* Borda da coluna */
+  border-radius: 10px; /* Arredondamento das bordas */
+  background-color: #222; /* Cor de fundo da coluna */
+  color: white; /* Cor do texto */
+  text-align: center; /* Centraliza o conteúdo */
+  box-sizing: border-box; /* Garante que padding e border sejam considerados no tamanho */
+  min-height: 300px; /* Garante que a coluna tenha altura mínima */
+  display: flex;
+  flex-direction: column; /* Alinha o conteúdo verticalmente */
+  justify-content: center; /* Centraliza verticalmente o círculo */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
 }
 
-/* Estilos específicos para a coluna direita */
-.progress-right {
-  background-color: #222;
-  align-items: center;
-  /* Você pode adicionar estilos personalizados para a direita aqui, se necessário */
+/* Estilo do título "Progresso" */
+#progress .progress-left h2 {
+  margin-bottom: 40px; /* Espaçamento entre o título e o círculo */
+  font-size: 28px;
+  color: #00ff00; /* Cor verde para o título */
 }
-
+/* Estilo do título "Progresso" */
+#progress .progress-right h2 {
+  margin-bottom: 40px; /* Espaçamento entre o título e o círculo */
+  font-size: 28px;
+  color: #00ff00; /* Cor verde para o título */
+}
 h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
@@ -490,6 +518,121 @@ h2 {
 
 p {
   font-size: 1em;
+}
+/* Estilos do círculo de progresso */
+#progress .progress-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 20px solid #00ff00; /* Borda verde do círculo */
+}
+#progress .progress-inner-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 15px solid #313d31; /* Borda interna do círculo */
+}
+#progress .progress-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff; /* Cor do texto dentro do círculo */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza o texto no círculo */
+}
+/* Remover efeitos de hover apenas para esta seção */
+#progress .topic-progress:hover {
+  transform: none !important; /* Sem efeito de aumento ao passar o mouse */
+}
+
+#progress .progress-bar-container:hover {
+  box-shadow: none !important; /* Sem efeito de sombra ao passar o mouse */
+}
+
+/*direita*/
+/*---------------------Estilo para a parte direita da seção Progresso----------------------------*/
+#progress .progress-right {
+  flex: 1;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow-y: auto; /* Apenas permite rolagem vertical se o conteúdo ultrapassar a altura */
+}
+#progress .topics-menu {
+  padding: 20px 10px; /* Garantir que haja espaçamento interno adequado */
+  margin: 0; /* Remover qualquer margem que esteja causando sobreposição */
+}
+#progress .progress-right h2 {
+  margin-bottom: 20px;
+}
+
+#progress .topics-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre os tópicos */
+  background-color: #333;
+}
+
+#progress .topic-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#progress .topic-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: black; /* Cor para melhor visibilidade */
+}
+#progress .progress-left h1 {
+  margin-bottom: 30px; /* Espaço abaixo dos cabeçalhos */
+}
+
+#progress .progress-left p {
+  text-align: justify;
+  margin-bottom: 30px; /* Espaço abaixo do parágrafo */
+  line-height: 1.6; /* Ajuste este valor conforme necessário para mais ou menos espaçamento */
+  margin-bottom: 40px;
+}
+
+#progress .progress-bar-container {
+  width: 100%;
+  background-color: #555; /* Cor de fundo da barra de progresso */
+  border-radius: 5px;
+  height: 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+#progress .progress-bar {
+  height: 100%;
+  background-color: #00ff00; /* Cor da barra de progresso */
+  width: 0%; /* Inicialmente sem progresso */
+  border-radius: 5px;
+  transition: width 0.5s ease; /* Animação suave ao atualizar o progresso */
+}
+
+#progress .progress-percentage {
+  position: absolute;
+  left: 10px; /* Coloca a porcentagem no início da barra */
+  top: 50%;
+  transform: translateY(-50%);
+  color: black; /* Cor do texto de porcentagem */
+  font-weight: bold;
+  z-index: 1; /* Garante que o texto apareça acima da barra de progresso */
 }
 
 /*-------------------- Divisão da Seção Home em duas partes (esquerda e direita)------------------------------- */
@@ -595,7 +738,7 @@ p {
 }
 
 .topic-button {
-  width: 224px;
+  width: 228px;
   height: 41px;
   padding: 0;
   font-size: 18px;

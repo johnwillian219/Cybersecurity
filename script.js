@@ -81,8 +81,17 @@ function updateProgress() {
     }
 
     const progressPercentage = (checkedCount / totalCheckboxes) * 100;
-    document.querySelector('.progress-text').innerText = `${progressPercentage.toFixed(2)}%`;
+    // Atualiza o texto de progresso na Home
+    const homeProgressText = document.querySelector('.home-right .progress-text');
+    if (homeProgressText) {
+        homeProgressText.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
 
+    // Atualiza o texto de progresso na seção Progresso
+    const progressSectionText = document.querySelector('#progress .progress-text');
+    if (progressSectionText) {
+        progressSectionText.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
     const sectionTitle = document.querySelector('.section-title');
     if (progressPercentage === 0) {
         sectionTitle.innerText = "Let's Start";
@@ -150,71 +159,231 @@ let ITCheckedCount = 0;
 function updateOthersProgress() {
     const totalCheckboxes = 8; // Total de checkboxes para Others
     const progressPercentage = (othersCheckedCount / totalCheckboxes) * 100;
-    document.querySelector('#others-progress .progress-bar').style.width = `${progressPercentage}%`;
-    document.querySelector('#others-progress .progress-percentage').innerText = `${progressPercentage.toFixed(2)}%`;
+
+    // Atualiza a barra de progresso na Home
+    const othersProgressBarHome = document.querySelector('.home-right #others-progress .progress-bar');
+    const othersProgressPercentageHome = document.querySelector('.home-right #others-progress .progress-percentage');
+
+    if (othersProgressBarHome && othersProgressPercentageHome) {
+        othersProgressBarHome.style.width = `${progressPercentage}%`;
+        othersProgressPercentageHome.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
+
+    // Atualiza a barra de progresso na seção Progresso
+    const othersProgressBarSection = document.querySelector('#progress #others-progress .progress-bar');
+    const othersProgressPercentageSection = document.querySelector('#progress #others-progress .progress-percentage');
+
+    if (othersProgressBarSection && othersProgressPercentageSection) {
+        othersProgressBarSection.style.width = `${progressPercentage}%`;
+        othersProgressPercentageSection.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
 }
 
 function updateWebProgress() {
     const totalCheckboxes = 28; // Total de checkboxes para web
     const progressPercentage = (webCheckedCount / totalCheckboxes) * 100;
-    document.querySelector('#web-progress .progress-bar').style.width = `${progressPercentage}%`;
-    document.querySelector('#web-progress .progress-percentage').innerText = `${progressPercentage.toFixed(2)}%`;
+
+    // Atualiza a barra de progresso na Home
+    const webProgressBarHome = document.querySelector('.home-right #web-progress .progress-bar');
+    const webProgressPercentageHome = document.querySelector('.home-right #web-progress .progress-percentage');
+
+    if (webProgressBarHome && webProgressPercentageHome) {
+        webProgressBarHome.style.width = `${progressPercentage}%`;
+        webProgressPercentageHome.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
+
+    // Atualiza a barra de progresso na seção Progresso
+    const webProgressBarSection = document.querySelector('#progress #web-progress .progress-bar');
+    const webProgressPercentageSection = document.querySelector('#progress #web-progress .progress-percentage');
+
+    if (webProgressBarSection && webProgressPercentageSection) {
+        webProgressBarSection.style.width = `${progressPercentage}%`;
+        webProgressPercentageSection.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
 }
 
 function updateToolsProgress() {
     const totalCheckboxes = 40; // Total de checkboxes para distros e tools
     const progressPercentage = (toolsCheckedCount / totalCheckboxes) * 100;
-    document.querySelector('#tools-progress .progress-bar').style.width = `${progressPercentage}%`;
-    document.querySelector('#tools-progress .progress-percentage').innerText = `${progressPercentage.toFixed(2)}%`;
+
+    // Atualiza na Home
+    const toolsProgressBarHome = document.querySelector('.home-right #tools-progress .progress-bar');
+    const toolsProgressPercentageHome = document.querySelector('.home-right #tools-progress .progress-percentage');
+
+    if (toolsProgressBarHome && toolsProgressPercentageHome) {
+        toolsProgressBarHome.style.width = `${progressPercentage}%`;
+        toolsProgressPercentageHome.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
+
+    // Atualiza na seção Progresso
+    const toolsProgressBarSection = document.querySelector('#progress #tools-progress .progress-bar');
+    const toolsProgressPercentageSection = document.querySelector('#progress #tools-progress .progress-percentage');
+
+    if (toolsProgressBarSection && toolsProgressPercentageSection) {
+        toolsProgressBarSection.style.width = `${progressPercentage}%`;
+        toolsProgressPercentageSection.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
 }
 
 function updateProgrammingProgress() {
     const totalCheckboxes = 28; // Total de checkboxes para programming
     const progressPercentage = (programmingCheckedCount / totalCheckboxes) * 100;
-    document.querySelector('#programming-progress .progress-bar').style.width = `${progressPercentage}%`;
-    document.querySelector('#programming-progress .progress-percentage').innerText = `${progressPercentage.toFixed(2)}%`;
+
+    // Atualiza na Home
+    const programmingProgressBarHome = document.querySelector('.home-right #programming-progress .progress-bar');
+    const programmingProgressPercentageHome = document.querySelector('.home-right #programming-progress .progress-percentage');
+
+    if (programmingProgressBarHome && programmingProgressPercentageHome) {
+        programmingProgressBarHome.style.width = `${progressPercentage}%`;
+        programmingProgressPercentageHome.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
+
+    // Atualiza na seção Progresso
+    const programmingProgressBarSection = document.querySelector('#progress #programming-progress .progress-bar');
+    const programmingProgressPercentageSection = document.querySelector('#progress #programming-progress .progress-percentage');
+
+    if (programmingProgressBarSection && programmingProgressPercentageSection) {
+        programmingProgressBarSection.style.width = `${progressPercentage}%`;
+        programmingProgressPercentageSection.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
 }
 
 function updateCloudProgress() {
     const totalCheckboxes = 20; // Total de checkboxes para cloud
     const progressPercentage = (cloudCheckedCount / totalCheckboxes) * 100;
-    document.querySelector('#cloud-progress .progress-bar').style.width = `${progressPercentage}%`;
-    document.querySelector('#cloud-progress .progress-percentage').innerText = `${progressPercentage.toFixed(2)}%`;
+
+    // Atualiza na Home
+    const cloudProgressBarHome = document.querySelector('.home-right #cloud-progress .progress-bar');
+    const cloudProgressPercentageHome = document.querySelector('.home-right #cloud-progress .progress-percentage');
+
+    if (cloudProgressBarHome && cloudProgressPercentageHome) {
+        cloudProgressBarHome.style.width = `${progressPercentage}%`;
+        cloudProgressPercentageHome.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
+
+    // Atualiza na seção Progresso
+    const cloudProgressBarSection = document.querySelector('#progress #cloud-progress .progress-bar');
+    const cloudProgressPercentageSection = document.querySelector('#progress #cloud-progress .progress-percentage');
+
+    if (cloudProgressBarSection && cloudProgressPercentageSection) {
+        cloudProgressBarSection.style.width = `${progressPercentage}%`;
+        cloudProgressPercentageSection.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
 }
 
 function updateSecurityProgress() {
     const totalCheckboxes = 32; // Total de checkboxes para security
     const progressPercentage = (securityCheckedCount / totalCheckboxes) * 100;
-    document.querySelector('#security-progress .progress-bar').style.width = `${progressPercentage}%`;
-    document.querySelector('#security-progress .progress-percentage').innerText = `${progressPercentage.toFixed(2)}%`;
+
+    // Atualiza na Home
+    const securityProgressBarHome = document.querySelector('.home-right #security-progress .progress-bar');
+    const securityProgressPercentageHome = document.querySelector('.home-right #security-progress .progress-percentage');
+
+    if (securityProgressBarHome && securityProgressPercentageHome) {
+        securityProgressBarHome.style.width = `${progressPercentage}%`;
+        securityProgressPercentageHome.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
+
+    // Atualiza na seção Progresso
+    const securityProgressBarSection = document.querySelector('#progress #security-progress .progress-bar');
+    const securityProgressPercentageSection = document.querySelector('#progress #security-progress .progress-percentage');
+
+    if (securityProgressBarSection && securityProgressPercentageSection) {
+        securityProgressBarSection.style.width = `${progressPercentage}%`;
+        securityProgressPercentageSection.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
 }
 
 function updateVirtualizationProgress() {
     const totalCheckboxes = 16; // Total de checkboxes para virtualization
     const progressPercentage = (virtualizationCheckedCount / totalCheckboxes) * 100;
-    document.querySelector('#virtualization-progress .progress-bar').style.width = `${progressPercentage}%`;
-    document.querySelector('#virtualization-progress .progress-percentage').innerText = `${progressPercentage.toFixed(2)}%`;
+
+    // Atualiza na Home
+    const virtualizationProgressBarHome = document.querySelector('.home-right #virtualization-progress .progress-bar');
+    const virtualizationProgressPercentageHome = document.querySelector('.home-right #virtualization-progress .progress-percentage');
+
+    if (virtualizationProgressBarHome && virtualizationProgressPercentageHome) {
+        virtualizationProgressBarHome.style.width = `${progressPercentage}%`;
+        virtualizationProgressPercentageHome.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
+
+    // Atualiza na seção Progresso
+    const virtualizationProgressBarSection = document.querySelector('#progress #virtualization-progress .progress-bar');
+    const virtualizationProgressPercentageSection = document.querySelector('#progress #virtualization-progress .progress-percentage');
+
+    if (virtualizationProgressBarSection && virtualizationProgressPercentageSection) {
+        virtualizationProgressBarSection.style.width = `${progressPercentage}%`;
+        virtualizationProgressPercentageSection.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
 }
 
 function updateComputerProgress() {
-    const totalCheckboxes = 40; // Total de checkboxes para Compputer network
+    const totalCheckboxes = 40; // Total de checkboxes para Computer network
     const progressPercentage = (computerCheckedCount / totalCheckboxes) * 100;
-    document.querySelector('#computer-networks-progress .progress-bar').style.width = `${progressPercentage}%`;
-    document.querySelector('#computer-networks-progress .progress-percentage').innerText = `${progressPercentage.toFixed(2)}%`;
+
+    // Atualiza na Home
+    const computerProgressBarHome = document.querySelector('.home-right #computer-networks-progress .progress-bar');
+    const computerProgressPercentageHome = document.querySelector('.home-right #computer-networks-progress .progress-percentage');
+
+    if (computerProgressBarHome && computerProgressPercentageHome) {
+        computerProgressBarHome.style.width = `${progressPercentage}%`;
+        computerProgressPercentageHome.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
+
+    // Atualiza na seção Progresso
+    const computerProgressBarSection = document.querySelector('#progress #computer-networks-progress .progress-bar');
+    const computerProgressPercentageSection = document.querySelector('#progress #computer-networks-progress .progress-percentage');
+
+    if (computerProgressBarSection && computerProgressPercentageSection) {
+        computerProgressBarSection.style.width = `${progressPercentage}%`;
+        computerProgressPercentageSection.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
 }
 
 function updateSOProgress() {
     const totalCheckboxes = 28; // Total de checkboxes para SO
     const progressPercentage = (SOCheckedCount / totalCheckboxes) * 100;
-    document.querySelector('#operating-systems-progress .progress-bar').style.width = `${progressPercentage}%`;
-    document.querySelector('#operating-systems-progress .progress-percentage').innerText = `${progressPercentage.toFixed(2)}%`;
+
+    // Atualiza na Home
+    const soProgressBarHome = document.querySelector('.home-right #operating-systems-progress .progress-bar');
+    const soProgressPercentageHome = document.querySelector('.home-right #operating-systems-progress .progress-percentage');
+
+    if (soProgressBarHome && soProgressPercentageHome) {
+        soProgressBarHome.style.width = `${progressPercentage}%`;
+        soProgressPercentageHome.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
+
+    // Atualiza na seção Progresso
+    const soProgressBarSection = document.querySelector('#progress #operating-systems-progress .progress-bar');
+    const soProgressPercentageSection = document.querySelector('#progress #operating-systems-progress .progress-percentage');
+
+    if (soProgressBarSection && soProgressPercentageSection) {
+        soProgressBarSection.style.width = `${progressPercentage}%`;
+        soProgressPercentageSection.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
 }
 
 function updateITProgress() {
     const totalCheckboxes = 16; // Total de checkboxes para IT skills
     const progressPercentage = (ITCheckedCount / totalCheckboxes) * 100;
-    document.querySelector('#fundamental-it-skills-progress .progress-bar').style.width = `${progressPercentage}%`;
-    document.querySelector('#fundamental-it-skills-progress .progress-percentage').innerText = `${progressPercentage.toFixed(2)}%`;
+
+    // Atualiza na Home
+    const itProgressBarHome = document.querySelector('.home-right #fundamental-it-skills-progress .progress-bar');
+    const itProgressPercentageHome = document.querySelector('.home-right #fundamental-it-skills-progress .progress-percentage');
+
+    if (itProgressBarHome && itProgressPercentageHome) {
+        itProgressBarHome.style.width = `${progressPercentage}%`;
+        itProgressPercentageHome.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
+
+    // Atualiza na seção Progresso
+    const itProgressBarSection = document.querySelector('#progress #fundamental-it-skills-progress .progress-bar');
+    const itProgressPercentageSection = document.querySelector('#progress #fundamental-it-skills-progress .progress-percentage');
+
+    if (itProgressBarSection && itProgressPercentageSection) {
+        itProgressBarSection.style.width = `${progressPercentage}%`;
+        itProgressPercentageSection.innerText = `${progressPercentage.toFixed(2)}%`;
+    }
 }
 
 
@@ -257,22 +426,18 @@ document.addEventListener('DOMContentLoaded', () => {
 const topicItems = document.querySelectorAll('.topic-item');
 
 //---------------------------------SeÇÃO SOBRE--------------------------------------------------------------//
-//controlar quando os botões aparecem
 let currentTopicIndex = 0;
 const topics = document.querySelectorAll('.topic-item');
 const prevButton = document.getElementById('prev-topic');
 const nextButton = document.getElementById('next-topic');
 
-// Função para atualizar a visibilidade dos botões
 function updateButtons() {
-    // Esconder o botão "prev" se estivermos no primeiro tópico
     if (currentTopicIndex === 0) {
         prevButton.style.display = 'none';
     } else {
         prevButton.style.display = 'block';
     }
 
-    // Esconder o botão "next" se estivermos no último tópico
     if (currentTopicIndex === topics.length - 1) {
         nextButton.style.display = 'none';
     } else {
@@ -280,16 +445,14 @@ function updateButtons() {
     }
 }
 
-// Função para mudar de tópico
 function showTopic(index) {
     topics.forEach((topic, i) => {
         topic.style.display = i === index ? 'block' : 'none';
     });
     currentTopicIndex = index;
-    updateButtons(); // Atualiza a visibilidade dos botões
+    updateButtons();
 }
 
-// Botões de navegação
 prevButton.addEventListener('click', () => {
     if (currentTopicIndex > 0) {
         showTopic(currentTopicIndex - 1);
@@ -302,5 +465,4 @@ nextButton.addEventListener('click', () => {
     }
 });
 
-// Inicializar o primeiro tópico e atualizar os botões
 showTopic(currentTopicIndex);

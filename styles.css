@@ -393,6 +393,105 @@ body {
   }
 }
 
+.nav-button {
+  position: fixed; /* Trocar de absolute para fixed para manter na posição ao rolar a página */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(
+    -50%
+  ); /* Ajusta para que o centro do botão esteja no meio */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo translúcido */
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50%; /* Botão circular */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+  z-index: 100;
+  width: 60px; /* Largura e altura igual para manter o botão circular */
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Seta esquerda */
+#prev-topic {
+  left: 10px; /* Continua alinhado à esquerda */
+}
+
+/* Seta direita */
+#next-topic {
+  right: 10px; /* Continua alinhado à direita */
+}
+
+/* Efeito hover para os botões */
+.nav-button:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fundo branco ao passar o mouse */
+  color: black; /* Seta preta ao passar o mouse */
+  transform: translateY(-50%) scale(1.1); /* Mantém a centralização e aumenta o tamanho */
+}
+
+/*---------------------Seção Progresso-------------------------------------------------------------------------*/
+/* Estilo geral da seção de progresso */
+#progress {
+  padding: 20px;
+  text-align: flex-start;
+  min-height: 100vh; /* Garante que a seção ocupe a altura total da tela */
+  box-sizing: border-box; /* Garante que padding seja incluído no cálculo de altura */
+  position: relative; /* Garante que o conteúdo não sobreponha outros elementos */
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Garante que os itens comecem no topo, mas cresçam conforme o conteúdo */
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que os itens sejam reposicionados em telas menores */
+}
+
+.progress-left,
+.progress-right {
+  margin-top: 20px;
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #222; /* Cor de fundo #222 para ambas as colunas */
+  color: white; /* Cor do texto para melhor contraste */
+  text-align: center; /* Conteúdo centralizado */
+  box-sizing: border-box; /* Garante que padding e border sejam considerados no tamanho */
+  min-height: 100%; /* Garante que as colunas cresçam conforme o conteúdo */
+}
+
+/* Estilos específicos para a coluna esquerda */
+.progress-left {
+  background-color: #222;
+  align-items: center;
+  /* Você pode adicionar estilos personalizados para a esquerda aqui, se necessário */
+}
+
+/* Estilos específicos para a coluna direita */
+.progress-right {
+  background-color: #222;
+  align-items: center;
+  /* Você pode adicionar estilos personalizados para a direita aqui, se necessário */
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1em;
+}
+
 /*-------------------- Divisão da Seção Home em duas partes (esquerda e direita)------------------------------- */
 .home-container {
   display: flex;

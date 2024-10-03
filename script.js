@@ -255,3 +255,49 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const topicItems = document.querySelectorAll('.topic-item');
+
+//---------------------------------SeÇÃO SOBRE--------------------------------------------------------------//
+document.addEventListener('DOMContentLoaded', function () {
+    const topics = document.querySelectorAll('.topic-item');
+    let currentTopic = 0;
+    const totalTopics = topics.length;
+    const switchInterval = 40000; // 40 segundos
+
+    // Função para exibir o tópico atual
+    function showTopic(index) {
+        topics.forEach((topic, i) => {
+            topic.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    // Função para alternar para o próximo tópico
+    function nextTopic() {
+        currentTopic = (currentTopic + 1) % totalTopics; // Avança para o próximo ou volta ao primeiro
+        showTopic(currentTopic);
+    }
+
+    // Função para alternar para o tópico anterior
+    function prevTopic() {
+        currentTopic = (currentTopic - 1 + totalTopics) % totalTopics; // Volta para o anterior ou vai para o último
+        showTopic(currentTopic);
+    }
+
+    // Alternar automaticamente a cada 40 segundos
+    let topicSwitchInterval = setInterval(nextTopic, switchInterval);
+
+    // Navegação manual - Botões
+    document.getElementById('next-topic').addEventListener('click', function () {
+        clearInterval(topicSwitchInterval); // Para a alternância automática
+        nextTopic();
+        topicSwitchInterval = setInterval(nextTopic, switchInterval); // Reinicia o intervalo
+    });
+
+    document.getElementById('prev-topic').addEventListener('click', function () {
+        clearInterval(topicSwitchInterval); // Para a alternância automática
+        prevTopic();
+        topicSwitchInterval = setInterval(nextTopic, switchInterval); // Reinicia o intervalo
+    });
+
+    // Exibir o primeiro tópico no início
+    showTopic(currentTopic);
+});

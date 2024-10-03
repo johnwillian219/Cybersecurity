@@ -635,6 +635,35 @@ p {
   z-index: 1; /* Garante que o texto apareça acima da barra de progresso */
 }
 
+/* Transição suave para o efeito de hover */
+#progress .progress-bar-container {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#progress .progress-bar-container:hover {
+  transform: scale(1.05); /* Aumenta o tamanho da barra */
+  box-shadow: 0px 0px 15px 5px rgba(50, 205, 50, 0.5); /* Sombra no hover */
+}
+
+/* Transição para a barra de progresso */
+#progress .progress-bar {
+  transition: background-color 0.3s ease-in-out, width 0.4s ease-in-out;
+}
+
+#progress .progress-bar-container:hover .progress-bar {
+  background-color: #32cd32; /* Muda a cor da barra no hover */
+}
+
+/* Adiciona efeito de aumento do texto da porcentagem */
+#progress .progress-percentage {
+  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#progress .progress-bar-container:hover .progress-percentage {
+  font-size: 1.2em; /* Aumenta o tamanho do texto da porcentagem */
+  color: #ffffff; /* Muda a cor para branco no hover */
+}
+
 /*-------------------- Divisão da Seção Home em duas partes (esquerda e direita)------------------------------- */
 .home-container {
   display: flex;

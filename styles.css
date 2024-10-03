@@ -663,7 +663,16 @@ p {
   font-size: 1.2em; /* Aumenta o tamanho do texto da porcentagem */
   color: #ffffff; /* Muda a cor para branco no hover */
 }
-
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+  .progress-container {
+    flex-direction: column; /* Alinha as colunas em uma coluna */
+  }
+  .progress-left,
+  .progress-right {
+    width: 100%; /* As colunas ocupam 100% da largura */
+  }
+}
 /*-------------------- Divisão da Seção Home em duas partes (esquerda e direita)------------------------------- */
 .home-container {
   display: flex;

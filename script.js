@@ -301,3 +301,51 @@ document.addEventListener('DOMContentLoaded', function () {
     // Exibir o primeiro tópico no início
     showTopic(currentTopic);
 });
+
+//controlar quando os botões aparecem
+let currentTopicIndex = 0;
+const topics = document.querySelectorAll('.topic-item');
+const prevButton = document.getElementById('prev-topic');
+const nextButton = document.getElementById('next-topic');
+
+// Função para atualizar a visibilidade dos botões
+function updateButtons() {
+    // Esconder o botão "prev" se estivermos no primeiro tópico
+    if (currentTopicIndex === 0) {
+        prevButton.style.display = 'none';
+    } else {
+        prevButton.style.display = 'block';
+    }
+
+    // Esconder o botão "next" se estivermos no último tópico
+    if (currentTopicIndex === topics.length - 1) {
+        nextButton.style.display = 'none';
+    } else {
+        nextButton.style.display = 'block';
+    }
+}
+
+// Função para mudar de tópico
+function showTopic(index) {
+    topics.forEach((topic, i) => {
+        topic.style.display = i === index ? 'block' : 'none';
+    });
+    currentTopicIndex = index;
+    updateButtons(); // Atualiza a visibilidade dos botões
+}
+
+// Botões de navegação
+prevButton.addEventListener('click', () => {
+    if (currentTopicIndex > 0) {
+        showTopic(currentTopicIndex - 1);
+    }
+});
+
+nextButton.addEventListener('click', () => {
+    if (currentTopicIndex < topics.length - 1) {
+        showTopic(currentTopicIndex + 1);
+    }
+});
+
+// Inicializar o primeiro tópico e atualizar os botões
+showTopic(currentTopicIndex);

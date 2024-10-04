@@ -636,12 +636,12 @@ body {
 
   #progress .topic-progress {
     width: 100%; /* Faz os tópicos ocupar toda a largura disponível */
-    max-width: 800px; /* Define uma largura máxima, se desejado */
     gap: 5px;
   }
 
-  #progress .progress-percentage {
-    font-size: 14px; /* Diminui o tamanho do texto nas barras de progresso */
+  #progress .progress-percentage,
+  #progress .topic-name {
+    font-size: 10px; /* Diminui o tamanho do texto nas barras de progresso */
   }
 
   /* Centraliza o título "Progresso Parciais" */

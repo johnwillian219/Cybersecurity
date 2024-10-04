@@ -436,7 +436,7 @@ body {
   border: 4px solid #222;
   border-radius: 10px;
   flex-direction: column;
-  min-height: 800px; /* Define um tamanho mínimo */
+  min-height: 700px; /* Define um tamanho mínimo */
   height: auto; /* Altura cresce conforme o conteúdo */
   overflow: hidden;
   display: flex;
@@ -605,26 +605,42 @@ body {
   font-size: 1.2em;
   color: #ffffff;
 }
-/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
-  #progress {
-    flex-direction: column; /* Garante que a seção se empilhe verticalmente */
-    height: auto; /* Permite que a altura cresça conforme o conteúdo */
+  #progress .progress-container {
+    display: flex; /* Usa flexbox para o contêiner principal */
+    flex-direction: column; /* Empilha as colunas verticalmente */
+    flex-wrap: wrap; /* Permite que os itens se movam para baixo se necessário */
+    height: auto; /* Ajusta a altura do contêiner para auto */
   }
 
-  .progress-container {
-    flex-direction: column; /* Colunas uma abaixo da outra */
-    align-items: stretch; /* As colunas preenchem a largura */
-    width: 100%; /* Ocupa toda a largura disponível */
+  #progress .progress-left,
+  #progress .progress-right {
+    width: 100%; /* Cada coluna ocupa a largura total */
+    align-items: center; /* Alinha os itens do centro (caso sejam flexíveis) */
+    display: flex; /* Habilita flexbox nas colunas */
+    justify-content: center; /* Centraliza o conteúdo das colunas horizontalmente */
+    flex-direction: column; /* Alinha os itens em coluna */
   }
 
-  .progress-left,
-  .progress-right {
-    width: 100%; /* Garante que ambas as colunas ocupem toda a largura */
-    padding: 10px;
-    margin-top: 20px; /* Espaçamento entre as colunas */
-    flex-basis: auto; /* Permite que as colunas cresçam automaticamente */
-    height: auto; /* Remove qualquer altura fixa para permitir o crescimento dinâmico */
+  #topics-menu {
+    display: flex; /* Habilita flexbox no menu de tópicos */
+    flex-direction: column; /* Alinha os tópicos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Opcional: centraliza verticalmente */
+    margin-top: 10px; /* Adiciona espaço acima do menu de tópicos */
+  }
+
+  .topic-progress {
+    width: 100%; /* Faz os tópicos ocupar toda a largura disponível */
+    max-width: 600px; /* Define uma largura máxima, se desejado */
+    margin-bottom: 20px; /* Espaçamento entre os tópicos */
+  }
+
+  /* Centraliza o título "Progresso Parciais" */
+  .progress-right h2 {
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Faz o título ocupar toda a largura */
+    margin-bottom: 20px; /* Espaço entre o título e o menu de tópicos */
   }
 }
 

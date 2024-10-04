@@ -612,7 +612,6 @@ body {
     flex-wrap: wrap; /* Permite que os itens se movam para baixo se necessário */
     height: auto; /* Ajusta a altura do contêiner para auto */
     max-width: 1200px; /* Aumenta a largura máxima do contêiner */
-    margin: 0 auto; /* Centraliza o contêiner */
   }
 
   #progress .progress-left,
@@ -622,7 +621,6 @@ body {
     display: flex; /* Habilita flexbox nas colunas */
     justify-content: center; /* Centraliza o conteúdo das colunas horizontalmente */
     flex-direction: column; /* Alinha os itens em coluna */
-    padding: 20px; /* Adiciona preenchimento ao contêiner */
   }
 
   #progress #topics-menu {
@@ -630,18 +628,18 @@ body {
     flex-direction: column; /* Alinha os tópicos verticalmente */
     align-items: center; /* Centraliza os itens horizontalmente */
     justify-content: center; /* Opcional: centraliza verticalmente */
-    margin-top: 10px; /* Adiciona espaço acima do menu de tópicos */
-    /*width: 750px;*/
+    background-color: #333;
   }
 
   #progress .topic-progress {
     width: 100%; /* Faz os tópicos ocupar toda a largura disponível */
-    gap: 5px;
   }
-
+  #progress .progress-bar-container {
+    padding: 0; /* Remove o padding para um espaço mais compacto */
+  }
   #progress .progress-percentage,
   #progress .topic-name {
-    font-size: 10px; /* Diminui o tamanho do texto nas barras de progresso */
+    font-size: 12px; /* Diminui o tamanho do texto nas barras de progresso */
   }
   #progress .progress-left p {
     display: none; /* Esconde o parágrafo em dispositivos móveis */

@@ -612,6 +612,9 @@ body {
     flex-wrap: wrap; /* Permite que os itens se movam para baixo se necessário */
     height: auto; /* Ajusta a altura do contêiner para auto */
   }
+  .progress-percentage {
+    font-size: 12px; /* Diminui o tamanho do texto nas barras de progresso */
+  }
 
   #progress .progress-left,
   #progress .progress-right {

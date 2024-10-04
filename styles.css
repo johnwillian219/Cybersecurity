@@ -423,6 +423,86 @@ body {
   color: black;
   transform: translateY(-50%) scale(1.1);
 }
+/**********************seção contacto***************************************************************************/
+#contact .contact-container {
+  display: flex; /* Usar flexbox para layout */
+  justify-content: space-between; /* Espaço igual entre as colunas */
+  align-items: flex-start; /* Alinhar o conteúdo no topo */
+  width: 100%; /* Largura total */
+  gap: 20px;
+  align-items: stretch; /* Faz as divisões terem a mesma altura */
+}
+
+.contact-left,
+.contact-right {
+  flex: 1; /* Faz com que ambas as divisões ocupem o mesmo espaço */
+  padding: 20px; /* Adiciona um espaçamento interno */
+  width: 48%; /* Cada coluna ocupa 48% da largura total */
+  padding: 20px; /* Espaçamento interno */
+  background-color: #222;
+  border-radius: 10px;
+  align-items: stretch;
+}
+
+.contact-left h2 {
+  text-align: center;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.contact-right label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #f9f7f7;
+  border-radius: 5px;
+}
+
+.contact-right button {
+  padding: 10px 20px;
+  background-color: #32cd32;
+  color: rgb(188, 180, 180);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-right button:hover {
+  background-color: #28a428;
+}
+
+@media (max-width: 768px) {
+  .contact-right {
+    width: 100%;
+  }
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  #contact .contact-container {
+    flex-direction: column; /* Colunas empilhadas em dispositivos móveis */
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%; /* Cada coluna ocupa 100% da largura total */
+    margin-bottom: 20px; /* Espaço entre as colunas */
+  }
+}
 
 /*---------------------Seção Progresso-------------------------------------------------------------------------*/
 #progress {

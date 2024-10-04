@@ -1497,8 +1497,44 @@
 
 <!-------------------------------Inicio da Seção Contato ------------------------------------------------------------------------------------------>
 <section id="contact" class="content-section full-height" style="display: none;">
-    <h1>Contato</h1>
-    <p>Entre em contato conosco para mais informações sobre cibersegurança e treinamentos.</p>
+    <div class="contact-container">
+        <div class="contact-left">
+            <h2 class="section-title">Contate-nos</h2>
+            <p style="margin-bottom: 35px;">Entre em contato conosco para mais informações sobre cibersegurança, serviços e treinamentos.</p>
+            <div class="contact-icons">
+                <a href="mailto:johnwillian254@gmail.com" class="contact-icon">
+                    <img src="imagens/email.svg" alt="Email">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100074368448584" target="_blank" class="contact-icon">
+                    <img src="imagens/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://wa.me/00351964047460" target="_blank" class="contact-icon">
+                    <img src="imagens/whatsapp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.linkedin.com/in/john-william-cabral-gomes-031389234/" target="_blank" class="contact-icon">
+                    <img src="imagens/linkedin.svg" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+        <div class="contact-right">
+            <form id="contact-form">
+                <!-- Label e Campo para o Assunto -->
+                <label for="subject">Assunto:</label>
+                <input type="text" id="subject" name="subject" placeholder="Digite o assunto" required>
+
+                <!-- Label e Campo para o Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+                <!-- Label e Área de Texto para a Mensagem -->
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="6" placeholder="Digite sua mensagem" required></textarea>
+
+                <!-- Botão de Envio -->
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
 </section>
 <!-------------------------------Fim da seção de contato------------------------------------------------------------------------------------------->
 

@@ -428,97 +428,74 @@ body {
 /* Estilo geral da seção de progresso */
 #progress {
   padding: 20px;
-  text-align: center; /* Pode ser removido se não for necessário */
-  box-sizing: border-box; /* Garante que padding seja incluído no cálculo de altura */
-  position: relative; /* Garante que o conteúdo não sobreponha outros elementos */
-  background-color: #222; /* Cor de fundo da seção */
-  color: white; /* Cor do texto */
-  border: 4px solid #222; /* Borda das colunas */
-  border-radius: 10px; /* Arredondamento das bordas */
-  flex-direction: column; /* Permite que os filhos cresçam na vertical */
-  height: 800px; /* Garante que o progresso ocupe a tela toda inicialmente */
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #222;
+  color: white;
+  border: 4px solid #222;
+  border-radius: 10px;
+  flex-direction: column;
+  min-height: 800px; /* Define um tamanho mínimo */
+  height: auto; /* Altura cresce conforme o conteúdo */
+  overflow: hidden;
+  display: flex;
 }
+
 /* Estilo do título da seção */
 #progress .section-title {
   font-size: 40px;
   color: #00ff00;
   margin-bottom: 20px;
 }
+
+/* Estilo do container de progresso */
 #progress .progress-container {
   display: flex;
-  justify-content: space-between; /* Distribui espaço entre as colunas */
-  /*align-items: center; /* Alinha os itens no topo */
+  justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap; /* Permite que os itens sejam reposicionados em telas menores */
-  flex-grow: 1; /* Faz com que a progress-container cresça com o conteúdo */
-  align-items: stretch; /* Faz as colunas esquerda e direita terem a mesma altura */
+  flex-wrap: wrap; /* Reorganiza as colunas em telas menores */
+  align-items: stretch;
+  flex-grow: 1; /* Permite que o container cresça conforme o conteúdo */
 }
 
-#progress-container1 {
-  background-color: #333; /* Define a cor de fundo do container */
-  padding: 20px; /* Adiciona um pouco de preenchimento para espaçamento interno */
-  border-radius: 10px; /* Opcional: arredonda os cantos do container */
-  display: flex; /* Opcional: permite centralizar o conteúdo */
-  justify-content: center; /* Centraliza horizontalmente o conteúdo */
-  align-items: center; /* Centraliza verticalmente o conteúdo */
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-/* Estilos para a coluna esquerda */
+/* Estilos para as colunas esquerda e direita */
 #progress .progress-left,
 #progress .progress-right {
   margin-top: 20px;
   flex: 1;
   padding: 20px;
-  border: 1px solid #222; /* Borda das colunas */
-  border-radius: 10px; /* Arredondamento das bordas */
-  background-color: #333; /* Cor de fundo da coluna */
-  color: white; /* Cor do texto */
-  text-align: center; /* Centraliza o conteúdo */
-  box-sizing: border-box; /* Garante que padding e border sejam considerados no tamanho */
-  min-height: 200px; /* Garante que as colunas tenham altura mínima */
-  overflow: auto; /* Permite rolagem se o conteúdo for maior que a área disponível */
+  border: 1px solid #222;
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  min-height: 300px; /* Garante altura mínima */
+  overflow: auto; /* Rolagem automática caso o conteúdo ultrapasse a área */
 }
 
 /* Estilos para a coluna esquerda */
 #progress .progress-left {
-  margin-top: 0px;
-  flex: 1;
-  padding: 20px;
-  /*border: 2px solid #333; /* Borda da coluna */
-  border-radius: 10px; /* Arredondamento das bordas */
-  background-color: #222; /* Cor de fundo da coluna */
-  color: white; /* Cor do texto */
-  text-align: center; /* Centraliza o conteúdo */
-  box-sizing: border-box; /* Garante que padding e border sejam considerados no tamanho */
-  min-height: 300px; /* Garante que a coluna tenha altura mínima */
   display: flex;
-  flex-direction: column; /* Alinha o conteúdo verticalmente */
-  justify-content: center; /* Centraliza verticalmente o círculo */
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Estilo do título "Progresso" */
-#progress .progress-left h2 {
-  margin-bottom: 40px; /* Espaçamento entre o título e o círculo */
-  font-size: 28px;
-  color: #00ff00; /* Cor verde para o título */
-}
-/* Estilo do título "Progresso" */
-#progress .progress-right h2 {
-  margin-bottom: 40px; /* Espaçamento entre o título e o círculo */
-  font-size: 28px;
-  color: #00ff00; /* Cor verde para o título */
-}
-h2 {
+/* Estilos do título da coluna esquerda */
+#progress .progress-left h1 {
+  margin-bottom: 30px;
   font-size: 1.5em;
-  margin-bottom: 10px;
 }
 
-p {
-  font-size: 1em;
+/* Estilos do texto da coluna esquerda */
+#progress .progress-left p {
+  text-align: justify;
+  margin-bottom: 40px;
+  line-height: 1.6;
 }
+
 /* Estilos do círculo de progresso */
 #progress .progress-circle {
   width: 200px;
@@ -528,9 +505,9 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  border: 20px solid #00ff00; /* Borda verde do círculo */
+  border: 20px solid #00ff00;
 }
+
 #progress .progress-inner-circle {
   width: 150px;
   height: 150px;
@@ -539,51 +516,30 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 15px solid #313d31; /* Borda interna do círculo */
+  border: 15px solid #313d31;
 }
+
 #progress .progress-text {
   font-size: 24px;
   font-weight: bold;
-  color: #ffffff; /* Cor do texto dentro do círculo */
+  color: #ffffff;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centraliza o texto no círculo */
-}
-/* Remover efeitos de hover apenas para esta seção */
-#progress .topic-progress:hover {
-  transform: none !important; /* Sem efeito de aumento ao passar o mouse */
+  transform: translate(-50%, -50%);
 }
 
-#progress .progress-bar-container:hover {
-  box-shadow: none !important; /* Sem efeito de sombra ao passar o mouse */
-}
-
-/*direita*/
-/*---------------------Estilo para a parte direita da seção Progresso----------------------------*/
+/* Estilos para a coluna direita */
 #progress .progress-right {
-  flex: 1;
-  padding: 20px;
-  background-color: #333;
-  color: white;
-  border-radius: 10px;
-  box-sizing: border-box;
-  text-align: center;
-  overflow-y: auto; /* Apenas permite rolagem vertical se o conteúdo ultrapassar a altura */
-}
-#progress .topics-menu {
-  padding: 20px 10px; /* Garantir que haja espaçamento interno adequado */
-  margin: 0; /* Remover qualquer margem que esteja causando sobreposição */
-}
-#progress .progress-right h2 {
-  margin-bottom: 20px;
+  overflow-y: auto;
 }
 
 #progress .topics-menu {
+  padding: 20px 10px;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Espaçamento entre os tópicos */
-  background-color: #333;
+  gap: 15px;
 }
 
 #progress .topic-progress {
@@ -595,22 +551,12 @@ p {
 #progress .topic-name {
   font-size: 18px;
   margin-bottom: 10px;
-  color: black; /* Cor para melhor visibilidade */
-}
-#progress .progress-left h1 {
-  margin-bottom: 30px; /* Espaço abaixo dos cabeçalhos */
-}
-
-#progress .progress-left p {
-  text-align: justify;
-  margin-bottom: 30px; /* Espaço abaixo do parágrafo */
-  line-height: 1.6; /* Ajuste este valor conforme necessário para mais ou menos espaçamento */
-  margin-bottom: 40px;
+  color: black;
 }
 
 #progress .progress-bar-container {
   width: 100%;
-  background-color: #555; /* Cor de fundo da barra de progresso */
+  background-color: #555;
   border-radius: 5px;
   height: 36px;
   position: relative;
@@ -619,114 +565,55 @@ p {
 
 #progress .progress-bar {
   height: 100%;
-  background-color: #00ff00; /* Cor da barra de progresso */
+  background-color: #00ff00;
   width: 0%; /* Inicialmente sem progresso */
   border-radius: 5px;
-  transition: width 0.5s ease; /* Animação suave ao atualizar o progresso */
+  transition: width 0.5s ease;
 }
 
 #progress .progress-percentage {
   position: absolute;
-  left: 10px; /* Coloca a porcentagem no início da barra */
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: black; /* Cor do texto de porcentagem */
+  color: black;
   font-weight: bold;
-  z-index: 1; /* Garante que o texto apareça acima da barra de progresso */
+  z-index: 1;
 }
 
-/* Transição suave para o efeito de hover */
-#progress .progress-bar-container {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
+/* Efeitos de hover */
 #progress .progress-bar-container:hover {
-  transform: scale(1.05); /* Aumenta o tamanho da barra */
-  box-shadow: 0px 0px 15px 5px rgba(50, 205, 50, 0.5); /* Sombra no hover */
-}
-
-/* Transição para a barra de progresso */
-#progress .progress-bar {
-  transition: background-color 0.3s ease-in-out, width 0.4s ease-in-out;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px 5px rgba(50, 205, 50, 0.5);
 }
 
 #progress .progress-bar-container:hover .progress-bar {
-  background-color: #32cd32; /* Muda a cor da barra no hover */
+  background-color: #32cd32;
 }
 
-/* Adiciona efeito de aumento do texto da porcentagem */
 #progress .progress-percentage {
   transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 #progress .progress-bar-container:hover .progress-percentage {
-  font-size: 1.2em; /* Aumenta o tamanho do texto da porcentagem */
-  color: #ffffff; /* Muda a cor para branco no hover */
+  font-size: 1.2em;
+  color: #ffffff;
 }
-/* Estilo para dispositivos móveis */
+
+/* Ajustes para Dispositivos Móveis */
 @media (max-width: 768px) {
-  #progress {
-    padding: 20px;
-    box-sizing: border-box; /* Inclui padding no cálculo da altura */
-    background-color: #222; /* Cor de fundo da seção */
-    color: white; /* Cor do texto */
-    border: 4px solid #222; /* Borda das colunas */
-    border-radius: 10px; /* Arredondamento das bordas */
-    height: auto; /* Permite que a altura se ajuste automaticamente */
+  #progress .progress-container {
+    flex-direction: column;
   }
 
-  .progress-container {
-    display: flex;
-    flex-direction: column; /* Alinha as colunas verticalmente */
-    width: 100%; /* Garante que a seção ocupe 100% da largura */
-    margin: 0; /* Remove margens */
+  #progress .progress-left,
+  #progress .progress-right {
+    width: 100%;
+    padding: 10px;
   }
 
-  .progress-left,
-  .progress-right {
-    width: 100%; /* As colunas ocupam 100% da largura */
-    margin-bottom: 20px; /* Espaçamento entre as colunas */
-    padding: 15px; /* Espaçamento interno */
-    border: 1px solid #222; /* Borda das colunas */
-    border-radius: 10px; /* Arredondamento das bordas */
-    background-color: #333; /* Cor de fundo da coluna */
-    color: white; /* Cor do texto */
-    text-align: center; /* Centraliza o conteúdo */
-    box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho */
-    min-height: 200px; /* Garante que as colunas tenham altura mínima */
-    overflow: auto; /* Permite rolagem se o conteúdo for maior que a área disponível */
-  }
-
-  /* Ajustes adicionais para melhorar a legibilidade */
-  h1,
-  h2 {
-    font-size: 24px; /* Aumenta o tamanho da fonte dos títulos */
-    margin-bottom: 15px; /* Espaço abaixo dos títulos */
-    text-align: center; /* Centraliza o texto dos títulos */
-  }
-
-  p {
-    font-size: 14px; /* Aumenta o tamanho da fonte dos parágrafos */
-    text-align: justify; /* Justifica o texto */
-    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
-  }
-
-  /* Estilo do círculo de progresso */
-  .progress-circle {
-    width: 150px; /* Diminui o tamanho do círculo */
-    height: 150px;
-  }
-
-  .progress-text {
-    font-size: 18px; /* Diminui o tamanho do texto dentro do círculo */
-  }
-
-  .progress-bar-container {
-    height: 30px; /* Diminui a altura da barra de progresso */
-  }
-
-  .progress-percentage {
-    font-size: 14px; /* Diminui o tamanho do texto de porcentagem */
+  #progress .progress-right {
+    margin-top: 20px;
   }
 }
 

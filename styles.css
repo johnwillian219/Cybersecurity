@@ -488,6 +488,12 @@ body {
   margin-bottom: 30px;
   font-size: 1.5em;
 }
+/* Título da seção */
+#progress h1 {
+  font-size: 36px; /* Tamanho do título principal */
+  color: #00ff00; /* Cor do título */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
 
 /* Estilos do texto da coluna esquerda */
 #progress .progress-left p {
@@ -599,21 +605,26 @@ body {
   font-size: 1.2em;
   color: #ffffff;
 }
-
-/* Ajustes para Dispositivos Móveis */
+/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
-  #progress .progress-container {
-    flex-direction: column;
+  #progress {
+    flex-direction: column; /* Garante que a seção se empilhe verticalmente */
+    height: auto; /* Permite que a altura cresça conforme o conteúdo */
   }
 
-  #progress .progress-left,
-  #progress .progress-right {
-    width: 100%;
+  .progress-container {
+    flex-direction: column; /* Colunas uma abaixo da outra */
+    align-items: stretch; /* As colunas preenchem a largura */
+    width: 100%; /* Ocupa toda a largura disponível */
+  }
+
+  .progress-left,
+  .progress-right {
+    width: 100%; /* Garante que ambas as colunas ocupem toda a largura */
     padding: 10px;
-  }
-
-  #progress .progress-right {
-    margin-top: 20px;
+    margin-top: 20px; /* Espaçamento entre as colunas */
+    flex-basis: auto; /* Permite que as colunas cresçam automaticamente */
+    height: auto; /* Remove qualquer altura fixa para permitir o crescimento dinâmico */
   }
 }
 

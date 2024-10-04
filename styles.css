@@ -631,7 +631,7 @@ body {
     align-items: center; /* Centraliza os itens horizontalmente */
     justify-content: center; /* Opcional: centraliza verticalmente */
     margin-top: 10px; /* Adiciona espaço acima do menu de tópicos */
-    width: 750px;
+    /*width: 750px;*/
   }
 
   #progress .topic-progress {
@@ -647,7 +647,7 @@ body {
     display: none; /* Esconde o parágrafo em dispositivos móveis */
   }
   #progress .progress-left h1 {
-    font-size: 24px; /* Esconde o parágrafo em dispositivos móveis */
+    font-size: 20px; /* Esconde o parágrafo em dispositivos móveis */
   }
   /* Centraliza o título "Progresso Parciais" */
   .progress-right h2 {

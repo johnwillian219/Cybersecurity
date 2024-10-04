@@ -613,9 +613,21 @@ body {
     height: auto; /* Ajusta a altura do contêiner para auto */
     max-width: 1200px; /* Aumenta a largura máxima do contêiner */
   }
+  #progress .topics-menu {
+    margin: 0; /* Remove a margem padrão do menu */
+    padding: 0; /* Remove o padding padrão do menu */
+  }
+
+  #progress .topic-progress {
+    margin-bottom: 5px; /* Ajuste o espaçamento entre os itens do menu */
+  }
+
+  #progress .topic-name {
+    margin-bottom: 5px; /* Ajusta o espaço entre o nome do tópico e a barra */
+  }
 
   #progress .progress-left,
-  #progress .progress-right {
+  #progress .topics-menu {
     width: 100%; /* Cada coluna ocupa a largura total */
     align-items: center; /* Alinha os itens do centro (caso sejam flexíveis) */
     display: flex; /* Habilita flexbox nas colunas */

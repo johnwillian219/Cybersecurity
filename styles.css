@@ -425,7 +425,6 @@ body {
 }
 
 /*---------------------Seção Progresso-------------------------------------------------------------------------*/
-/* Estilo geral da seção de progresso */
 #progress {
   padding: 20px;
   text-align: center;
@@ -436,30 +435,27 @@ body {
   border: 4px solid #222;
   border-radius: 10px;
   flex-direction: column;
-  min-height: 700px; /* Define um tamanho mínimo */
-  height: auto; /* Altura cresce conforme o conteúdo */
+  min-height: 700px;
+  height: auto;
   overflow: hidden;
   display: flex;
 }
 
-/* Estilo do título da seção */
 #progress .section-title {
   font-size: 40px;
   color: #00ff00;
   margin-bottom: 20px;
 }
 
-/* Estilo do container de progresso */
 #progress .progress-container {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap; /* Reorganiza as colunas em telas menores */
+  flex-wrap: wrap;
   align-items: stretch;
-  flex-grow: 1; /* Permite que o container cresça conforme o conteúdo */
+  flex-grow: 1;
 }
 
-/* Estilos para as colunas esquerda e direita */
 #progress .progress-left,
 #progress .progress-right {
   margin-top: 20px;
@@ -471,11 +467,10 @@ body {
   color: white;
   text-align: center;
   box-sizing: border-box;
-  min-height: 300px; /* Garante altura mínima */
-  overflow: auto; /* Rolagem automática caso o conteúdo ultrapasse a área */
+  min-height: 300px;
+  overflow: auto;
 }
 
-/* Estilos para a coluna esquerda */
 #progress .progress-left {
   display: flex;
   flex-direction: column;
@@ -483,26 +478,23 @@ body {
   align-items: center;
 }
 
-/* Estilos do título da coluna esquerda */
 #progress .progress-left h1 {
   margin-bottom: 30px;
   font-size: 1.5em;
 }
-/* Título da seção */
+
 #progress h1 {
-  font-size: 36px; /* Tamanho do título principal */
-  color: #00ff00; /* Cor do título */
-  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  font-size: 36px;
+  color: #00ff00;
+  margin-bottom: 20px;
 }
 
-/* Estilos do texto da coluna esquerda */
 #progress .progress-left p {
   text-align: justify;
   margin-bottom: 40px;
   line-height: 1.6;
 }
 
-/* Estilos do círculo de progresso */
 #progress .progress-circle {
   width: 200px;
   height: 200px;
@@ -535,7 +527,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* Estilos para a coluna direita */
 #progress .progress-right {
   overflow-y: auto;
 }
@@ -572,7 +563,6 @@ body {
 #progress .progress-bar {
   height: 100%;
   background-color: #00ff00;
-  width: 0%; /* Inicialmente sem progresso */
   border-radius: 5px;
   transition: width 0.5s ease;
 }
@@ -587,7 +577,6 @@ body {
   z-index: 1;
 }
 
-/* Efeitos de hover */
 #progress .progress-bar-container:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 15px 5px rgba(50, 205, 50, 0.5);
@@ -607,56 +596,56 @@ body {
 }
 @media (max-width: 768px) {
   #progress .progress-container {
-    display: flex; /* Habilita flexbox no contêiner principal */
-    flex-direction: column; /* Empilha as colunas verticalmente */
-    flex-wrap: wrap; /* Permite que os itens se movam para baixo se necessário */
-    height: auto; /* Ajusta a altura do contêiner para auto */
-    max-width: 1200px; /* Aumenta a largura máxima do contêiner */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    max-width: 1200px;
   }
   #progress .topics-menu {
-    margin: 0; /* Remove a margem padrão do menu */
-    padding: 0; /* Remove o padding padrão do menu */
+    margin: 0;
+    padding: 0;
     gap: 7px;
   }
 
   #progress .progress-left,
   #progress .topics-menu {
-    width: 100%; /* Cada coluna ocupa a largura total */
-    align-items: center; /* Alinha os itens do centro (caso sejam flexíveis) */
-    display: flex; /* Habilita flexbox nas colunas */
-    justify-content: center; /* Centraliza o conteúdo das colunas horizontalmente */
-    flex-direction: column; /* Alinha os itens em coluna */
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
   #progress #topics-menu {
-    display: flex; /* Habilita flexbox no menu de tópicos */
-    flex-direction: column; /* Alinha os tópicos verticalmente */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Opcional: centraliza verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #333;
   }
 
   #progress .topic-progress {
-    width: 100%; /* Faz os tópicos ocupar toda a largura disponível */
+    width: 100%;
   }
   #progress .progress-bar-container {
-    padding: 0; /* Remove o padding para um espaço mais compacto */
+    padding: 0;
   }
   #progress .progress-percentage,
   #progress .topic-name {
-    font-size: 12px; /* Diminui o tamanho do texto nas barras de progresso */
+    font-size: 12px;
   }
   #progress .progress-left p {
-    display: none; /* Esconde o parágrafo em dispositivos móveis */
+    display: none;
   }
   #progress .progress-left h1 {
-    font-size: 20px; /* Esconde o parágrafo em dispositivos móveis */
+    font-size: 20px;
   }
-  /* Centraliza o título "Progresso Parciais" */
+
   .progress-right h2 {
-    text-align: center; /* Centraliza o texto */
-    width: 100%; /* Faz o título ocupar toda a largura */
-    margin-bottom: 10px; /* Espaço entre o título e o menu de tópicos */
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 

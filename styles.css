@@ -607,13 +607,12 @@ body {
 }
 @media (max-width: 768px) {
   #progress .progress-container {
-    display: flex; /* Usa flexbox para o contêiner principal */
+    display: flex; /* Habilita flexbox no contêiner principal */
     flex-direction: column; /* Empilha as colunas verticalmente */
     flex-wrap: wrap; /* Permite que os itens se movam para baixo se necessário */
     height: auto; /* Ajusta a altura do contêiner para auto */
-  }
-  .progress-percentage {
-    font-size: 12px; /* Diminui o tamanho do texto nas barras de progresso */
+    max-width: 1200px; /* Aumenta a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner */
   }
 
   #progress .progress-left,
@@ -623,27 +622,33 @@ body {
     display: flex; /* Habilita flexbox nas colunas */
     justify-content: center; /* Centraliza o conteúdo das colunas horizontalmente */
     flex-direction: column; /* Alinha os itens em coluna */
+    padding: 20px; /* Adiciona preenchimento ao contêiner */
   }
 
-  #topics-menu {
+  #progress #topics-menu {
     display: flex; /* Habilita flexbox no menu de tópicos */
     flex-direction: column; /* Alinha os tópicos verticalmente */
     align-items: center; /* Centraliza os itens horizontalmente */
     justify-content: center; /* Opcional: centraliza verticalmente */
     margin-top: 10px; /* Adiciona espaço acima do menu de tópicos */
+    width: 800px;
   }
 
-  .topic-progress {
+  #progress .topic-progress {
     width: 100%; /* Faz os tópicos ocupar toda a largura disponível */
-    max-width: 600px; /* Define uma largura máxima, se desejado */
-    margin-bottom: 20px; /* Espaçamento entre os tópicos */
+    max-width: 800px; /* Define uma largura máxima, se desejado */
+    gap: 5px;
+  }
+
+  #progress .progress-percentage {
+    font-size: 14px; /* Diminui o tamanho do texto nas barras de progresso */
   }
 
   /* Centraliza o título "Progresso Parciais" */
   .progress-right h2 {
     text-align: center; /* Centraliza o texto */
     width: 100%; /* Faz o título ocupar toda a largura */
-    margin-bottom: 20px; /* Espaço entre o título e o menu de tópicos */
+    margin-bottom: 10px; /* Espaço entre o título e o menu de tópicos */
   }
 }
 

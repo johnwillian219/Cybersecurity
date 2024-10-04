@@ -616,14 +616,7 @@ body {
   #progress .topics-menu {
     margin: 0; /* Remove a margem padrão do menu */
     padding: 0; /* Remove o padding padrão do menu */
-  }
-
-  #progress .topic-progress {
-    margin-bottom: 5px; /* Ajuste o espaçamento entre os itens do menu */
-  }
-
-  #progress .topic-name {
-    margin-bottom: 5px; /* Ajusta o espaço entre o nome do tópico e a barra */
+    gap: 7px;
   }
 
   #progress .progress-left,
